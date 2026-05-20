@@ -1,0 +1,1996 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الفهد لإكسسوارات السيارات | النسخة الاحترافية الفاخرة</title>
+    <link rel="icon" href="fahd.icon">
+    <meta name="description" content="متجر الفهد لزينة وإكسسوارات السيارات - وجهتك الأولى للحصول على أفضل وأحدث كماليات السيارات بجودة عالية وأسعار تنافسية">
+    <meta name="keywords" content="اكسسوارات سيارات, زينة سيارات, كماليات السيارات, الفهد للسيارات, مرسيدس, بي ام دبليو, تويوتا">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ===== LUXURY AUTOMOTIVE MODERN VARIABLES ===== */
+        :root {
+            --primary: #060c18;
+            --primary-light: #0f1b35;
+            --primary-glow: rgba(15, 27, 53, 0.8);
+            --accent: #f4a261;
+            --accent-gradient: linear-gradient(135deg, #f4a261 0%, #e76f51 100%);
+            --accent-dark: #e76f51;
+            --text-light: #f8f9fa;
+            --text-dark: #212529;
+            --text-muted: #94a3b8;
+            --bg-glass: rgba(15, 27, 53, 0.55);
+            --bg-glass-dark: rgba(6, 12, 24, 0.85);
+            --border-glass: rgba(255, 255, 255, 0.08);
+            --shadow-premium: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+            --shadow-glow: 0 0 20px rgba(244, 162, 97, 0.2);
+            --border-radius: 20px;
+            --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            --font-cairo: 'Cairo', sans-serif;
+            --whatsapp-green: #25D366;
+        }
+
+        /* ===== LIGHT THEME ADJUSTMENTS OVERRIDE ===== */
+        body.light-mode {
+            background: linear-gradient(180deg, rgba(240, 244, 248, 0.95) 0%, rgba(220, 228, 235, 0.98) 100%), 
+                        url('https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?q=80&w=1920') no-repeat center center fixed;
+            background-size: cover;
+            color: var(--text-dark);
+            --primary: #ffffff;
+            --primary-light: #e6eef5;
+            --primary-glow: rgba(230, 238, 245, 0.8);
+            --bg-glass: rgba(255, 255, 255, 0.85);
+            --bg-glass-dark: rgba(240, 244, 248, 0.95);
+            --border-glass: rgba(0, 0, 0, 0.08);
+            --text-light: #1e293b;
+            --text-muted: #64748b;
+            --shadow-premium: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
+        }
+
+        body.light-mode header,
+        body.light-mode footer,
+        body.light-mode .admin-nav-sidebar,
+        body.light-mode .table-viewport-card,
+        body.light-mode .brand-premium-card,
+        body.light-mode .product-premium-card,
+        body.light-mode .billing-card-pane,
+        body.light-mode .cart-hardware-row,
+        body.light-mode .faq-accordion-item,
+        body.light-mode .search-bar-container {
+            background: var(--bg-glass);
+            color: var(--text-dark);
+            border-color: var(--border-glass);
+        }
+        body.light-mode .logo-main,
+        body.light-mode nav a,
+        body.light-mode .section-header h2,
+        body.light-mode .prod-title-text,
+        body.light-mode .admin-sidebar-link,
+        body.light-mode .admin-table th,
+        body.light-mode .cart-panel-header h2,
+        body.light-mode .cart-row-meta h4,
+        body.light-mode .summary-row-total {
+            color: var(--text-dark) !important;
+        }
+        body.light-mode nav a:hover, body.light-mode li.active a {
+            background: rgba(0, 0, 0, 0.04);
+        }
+        body.light-mode .admin-sidebar-link.active, body.light-mode .admin-sidebar-link:hover {
+            background: var(--primary-light);
+            color: var(--accent-dark) !important;
+        }
+        body.light-mode input, body.light-mode select, body.light-mode textarea {
+            background: #ffffff !important;
+            color: #000000 !important;
+            border: 1px solid #cbd5e1 !important;
+        }
+
+        /* ===== LANGUAGE DIRECTION HELPERS ===== */
+        body.ltr-mode {
+            direction: ltr !important;
+        }
+        body.ltr-mode .scroll-progress {
+            transform-origin: left;
+        }
+        body.ltr-mode .toast-system-container {
+            left: auto;
+            right: 40px;
+        }
+        body.ltr-mode .toast-notification {
+            border-right: none;
+            border-left: 5px solid var(--accent);
+            animation: toastInLng 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        @keyframes toastInLng { from { transform: translateX(130%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+        body.ltr-mode .cart-flyout-panel {
+            left: auto;
+            right: -480px;
+            border-right: none;
+            border-left: 1px solid var(--border-glass);
+            transition: right 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        body.ltr-mode .cart-flyout-panel.active { right: 0; left: auto; }
+
+        /* ===== PREMIUM CINEMATIC BACKGROUND & OVERLAYS ===== */
+        body {
+            font-family: var(--font-cairo);
+            background: linear-gradient(180deg, rgba(6, 12, 24, 0.88) 0%, rgba(2, 4, 8, 0.95) 100%), 
+                        url('https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?q=80&w=1920') no-repeat center center fixed;
+            background-size: cover;
+            color: var(--text-light);
+            line-height: 1.6;
+            direction: rtl;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        /* Dynamic Parallax Background Movement Effect */
+        body::before {
+            content: '';
+            position: fixed;
+            top: -10%; left: -10%; width: 120%; height: 120%;
+            background: radial-gradient(circle at 80% 20%, rgba(244, 162, 97, 0.06) 0%, transparent 50%),
+                        radial-gradient(circle at 10% 80%, rgba(231, 111, 81, 0.04) 0%, transparent 40%);
+            z-index: -1;
+            pointer-events: none;
+            animation: backgroundMotion 30s infinite alternate ease-in-out;
+        }
+
+        @keyframes backgroundMotion {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(2%, 2%) scale(1.03); }
+        }
+
+        /* ===== GLOBAL INITIALIZATION ===== */
+        * { box-sizing: border-box; margin: 0; padding: 0; user-select: none; }
+        html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+        .container { width: 94%; max-width: 1440px; margin: 0 auto; padding: 0 15px; }
+        input, select, textarea, button { font-family: var(--font-cairo); }
+
+        .scroll-progress {
+            position: fixed; top: 0; right: 0; left: 0; height: 4px;
+            background: var(--accent-gradient); transform: scaleX(0);
+            transform-origin: right; z-index: 2000;
+        }
+
+        /* ===== NAVIGATION BAR ===== */
+        header {
+            background: var(--bg-glass-dark); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px);
+            border-bottom: 1px solid var(--border-glass); position: sticky; top: 0; z-index: 1000;
+            box-shadow: var(--shadow-premium); transition: var(--transition-smooth);
+        }
+        .header-content { display: flex; justify-content: space-between; align-items: center; padding: 0.8rem 0; flex-wrap: wrap; gap: 1rem; }
+        .logo-container { display: flex; align-items: center; gap: 15px; text-decoration: none; }
+        .logo-img {
+            width: 55px; height: 55px; background: var(--accent-gradient); border-radius: var(--border-radius);
+            display: flex; align-items: center; justify-content: center; box-shadow: 0 0 25px rgba(244, 162, 97, 0.35);
+        }
+        .logo-img i { font-size: 1.7rem; color: #030712; }
+        .logo-main { font-size: 2.2rem; font-weight: 900; color: #fff; line-height: 1; letter-spacing: 1px; }
+        .logo-subtitle { font-size: 0.95rem; color: var(--accent); font-weight: 600; margin-top: 2px; }
+        
+        nav ul { display: flex; list-style: none; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
+        nav a {
+            color: var(--text-muted); text-decoration: none; font-weight: 600; font-size: 1.05rem;
+            transition: var(--transition-smooth); padding: 10px 15px; border-radius: 12px;
+            display: flex; align-items: center; gap: 8px; white-space: nowrap;
+        }
+        nav a:hover, nav li.active a { color: #fff; background: rgba(255, 255, 255, 0.05); box-shadow: inset 0 1px 1px rgba(255,255,255,0.1); }
+        
+        .nav-actions { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+        .nav-icon-btn {
+            background: rgba(255,255,255,0.04); border: 1px solid var(--border-glass); color: #fff;
+            width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            cursor: pointer; position: relative; transition: var(--transition-smooth);
+        }
+        .nav-icon-btn:hover { transform: translateY(-3px); border-color: var(--accent); box-shadow: var(--shadow-glow); color: var(--accent); }
+        .cart-count {
+            position: absolute; top: -4px; right: -4px; background: var(--accent-gradient);
+            color: #030712; font-size: 0.8rem; font-weight: 800; width: 22px; height: 22px;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+        }
+
+        /* Language Button Switches Style */
+        .language-switcher-group {
+            display: flex;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-glass);
+            border-radius: 30px;
+            padding: 4px;
+            gap: 4px;
+        }
+        .lang-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            padding: 6px 14px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 700;
+            transition: var(--transition-smooth);
+        }
+        .lang-btn.active {
+            background: var(--accent-gradient);
+            color: #030712;
+        }
+
+        /* ===== HERO INTERACTIVE BANNER ===== */
+        .hero {
+            position: relative; padding: 11rem 0 9rem; text-align: center; overflow: hidden;
+            background: radial-gradient(circle at center, rgba(15, 27, 53, 0.4) 0%, rgba(6, 12, 24, 0.8) 100%);
+            border-bottom: 1px solid var(--border-glass);
+        }
+        .hero-canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; }
+        .hero-content { position: relative; z-index: 2; max-width: 950px; margin: 0 auto; padding: 0 15px; }
+        .hero h1 { font-size: 4.5rem; font-weight: 900; line-height: 1.2; margin-bottom: 1.5rem; text-shadow: 0 4px 25px rgba(0,0,0,0.8); }
+        .hero h1 span { color: transparent; -webkit-text-stroke: 1px #fff; background: var(--accent-gradient); -webkit-background-clip: text; background-clip: text; }
+        .hero p { font-size: 1.4rem; color: var(--text-muted); margin-bottom: 3.5rem; }
+        
+        .btn-premium {
+            background: var(--accent-gradient); color: #030712; padding: 16px 38px; border-radius: var(--border-radius);
+            text-decoration: none; font-weight: 800; font-size: 1.15rem; border: none; cursor: pointer;
+            display: inline-flex; align-items: center; gap: 12px; box-shadow: 0 12px 35px rgba(244, 162, 97, 0.35);
+            transition: var(--transition-smooth);
+        }
+        .btn-premium:hover { transform: translateY(-5px); box-shadow: 0 20px 45px rgba(244, 162, 97, 0.55); }
+
+        /* ===== FLASH BANNER ===== */
+        .flash-banner {
+            background: var(--accent-gradient); color: #030712; padding: 14px; text-align: center;
+            font-weight: 800; display: flex; justify-content: center; align-items: center; gap: 20px; box-shadow: var(--shadow-premium); flex-wrap: wrap;
+        }
+        .flash-timer { background: #030712; color: #fff; padding: 4px 14px; border-radius: 8px; font-family: monospace; font-size: 1.2rem; }
+
+        /* ===== SEARCH BAR ===== */
+        .search-wrapper { margin: -45px auto 5rem; max-width: 750px; position: relative; z-index: 10; padding: 0 15px; }
+        .search-bar-container {
+            display: flex; background: rgba(15, 27, 53, 0.95); border: 1px solid var(--border-glass);
+            padding: 12px; border-radius: var(--border-radius); backdrop-filter: blur(20px);
+            box-shadow: var(--shadow-premium), var(--shadow-glow);
+        }
+        .search-bar-container input { flex: 1; background: transparent; border: none; outline: none; color: #fff; padding: 0 15px; font-size: 1.15rem; min-width: 100px; }
+        .search-bar-container input::placeholder { color: var(--text-muted); }
+        .search-bar-container button { background: var(--accent-gradient); border: none; padding: 12px 28px; border-radius: 14px; color: #030712; font-weight: 800; cursor: pointer; white-space: nowrap; }
+
+        /* ===== LAYOUT & GRID CARDS ===== */
+        .section-header { text-align: center; margin-bottom: 4rem; position: relative; padding: 0 15px; }
+        .section-header h2 { font-size: 3.2rem; font-weight: 900; color: #fff; text-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+        .section-header h2 span { color: var(--accent); }
+        .section-header p { color: var(--text-muted); font-size: 1.2rem; margin-top: 0.5rem; }
+
+        .brands-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 2.5rem; }
+        .brand-premium-card {
+            background: var(--bg-glass); border: 1px solid var(--border-glass); border-radius: var(--border-radius);
+            overflow: hidden; cursor: pointer; transition: var(--transition-smooth); backdrop-filter: blur(15px);
+        }
+        .brand-premium-card:hover { transform: translateY(-12px); border-color: var(--accent); box-shadow: var(--shadow-premium), var(--shadow-glow); }
+        .brand-img-wrap { height: 170px; background: #fff; display: flex; align-items: center; justify-content: center; padding: 25px; transition: var(--transition-smooth); }
+        .brand-premium-card:hover .brand-img-wrap { background: #f8f9fa; }
+        .brand-img-wrap img { max-width: 100%; max-height: 110px; object-fit: contain; transition: transform 0.5s ease; }
+        .brand-premium-card:hover .brand-img-wrap img { transform: scale(1.15); }
+        .brand-premium-meta { padding: 1.4rem; text-align: center; font-weight: 800; font-size: 1.2rem; background: var(--primary-light); color: #fff; border-top: 1px solid var(--border-glass); }
+
+        /* ===== CATALOG INTERFACE ===== */
+        .catalog-layout { display: none; padding: 2rem 0 6rem; }
+        .catalog-header-banner {
+            position: relative; min-height: 250px; border-radius: var(--border-radius); overflow: hidden;
+            margin-bottom: 3.5rem; display: flex; align-items: center; padding: 2rem;
+            background-size: cover; background-position: center; border: 1px solid var(--border-glass);
+            box-shadow: var(--shadow-premium);
+        }
+        .catalog-header-banner::before { content: ''; position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(6, 12, 24, 0.78); backdrop-filter: blur(6px); }
+        .catalog-banner-inner { position: relative; z-index: 2; display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; }
+        .catalog-banner-logo { width: 130px; height: 130px; background: #fff; border-radius: 50%; padding: 20px; object-fit: contain; box-shadow: var(--shadow-premium); }
+        .catalog-banner-text h1 { font-size: 3rem; color: #fff; font-weight: 800; margin-bottom: 0.5rem; }
+        .catalog-banner-text p { color: var(--text-muted); font-size: 1.2rem; }
+
+        /* FILTERS & PRODUCT CARDS */
+        .filter-control-panel { background: var(--primary-light); border: 1px solid var(--border-glass); border-radius: var(--border-radius); padding: 1.8rem; margin-bottom: 3.5rem; display: flex; flex-wrap: wrap; gap: 2rem; }
+        .filter-box { display: flex; flex-direction: column; gap: 0.6rem; flex: 1; min-width: 220px; }
+        .filter-box label { font-size: 0.95rem; color: var(--text-muted); font-weight: 700; }
+        .filter-box select, .filter-box input { background: var(--primary); border: 1px solid var(--border-glass); padding: 12px 16px; border-radius: 10px; color: #fff; outline: none; font-size: 1rem; }
+        
+        .products-showcase-wrapper { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2.5rem; }
+        .product-premium-card { background: var(--bg-glass); border: 1px solid var(--border-glass); border-radius: var(--border-radius); overflow: hidden; display: flex; flex-direction: column; transition: var(--transition-smooth); backdrop-filter: blur(15px); }
+        .product-premium-card:hover { transform: translateY(-15px); border-color: var(--accent); box-shadow: var(--shadow-premium), var(--shadow-glow); }
+        .prod-image-frame { height: 260px; background: #fff; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; padding: 30px; }
+        .prod-image-frame img { max-width: 100%; max-height: 100%; object-fit: contain; transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+        .product-premium-card:hover .prod-image-frame img { transform: scale(1.12) rotate(1deg); }
+        
+        .wishlist-trigger { position: absolute; top: 15px; left: 15px; width: 44px; height: 44px; background: rgba(6,12,24,0.7); border: 1px solid var(--border-glass); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; cursor: pointer; transition: var(--transition-smooth); z-index: 5; backdrop-filter: blur(5px); }
+        .wishlist-trigger.active { color: #e76f51; background: #fff; box-shadow: 0 0 15px rgba(231,111,81,0.5); }
+        .prod-meta-tag { position: absolute; top: 15px; right: 15px; background: var(--accent-gradient); color: #030712; padding: 6px 14px; border-radius: 8px; font-size: 0.85rem; font-weight: 800; }
+        
+        .prod-details-pane { padding: 2.2rem; flex-grow: 1; display: flex; flex-direction: column; }
+        .prod-title-text { font-size: 1.4rem; font-weight: 800; color: #fff; margin-bottom: 0.8rem; }
+        .prod-desc-text { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 1.8rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .rating-stars { color: #ffd700; font-size: 0.9rem; margin-bottom: 1.2rem; }
+        .price-group { display: flex; align-items: baseline; gap: 12px; margin-top: auto; margin-bottom: 1.8rem; }
+        .current-price { font-size: 1.9rem; font-weight: 900; color: var(--accent); }
+        .old-price { font-size: 1.2rem; color: var(--text-muted); text-decoration: line-through; }
+        .action-button-group { display: flex; gap: 12px; }
+        .btn-card-action { flex: 1; padding: 14px; border-radius: 12px; border: none; font-weight: 800; font-size: 1rem; cursor: pointer; transition: var(--transition-smooth); display: flex; align-items: center; justify-content: center; gap: 8px; }
+        .btn-cart-add { background: var(--accent-gradient); color: #030712; }
+        .btn-quick-view { background: rgba(255,255,255,0.05); color: #fff; border: 1px solid var(--border-glass); }
+        .btn-quick-view:hover { background: rgba(255,255,255,0.15); }
+
+        /* ===== CHECKOUT MODULE ===== */
+        .checkout-layout { display: none; padding: 4rem 0 7rem; }
+        .checkout-grid-split { display: grid; grid-template-columns: 1.6fr 1fr; gap: 3.5rem; }
+        @media(max-width: 992px) { .checkout-grid-split { grid-template-columns: 1fr; } }
+        .billing-card-pane { background: var(--primary-light); border: 1px solid var(--border-glass); border-radius: var(--border-radius); padding: 3rem; box-shadow: var(--shadow-premium); position: relative; }
+        .billing-card-pane h3 { font-size: 1.8rem; font-weight: 800; margin-bottom: 2rem; border-bottom: 1px solid var(--border-glass); padding-bottom: 1rem; color: #fff; display: flex; align-items: center; gap: 12px; }
+        .billing-form-group { display: flex; flex-direction: column; gap: 0.7rem; margin-bottom: 1.8rem; }
+        .billing-form-group label { font-size: 1rem; font-weight: 700; color: var(--text-muted); }
+        .billing-form-group input, .billing-form-group select, .billing-form-group textarea { background: var(--primary); border: 1px solid var(--border-glass); padding: 14px 18px; border-radius: 10px; color: #fff; outline: none; font-size: 1rem; transition: var(--transition-smooth); }
+        .billing-form-group input:focus, .billing-form-group select:focus, .billing-form-group textarea:focus { border-color: var(--accent); box-shadow: var(--shadow-glow); }
+
+        /* Searchable Input Custom styling for dropdown */
+        .searchable-select-wrapper { position: relative; }
+        .search-dropdown-input { width: 100%; padding-left: 35px !important; }
+        .searchable-dropdown-list {
+            position: absolute; top: 100%; left: 0; width: 100%; max-height: 250px; overflow-y: auto;
+            background: var(--primary-light); border: 1px solid var(--accent); border-radius: 10px;
+            z-index: 100; display: none; box-shadow: var(--shadow-premium); list-style: none; margin-top: 5px;
+        }
+        .searchable-dropdown-list li { padding: 12px 18px; cursor: pointer; color: #fff; transition: 0.2s; border-bottom: 1px solid rgba(255,255,255,0.03); font-weight: 600; }
+        .searchable-dropdown-list li:hover { background: var(--accent-gradient); color: #030712; }
+
+        /* LOADING ANIMATION FOR CHECKOUT SUBMISSION */
+        .loading-submit-overlay { display: none; position: absolute; top:0; left:0; width:100%; height:100%; background:rgba(6, 12, 24, 0.9); border-radius:var(--border-radius); z-index:20; align-items:center; justify-content:center; flex-direction:column; gap:20px; }
+        .spinner-loader { border: 4px solid rgba(255,255,255,0.1); border-left-color: var(--accent); border-radius: 50%; width: 50px; height: 50px; animation: spinLoader 1s linear infinite; }
+        @keyframes spinLoader { to { transform: rotate(360deg); } }
+
+        /* ===== FUTURISTIC ADMIN DASHBOARD PANEL ===== */
+        .admin-dashboard-layout { display: none; padding: 3rem 0 7rem; }
+        .admin-sidebar-grid { display: grid; grid-template-columns: 280px 1fr; gap: 3.5rem; }
+        @media(max-width: 992px) { .admin-sidebar-grid { grid-template-columns: 1fr; } }
+        
+        .admin-nav-sidebar { background: rgba(15, 27, 53, 0.75); border: 1px solid var(--border-glass); border-radius: var(--border-radius); padding: 2rem 1.5rem; height: fit-content; backdrop-filter: blur(20px); box-shadow: var(--shadow-premium); }
+        .admin-nav-sidebar ul { list-style: none; display: flex; flex-direction: column; gap: 0.8rem; }
+        .admin-sidebar-link {
+            display: flex; align-items: center; gap: 14px; padding: 14px 18px; color: var(--text-muted);
+            text-decoration: none; border-radius: 12px; font-weight: 700; font-size: 1.05rem; cursor: pointer; transition: var(--transition-smooth);
+        }
+        .admin-sidebar-link i { font-size: 1.2rem; transition: var(--transition-smooth); }
+        .admin-sidebar-link.active, .admin-sidebar-link:hover { background: var(--primary); color: var(--accent); box-shadow: var(--shadow-glow); }
+        .admin-sidebar-link:hover i { transform: scale(1.2); }
+
+        .admin-content-window { display: flex; flex-direction: column; gap: 3rem; overflow: hidden; }
+        .stats-dashboard-matrix { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; }
+        .metric-matrix-card {
+            background: linear-gradient(145deg, #0f1b35 0%, #060c18 100%);
+            border: 1px solid var(--border-glass); border-radius: var(--border-radius); padding: 2rem;
+            display: flex; align-items: center; gap: 22px; box-shadow: var(--shadow-premium); transition: var(--transition-smooth);
+        }
+        .metric-matrix-card:hover { transform: translateY(-5px); border-color: var(--accent); }
+        .metric-card-icon { width: 60px; height: 60px; border-radius: 14px; background: rgba(244, 162, 97, 0.1); display: flex; align-items: center; justify-content: center; color: var(--accent); font-size: 1.8rem; }
+        .metric-card-data h4 { font-size: 0.95rem; color: var(--text-muted); font-weight: 700; }
+        .metric-card-data p { font-size: 2.2rem; font-weight: 900; color: #fff; margin-top: 2px; }
+
+        .table-viewport-card { background: rgba(15, 27, 53, 0.75); border: 1px solid var(--border-glass); border-radius: var(--border-radius); padding: 2.5rem; overflow-x: auto; box-shadow: var(--shadow-premium); backdrop-filter: blur(20px); }
+        .table-view-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 2rem; }
+        .admin-table { width: 100%; border-collapse: collapse; text-align: right; min-width: 800px; }
+        .admin-table th, .admin-table td { padding: 16px; border-bottom: 1px solid var(--border-glass); font-size: 1rem; }
+        .admin-table th { color: var(--text-muted); font-weight: 700; background: rgba(0,0,0,0.15); }
+        .admin-table tr:hover td { background: rgba(255,255,255,0.02); }
+        .row-action-btn { background:none; border:none; cursor:pointer; font-size:1.1rem; }
+
+        .drag-drop-box {
+            border: 2px dashed rgba(244,162,97,0.3); border-radius: var(--border-radius); padding: 3.5rem 2rem;
+            text-align: center; cursor: pointer; transition: var(--transition-smooth); background: var(--primary); color: var(--text-muted);
+        }
+        .drag-drop-box:hover, .drag-drop-box.dragover { border-color: var(--accent); color: #fff; background: rgba(244,162,97,0.02); }
+        .drag-drop-box i { font-size: 3.5rem; margin-bottom: 1.2rem; color: var(--accent); }
+
+        /* ===== TOAST NOTIFICATIONS ===== */
+        .toast-system-container { position: fixed; bottom: 40px; right: auto; left: 40px; display: flex; flex-direction: column; gap: 12px; z-index: 3000; }
+        .toast-notification {
+            background: #0f1b35; border-right: 5px solid var(--accent); color: #fff; padding: 18px 28px;
+            border-radius: 12px; font-weight: 700; box-shadow: var(--shadow-premium); display: flex; align-items: center; gap: 14px;
+            animation: toastIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards; font-size: 1.05rem;
+        }
+        @keyframes toastIn { from { transform: translateX(-130%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+
+        /* ===== CART OVERLAY SLIDE ===== */
+        .cart-flyout-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(2,4,8,0.85); backdrop-filter: blur(10px); z-index: 1500; display: none; }
+        .cart-flyout-panel {
+            position: fixed; top: 0; left: -480px; width: 460px; height: 100%; background: #060c18; border-right: 1px solid var(--border-glass);
+            z-index: 1600; padding: 3rem 2.5rem; display: flex; flex-direction: column; box-shadow: var(--shadow-premium); transition: left 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .cart-flyout-panel.active { left: 0; }
+        .cart-panel-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2.5rem; border-bottom: 1px solid var(--border-glass); padding-bottom: 1.2rem; }
+        .cart-panel-header h2 { font-size: 1.8rem; color: #fff; font-weight: 800; }
+        .close-panel-trigger { background: transparent; border: none; color: var(--text-muted); font-size: 2.2rem; cursor: pointer; transition: 0.3s; }
+        .close-panel-trigger:hover { color: #fff; }
+        
+        .cart-items-scrollbox { flex-grow: 1; overflow-y: auto; margin-bottom: 2rem; }
+        .cart-hardware-row { display: flex; gap: 18px; background: var(--primary-light); padding: 1.2rem; border-radius: 16px; margin-bottom: 1.2rem; border: 1px solid var(--border-glass); align-items: center; }
+        .cart-row-img { width: 75px; height: 75px; background: #fff; border-radius: 10px; padding: 6px; object-fit: contain; }
+        .cart-row-meta { flex-grow: 1; }
+        .cart-row-meta h4 { font-size: 1.1rem; color: #fff; margin-bottom: 5px; font-weight: 800; }
+        .cart-row-meta p { font-size: 1rem; color: var(--accent); font-weight: 700; }
+        .cart-row-qty-ctrl { display: flex; align-items: center; gap: 12px; margin-top: 10px; }
+        .qty-adjust-btn { width: 28px; height: 28px; border-radius: 8px; background: var(--primary); border: 1px solid var(--border-glass); color: #fff; font-weight: 700; cursor: pointer; }
+        .cart-row-delete { background: transparent; border: none; color: var(--accent-dark); cursor: pointer; font-size: 1.2rem; margin-right: auto; }
+
+        .cart-checkout-summary { border-top: 1px solid var(--border-glass); padding-top: 2rem; }
+        .summary-row-total { display: flex; justify-content: space-between; font-size: 1.5rem; font-weight: 900; color: #fff; margin-bottom: 2rem; }
+
+        /* ===== MODAL DETAIL PANEL ===== */
+        .modal-blur-window { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(2,4,8,0.85); backdrop-filter: blur(15px); z-index: 2500; display: none; align-items: center; justify-content: center; padding: 25px; }
+        .modal-premium-body { background: #060c18; border: 1px solid var(--border-glass); border-radius: var(--border-radius); max-width: 850px; width: 100%; padding: 3rem; position: relative; box-shadow: var(--shadow-premium); }
+        .modal-close-abs { position: absolute; top: 25px; left: 25px; font-size: 2.2rem; color: var(--text-muted); cursor: pointer; z-index: 10; }
+
+        /* ===== FAQ ACCORDION PANEL ===== */
+        .faq-wrapper { max-width: 950px; margin: 0 auto 6rem; display: flex; flex-direction: column; gap: 1.2rem; padding: 0 15px; }
+        .faq-accordion-item { background: var(--primary-light); border: 1px solid var(--border-glass); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-premium); }
+        .faq-trigger-tab { padding: 1.4rem 2.2rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-weight: 800; font-size: 1.15rem; }
+        .faq-content-pane { padding: 0 2.2rem; max-height: 0; overflow: hidden; transition: var(--transition-smooth); color: var(--text-muted); font-size: 1.05rem; }
+        .faq-accordion-item.active .faq-content-pane { padding: 1.4rem 2.2rem; max-height: 220px; border-top: 1px solid var(--border-glass); }
+
+        /* ===== FLOATING WHATSAPP SYSTEM BUTTON ===== */
+        .whatsapp-floating-btn {
+            position: fixed; bottom: 40px; right: 40px; background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            color: #fff; font-size: 2.2rem; box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4); z-index: 1400; text-decoration: none; transition: var(--transition-smooth);
+        }
+        .whatsapp-floating-btn:hover { transform: scale(1.1) rotate(8deg); }
+        .whatsapp-tooltip { position: absolute; right: 80px; background: #030712; border: 1px solid var(--border-glass); color: #fff; padding: 8px 16px; border-radius: 10px; font-size: 0.9rem; font-weight: 700; white-space: nowrap; opacity: 0; pointer-events: none; transition: 0.3s; }
+        .whatsapp-floating-btn:hover .whatsapp-tooltip { opacity: 1; }
+
+        /* ===== SYSTEM FOOTER STYLE ===== */
+        footer { background: #030712; border-top: 1px solid var(--border-glass); padding: 5rem 0 3rem; margin-top: auto; }
+        .footer-grid-view { display: grid; grid-template-columns: 2fr 1fr; gap: 4rem; margin-bottom: 4rem; }
+        @media(max-width: 768px) { .footer-grid-view { grid-template-columns: 1fr; gap: 2rem; } }
+        .footer-column h3 { font-size: 1.4rem; font-weight: 800; color: #fff; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 10px; }
+        .footer-column p { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 1.5rem; }
+        .footer-column ul { list-style: none; display: flex; flex-direction: column; gap: 0.8rem; }
+        .footer-column a { color: var(--text-muted); text-decoration: none; transition: 0.3s; font-weight: 600; }
+        .footer-column a:hover { color: var(--accent); padding-right: 6px; }
+        .social-matrix { display: flex; gap: 14px; margin-top: 1.8rem; }
+        .bottom-credits { text-align: center; border-top: 1px solid var(--border-glass); padding-top: 2.5rem; font-size: 0.95rem; font-weight: 600; }
+        
+        /* ===== SIMPLIFIED SOCIAL MEDIA SECTION ===== */
+        .social-media-showcase {
+            background: transparent;
+            border: none;
+            padding: 2rem 0;
+            margin: 3rem 0;
+            text-align: center;
+            position: relative;
+            overflow: visible;
+        }
+        .social-media-showcase::before { display: none; }
+        .social-media-showcase::after { display: none; }
+        
+        .social-media-showcase > * { position: relative; z-index: 1; }
+        .social-showcase-title {
+            color: var(--accent);
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            font-weight: 700;
+            text-shadow: none;
+            letter-spacing: 0;
+        }
+        .social-showcase-subtitle { display: none; }
+        
+        .social-platform-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 0;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .social-platform-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            padding: 1.5rem 1rem;
+            background: rgba(15, 27, 53, 0.3);
+            border: 1px solid var(--border-glass);
+            border-radius: 12px;
+            text-decoration: none;
+            color: #fff;
+            transition: 0.3s ease;
+            cursor: pointer;
+            box-shadow: none;
+            position: relative;
+            overflow: hidden;
+        }
+        .social-platform-card::before { display: none; }
+        .social-platform-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+            background: rgba(244, 162, 97, 0.15);
+        }
+        .social-platform-card > * { position: relative; z-index: 1; }
+        
+        .social-platform-icon {
+            font-size: 2rem;
+            color: var(--accent);
+            transition: 0.3s ease;
+        }
+        .social-platform-card:hover .social-platform-icon {
+            color: #fff;
+            transform: scale(1.1);
+        }
+        .social-platform-name {
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 0;
+        }
+        .social-platform-card:hover .social-platform-name {
+            color: var(--accent);
+        }
+        
+        .social-direct-links-bar { display: none; }
+        
+        @media(max-width: 768px) {
+            .social-showcase-title { font-size: 1.5rem; }
+            .social-platform-grid { grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 1rem; }
+            .social-platform-card { padding: 1rem 0.8rem; }
+            .social-platform-icon { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll-progress" id="progressBar"></div>
+    
+    <a href="https://wa.me/201273953660" target="_blank" class="whatsapp-floating-btn" id="whatsappFloatingBtn">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="whatsapp-tooltip" id="trans-wa-tooltip">تواصل معنا الآن</span>
+    </a>
+
+    <div class="flash-banner" id="flashOfferBanner">
+        <span id="flashOfferText">منصة الفهد المطورة 2026: تم تفعيل موديول إدارة الماركات وحساب أسعار الشحن ديناميكياً لجميع المحافظات!</span>
+        <div class="flash-timer" id="flashTimer">00:00:00</div>
+    </div>
+
+    <header>
+        <div class="container header-content">
+            <a href="#" class="logo-container" onclick="router.navigate('home')">
+                <div class="logo-img"><i class="fa-solid fa-car-burst"></i></div>
+                <div>
+                    <div class="logo-main">EL FAHD</div>
+                    <div class="logo-subtitle" id="trans-logo-sub">الفهد لإكسسوارات السيارات الفاخرة</div>
+                </div>
+            </a>
+            
+            <nav>
+                <ul>
+                    <li class="nav-item active" data-target="home"><a href="#" onclick="router.navigate('home')"><i class="fa-solid fa-house"></i> <span id="trans-nav-home">الرئيسية</span></a></li>
+                    <li class="nav-item" data-target="brands"><a href="#" onclick="router.navigate('home'); window.scrollTo(0, document.getElementById('brandsSection').offsetTop - 100);"><i class="fa-solid fa-tags"></i> <span id="trans-nav-brands">الماركات</span></a></li>
+                  <li class="nav-item" data-target="admin">
+    <a href="#" onclick="
+        const pass = prompt('ادخل كلمة مرور الإدارة');
+        if(pass === '12345'){
+            router.navigate('admin');
+        } else {
+            alert('كلمة المرور غير صحيحة');
+        }
+    ">
+        <i class="fa-solid fa-shield-halved"></i>
+        <span id="trans-nav-admin">الإدارة والتحكم</span>
+    </a>
+</li>
+
+            <div class="nav-actions">
+                <div class="nav-icon-btn" onclick="ui.toggleThemeMode()" id="themeModeToggler" title="تبديل المظهر">
+                    <i class="fa-solid fa-moon"></i>
+                </div>
+
+                <div class="language-switcher-group">
+                    <button class="lang-btn active" id="langBtnAr" onclick="ui.changeLanguage('ar')">العربية</button>
+                    <button class="lang-btn" id="langBtnEn" onclick="ui.changeLanguage('en')">English</button>
+                </div>
+
+                <div class="nav-icon-btn" onclick="ui.toggleCart(true)">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                    <div class="cart-count" id="globalCartCount">0</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="view-home" class="route-view">
+            <div class="hero">
+                <canvas class="hero-canvas" id="heroParticles"></canvas>
+                <div class="hero-content">
+                    <h1 id="trans-hero-title">تفرد بفخامة سيارتك مع <span>إكسسوارات الفهد</span></h1>
+                    <p id="trans-hero-desc">الوجهة الرقمية الأولى في الشرق الأوسط لتعديل أفخم ماركات السيارات العالمية بأعلى المعايير الألمانية واليابانية.</p>
+                    <a href="#brandsSection" class="btn-premium"><i class="fa-solid fa-compass"></i> <span id="trans-hero-btn">اكتشف كتالوجات الماركات</span></a>
+                </div>
+            </div>
+
+            <div class="search-wrapper">
+                <div class="search-bar-container">
+                    <input type="text" id="globalProductSearchInput" placeholder="ابحث عن إكسسوار معين، شاشات أندرويد، أنظمة ليد..." onkeyup="ui.triggerLiveSearch(this.value)">
+                    <button onclick="ui.executeSearchButton()"><i class="fa-solid fa-magnifying-glass"></i> <span id="trans-search-btn">ابحث الآن</span></button>
+                </div>
+            </div>
+
+            <div class="container" id="brandsSection" style="padding-bottom: 8rem;">
+                <div class="section-header">
+                    <h2><span id="trans-brands-title1">كتالوج الماركات</span> <span id="trans-brands-title2">العالمية المدعومة</span></h2>
+                    <p id="trans-brands-desc">اختر ماركة سيارتك واستكشف أرقى الإكسسوارات المصممة لها خصيصاً بمقاسات دقيقة للغاية</p>
+                </div>
+                <div class="brands-grid" id="homeBrandsContainer"></div>
+            </div>
+
+            <div class="container" style="padding-bottom: 9rem;">
+                <div class="section-header">
+                    <h2><span id="trans-faq-title1">الأسئلة الشائعة</span> <span>FAQ</span></h2>
+                    <p id="trans-faq-desc">كل ما تود معرفته عن خدمات الفهد للشحن والدعم الفني المباشر</p>
+                </div>
+                <div class="faq-wrapper">
+                    <div class="faq-accordion-item">
+                        <div class="faq-trigger-tab" onclick="ui.toggleFaq(this)"><span id="trans-faq-q1">هل تتوفر خدمات التركيب أم شحن فقط؟</span> <i class="fa-solid fa-chevron-down"></i></div>
+                        <div class="faq-content-pane"><p id="trans-faq-a1">نوفر شحناً سريعاً فائق الأمان لكافة محافظات جمهورية مصر العربية مع كتالوج إرشادي مفصل وفيديوهات تركيب ودعم فني مخصص لكل قطعة.</p></div>
+                    </div>
+                    <div class="faq-accordion-item">
+                        <div class="faq-trigger-tab" onclick="ui.toggleFaq(this)"><span id="trans-faq-q2">ما هي فترات الضمان على الشاشات والأنظمة الإلكترونية؟</span> <i class="fa-solid fa-chevron-down"></i></div>
+                        <div class="faq-content-pane"><p id="trans-faq-a2">جميع القطع الإلكترونية وشاشات الأندرويد والليد الفاخرة مشمولة بضمان استبدال حقيقي معتمد لمدة عامين كاملين من تاريخ فاتورة الشراء الأصلية.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="view-catalog" class="route-view catalog-layout">
+            <div class="container">
+                <button class="btn-premium" style="background:rgba(255,255,255,0.05); color:var(--text-light); border:1px solid var(--border-glass); margin-bottom:2.5rem;" onclick="router.navigate('home')">
+                    <i class="fa-solid fa-arrow-right"></i> <span id="trans-catalog-back">العودة للماركات الرئيسية</span>
+                </button>
+                <div id="catalogBannerPlaceholder"></div>
+                
+                <div class="filter-control-panel">
+                    <div class="filter-box">
+                        <label id="trans-filter-cat-lbl">تصفية وتحديد الفئة المطلوبة</label>
+                        <select id="filterCategorySelect" onchange="ui.applyCatalogFilters()">
+                            <option value="all">كل المعروضات والإكسسوارات</option>
+                            <option value="إلكترونيات">إلكترونيات وشاشات</option>
+                            <option value="إضاءة">أنظمة إضاءة وليد</option>
+                            <option value="خارجي">كماليات ومظهر خارجي</option>
+                            <option value="داخلي">إكسسوارات داخلية وراحة</option>
+                        </select>
+                    </div>
+                    <div class="filter-box">
+                        <label><span id="trans-filter-price-lbl">الحد الأقصى للميزانية</span> (<span id="priceMaxLabel">15000</span> ج.م)</label>
+                        <input type="range" id="filterPriceRange" min="0" max="15000" step="250" value="15000" oninput="document.getElementById('priceMaxLabel').innerText=this.value; ui.applyCatalogFilters();">
+                    </div>
+                </div>
+                <div class="products-showcase-wrapper" id="catalogProductsContainer"></div>
+            </div>
+        </section>
+
+        <section id="view-checkout" class="route-view checkout-layout">
+            <div class="container">
+                <div class="checkout-grid-split">
+                    <div class="billing-card-pane">
+                        <div class="loading-submit-overlay" id="checkoutSubmissionLoader">
+                            <div class="spinner-loader"></div>
+                            <h4 style="color:#fff; font-weight:700;" id="trans-chk-loader-txt">جاري تشفير وتسجيل بيانات طلبك في النظام...</h4>
+                        </div>
+                        <h3><i class="fa-solid fa-truck-ramp-box"></i> <span id="trans-chk-form-title">استكمال بيانات شحن وتوصيل الطلبية</span></h3>
+                        <form id="checkoutForm" onsubmit="ui.handleCheckoutSubmit(event)">
+                            <div style="display:grid; grid-template-columns:1fr 1fr; gap:2rem;">
+                                <div class="billing-form-group">
+                                    <label id="trans-chk-name-lbl">اسم المستلم بالكامل *</label>
+                                    <input type="text" required id="checkoutName" placeholder="الأستاذ / ...">
+                                </div>
+                                <div class="billing-form-group">
+                                    <label id="trans-chk-phone-lbl">رقم الهاتف الفعال للتواصل *</label>
+                                    <input type="tel" required id="checkoutPhone" placeholder="01.........">
+                                </div>
+                            </div>
+                            <div style="display:grid; grid-template-columns:1fr 1fr; gap:2rem; margin-top:1rem;">
+                                <div class="billing-form-group">
+                                    <label id="trans-chk-gov-lbl">المحافظة (لإصدار قيمة الشحن) *</label>
+                                    <div class="searchable-select-wrapper">
+                                        <input type="text" required id="checkoutGovSearchInput" class="search-dropdown-input" placeholder="اكتب اسم محافظتك للبحث..." onfocus="ui.filterGovDropdown()" onkeyup="ui.filterGovDropdown()">
+                                        <ul class="searchable-dropdown-list" id="checkoutGovDropdownList"></ul>
+                                    </div>
+                                </div>
+                                <div class="billing-form-group">
+                                    <label id="trans-chk-addr-lbl">عنوان العميل التفصيلي *</label>
+                                    <input type="text" required id="checkoutAddress" placeholder="اسم الشارع، رقم العقار، الدور، علامة مميزة...">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn-premium" style="width:100%; justify-content:center; margin-top:2.5rem;"><i class="fa-solid fa-circle-check"></i> <span id="trans-chk-submit-btn">تأكيد حجز الطلب وإرساله للمراجعة</span></button>
+                        </form>
+                    </div>
+
+                    <div class="billing-card-pane" style="height:fit-content;">
+                        <h3><i class="fa-solid fa-receipt"></i> <span id="trans-summary-title">ملخص المشتريات</span></h3>
+                        <div id="checkoutOrderItemsList" style="display:flex; flex-direction:column; gap:1.2rem; margin-bottom:2rem;"></div>
+                        <div style="border-top:1px solid var(--border-glass); padding-top:1.5rem; display:flex; flex-direction:column; gap:0.8rem;">
+                            <div style="display:flex; justify-content:between; align-items:center;">
+                                <span style="color:var(--text-muted);" id="trans-summary-gov">المحافظة المحددة:</span>
+                                <strong id="checkoutSelectedGovLabel">لم تحدد</strong>
+                            </div>
+                            <div style="display:flex; justify-content:between; align-items:center;">
+                                <span style="color:var(--text-muted);" id="trans-summary-fee">تكلفة الشحن لعنوانك:</span>
+                                <strong id="checkoutShippingCostLabel">0 ج.م</strong>
+                            </div>
+                            <div style="display:flex; justify-content:between; align-items:center; margin-top:1rem; font-size:1.3rem;">
+                                <span id="trans-summary-total">الإجمالي الكلي المالي:</span>
+                                <strong style="color:var(--accent);" id="checkoutSummaryTotal">0 ج.م</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="view-admin" class="route-view admin-dashboard-layout">
+            <div class="container">
+                <div class="admin-sidebar-grid">
+                    <aside class="admin-nav-sidebar">
+                        <div style="text-align:center; margin-bottom:2.5rem; padding-bottom:1.5rem; border-bottom:1px solid var(--border-glass);">
+                            <div style="width:70px; height:70px; background:var(--accent-gradient); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 15px; color:#030712; font-size:2rem;"><i class="fa-solid fa-user-gear"></i></div>
+                            <h4 style="color:#fff; font-weight:800;" id="trans-adm-title">لوحة الإدارة والمخازن</h4>
+                            <p style="font-size:0.85rem; color:var(--text-muted);">Root Superuser</p>
+                        </div>
+                        <ul>
+                            <li class="admin-sidebar-link active" id="link-metrics" onclick="admin.switchTab('metrics')"><i class="fa-solid fa-chart-line"></i> <span id="trans-tab-metrics">الإحصائيات العامة</span></li>
+                            <li class="admin-sidebar-link" id="link-shipping-settings" onclick="admin.switchTab('shipping-settings')"><i class="fa-solid fa-truck-fast"></i> <span id="trans-tab-shipping">إدارة أسعار الشحن</span></li>
+                            <li class="admin-sidebar-link" id="link-add-brand" onclick="admin.switchTab('add-brand')"><i class="fa-solid fa-folder-plus"></i> <span id="trans-tab-addbrand">إضافة ماركة سيارات</span></li>
+                            <li class="admin-sidebar-link" id="link-manage-brands" onclick="admin.switchTab('manage-brands')"><i class="fa-solid fa-tags"></i> <span id="trans-tab-mgbrands">إدارة وقائمة الماركات</span></li>
+                            <li class="admin-sidebar-link" id="link-add-product" onclick="admin.switchTab('add-product')"><i class="fa-solid fa-box-open"></i> <span id="trans-tab-addprod">إضافة منتج جديد</span></li>
+                            <li class="admin-sidebar-link" id="link-manage-products" onclick="admin.switchTab('manage-products')"><i class="fa-solid fa-boxes-stacked"></i> <span id="trans-tab-mgprods">إدارة المخزون الفعلي</span></li>
+                            <li class="admin-sidebar-link" id="link-orders" onclick="admin.switchTab('orders')"><i class="fa-solid fa-truck-moving"></i> <span id="trans-tab-orders">طلبيات شحن العملاء</span></li>
+                        </ul>
+                    </aside>
+
+                    <div class="admin-content-window">
+                        <div id="adminTab-metrics" class="admin-subview">
+                            <div class="stats-dashboard-matrix">
+                                <div class="metric-matrix-card">
+                                    <div class="metric-card-icon"><i class="fa-solid fa-wallet"></i></div>
+                                    <div class="metric-card-data"><h4 id="trans-stat-rev">إجمالي الإيرادات</h4><p id="statTotalRevenue">0</p></div>
+                                </div>
+                                <div class="metric-matrix-card">
+                                    <div class="metric-card-icon"><i class="fa-solid fa-truck-ramp-box"></i></div>
+                                    <div class="metric-card-data"><h4 id="trans-stat-orders">طلبات الشحن النشطة</h4><p id="statTotalOrders">0</p></div>
+                                </div>
+                                <div class="metric-matrix-card">
+                                    <div class="metric-card-icon"><i class="fa-solid fa-car"></i></div>
+                                    <div class="metric-card-data"><h4 id="trans-stat-brands">الماركات المسجلة</h4><p id="statTotalBrands">0</p></div>
+                                </div>
+                                <div class="metric-matrix-card">
+                                    <div class="metric-card-icon"><i class="fa-solid fa-boxes-packing"></i></div>
+                                    <div class="metric-card-data"><h4 id="trans-stat-prods">عدد المنتجات الفعلي</h4><p id="statTotalProducts">0</p></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="adminTab-shipping-settings" class="admin-subview" style="display: none;">
+                            <div class="table-viewport-card">
+                                <h3 id="trans-sh-mg-title">تعديل أسعار شحن المحافظات ديناميكياً</h3>
+                                <table class="admin-table" style="margin-top:1.5rem;">
+                                    <thead><tr><th id="trans-sh-th-gov">المحافظة</th><th id="trans-sh-th-fee">سعر الشحن الحالي (ج.م)</th><th id="trans-sh-th-act">حفظ التحديث</th></tr></thead>
+                                    <tbody id="adminShippingTableBody"></tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div id="adminTab-add-brand" class="admin-subview" style="display: none;">
+                            <div class="billing-card-pane">
+                                <h3 id="brandFormTitle">إضافة علامة تجارية (ماركة سيارات) جديدة في الكتالوج</h3>
+                                <form id="brandCreationForm" onsubmit="admin.handleBrandFormSubmit(event)">
+                                    <input type="hidden" id="editBrandId">
+                                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:2rem;">
+                                        <div class="billing-form-group">
+                                            <label id="trans-br-name-lbl">اسم العلامة التجارية بالكامل *</label>
+                                            <input type="text" required id="newBrandName" placeholder="مثال: بي ام دبليو BMW">
+                                        </div>
+                                        <div class="billing-form-group">
+                                            <label id="trans-br-cat-lbl">التصنيف الرئيسي والخصائص الفنية *</label>
+                                            <input type="text" required id="newBrandCategory" placeholder="شاشات، فيبر كربون، إضاءة ليد...">
+                                        </div>
+                                    </div>
+                                    <div class="billing-form-group" style="margin-top:1.5rem;">
+                                        <label id="trans-br-desc-lbl">وصف تسويقي وتفصيلي للماركة *</label>
+                                        <textarea required id="newBrandDesc" rows="3" placeholder="اكتب نبذة عن الإكسسوارات المتوفرة لهذه الماركة..."></textarea>
+                                    </div>
+                                    <div class="billing-form-group">
+                                        <label id="trans-br-logo-lbl">صورة أو شعار الماركة الفاخرة (Drag & Drop):</label>
+                                        <div class="drag-drop-box" id="brandDragDropZone">
+                                            <i class="fa-solid fa-cloud-arrow-up"></i>
+                                            <p id="trans-br-drag-txt">اسحب شعار الماركة وأفلته هنا أو انقر لرفع ملف محلي فوري</p>
+                                            <input type="file" id="brandFileInput" accept="image/*" style="display:none;">
+                                            <div id="brandImagePreviewContainer" style="margin-top:15px; display:none;"><img id="brandUploadedImagePreview" src="" style="max-height:90px; border-radius:10px;"></div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn-premium" style="width:100%; justify-content:center; margin-top:2rem;" id="trans-br-submit">تأكيد وحفظ بيانات الماركة بالسيستم</button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div id="adminTab-manage-brands" class="admin-subview" style="display: none;">
+                            <div class="table-viewport-card">
+                                <h3 id="trans-mgb-title">إدارة وتعديل الكتالوج الفعلي للماركات</h3>
+                                <table class="admin-table" style="margin-top:1.5rem;">
+                                    <thead><tr><th id="trans-mgb-logo">الشعار</th><th id="trans-mgb-name">اسم البراند</th><th id="trans-mgb-cat">الفئات الفنية</th><th id="trans-mgb-act">العمليات الإدارية</th></tr></thead>
+                                    <tbody id="adminBrandsTableBody"></tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div id="adminTab-add-product" class="admin-subview" style="display: none;">
+                            <div class="billing-card-pane">
+                                <h3 id="trans-addp-title">إدراج قطعة إكسسوار أو كماليات جديدة بالمخزن</h3>
+                                <form id="productCreationForm" onsubmit="admin.handleProductFormSubmit(event)">
+                                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:2rem;">
+                                        <div class="billing-form-group">
+                                            <label id="trans-addp-name">اسم المنتج / الإكسسوار بالكامل *</label>
+                                            <input type="text" required id="newProdName" placeholder="مثال: شاشة أندرويد 10 بوصة 4K">
+                                        </div>
+                                        <div class="billing-form-group">
+                                            <label id="trans-addp-brand">تابعة لأي ماركة سيارات مسجلة؟ *</label>
+                                            <select required id="newProdBrandSelect"></select>
+                                        </div>
+                                    </div>
+                                    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:1.5rem; margin-top:1.5rem;">
+                                        <div class="billing-form-group">
+                                            <label id="trans-addp-price">السعر الحالي للبيع (ج.م) *</label>
+                                            <input type="number" required id="newProdPrice">
+                                        </div>
+                                        <div class="billing-form-group">
+                                            <label id="trans-addp-oldprice">السعر القديم قبل الخصم (إن وجد)</label>
+                                            <input type="number" id="newProdOldPrice">
+                                        </div>
+                                        <div class="billing-form-group">
+                                            <label id="trans-addp-cat">القسم الفني للمنتج *</label>
+                                            <select required id="newProdCategory">
+                                                <option value="إلكترونيات">إلكترونيات وشاشات</option>
+                                                <option value="إضاءة">أنظمة إضاءة وليد</option>
+                                                <option value="خارجي">كماليات ومظهر خارجي</option>
+                                                <option value="داخلي">إكسسوارات داخلية وراحة</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="billing-form-group">
+                                        <label id="trans-addp-desc">تفاصيل ومواصفات المنتج الفنية الدقيقة *</label>
+                                        <textarea required id="newProdDesc" rows="3"></textarea>
+                                    </div>
+                                    <div class="billing-form-group">
+                                        <label id="trans-addp-file">صورة المنتج الفعلية عالية الجودة:</label>
+                                        <div class="drag-drop-box" id="productDragDropZone">
+                                            <i class="fa-solid fa-box-open"></i>
+                                            <p id="trans-addp-drag-txt">اسحب صورة المنتج وأفلتها هنا أو انقر لرفع ملف محلي فوري</p>
+                                            <input type="file" id="productFileInput" accept="image/*" style="display:none;">
+                                            <div id="productImagePreviewContainer" style="margin-top:15px; display:none;"><img id="productUploadedImagePreview" src="" style="max-height:110px; border-radius:10px;"></div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn-premium" style="width:100%; justify-content:center; margin-top:2rem;" id="trans-addp-submit">تأكيد وحفظ القطعة الجديدة في المخازن</button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div id="adminTab-manage-products" class="admin-subview" style="display: none;">
+                            <div class="table-viewport-card">
+                                <h3 id="trans-mgp-title">قائمة الجرد الفعلي للمخزون والكتالوج</h3>
+                                <table class="admin-table" style="margin-top:1.5rem;">
+                                    <thead><tr><th id="trans-mgp-img">الصورة</th><th id="trans-mgp-name">اسم المنتج</th><th id="trans-mgp-brand">الماركة</th><th id="trans-mgp-price">السعر الحالي</th><th id="trans-mgp-cat">الفئة الفنية</th><th id="trans-mgp-act">العمليات الإدارية</th></tr></thead>
+                                    <tbody id="adminProductsTableBody"></tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div id="adminTab-orders" class="admin-subview" style="display: none;">
+                            <div class="table-viewport-card">
+                                <div class="table-view-header">
+                                    <h3 id="trans-ords-title"><i class="fa-solid fa-folder-open" style="color:var(--accent);"></i> طلبيات وتكليفات شحن العملاء الحالية بالسيستم</h3>
+                                    <button class="btn-premium" style="padding:10px 22px; font-size:0.95rem; border-radius:12px;" onclick="admin.exportOrdersToExcel()">
+                                        <i class="fa-solid fa-file-excel"></i> <span id="trans-ords-excel-btn">تنزيل Excel للطلبات</span>
+                                    </button>
+                                </div>
+                                <table class="admin-table">
+                                    <thead>
+                                        <tr>
+                                            <th id="trans-ords-id">كود الأوردر</th>
+                                            <th id="trans-ords-client">بيانات العميل</th>
+                                            <th id="trans-ords-address">عنوان العميل</th>
+                                            <th id="trans-ords-items">المشتريات والقطع</th>
+                                            <th id="trans-ords-total">المطلوب سداده</th>
+                                            <th id="trans-ords-status">حالة الشحن</th>
+                                            <th id="trans-ords-actions">الإجراءات السريعة الفورية</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="adminOrdersTableBody"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="cart-flyout-overlay" id="cartOverlay" onclick="ui.toggleCart(false)"></div>
+    <div class="cart-flyout-panel" id="cartSidebar">
+        <div class="cart-panel-header">
+            <h2><i class="fa-solid fa-cart-shopping" style="color:var(--accent);"></i> <span id="trans-cart-title">سلة المشتريات</span></h2>
+            <button class="close-panel-trigger" onclick="ui.toggleCart(false)">&times;</button>
+        </div>
+        <div class="cart-items-scrollbox" id="cartItemsContainer"></div>
+        <div class="cart-checkout-summary">
+            <div class="summary-row-total">
+                <span id="trans-cart-total-lbl">الإجمالي:</span>
+                <span id="cartPanelTotal">0 ج.م</span>
+            </div>
+            <button class="btn-premium" style="width:100%; justify-content:center; padding:18px;" onclick="ui.goToCheckoutRoute()"><i class="fa-solid fa-credit-card"></i> <span id="trans-cart-checkout-btn">الانتقال لاستكمال الدفع والشحن</span></button>
+        </div>
+    </div>
+
+    <div class="modal-blur-window" id="quickViewModal" onclick="ui.closeQuickView(event)">
+        <div class="modal-premium-body">
+            <span class="modal-close-abs" onclick="ui.closeQuickView(null)">&times;</span>
+            <div id="quickViewModalContent"></div>
+        </div>
+    </div>
+
+    <div class="toast-system-container" id="toastContainer"></div>
+
+    <!-- SOCIAL MEDIA SHOWCASE SECTION - SIMPLIFIED -->
+    <section class="social-media-showcase" style="margin: 4rem auto; width: 94%; max-width: 1440px;">
+        <h2 class="social-showcase-title">تابعنا</h2>
+        
+        <div class="social-platform-grid">
+            <!-- TikTok -->
+            <a href="https://www.tiktok.com/@el._fahd?_r=1&_t=ZS-96V8qDBy6aL" target="_blank" class="social-platform-card" title="تابعنا على تيك توك">
+                <i class="fa-brands fa-tiktok social-platform-icon"></i>
+                <span class="social-platform-name">تيك توك</span>
+            </a>
+            
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/share/1a5dnLXJjt/?mibextid=wwXIfr" target="_blank" class="social-platform-card" title="تابعنا على فيسبوك">
+                <i class="fa-brands fa-facebook-f social-platform-icon"></i>
+                <span class="social-platform-name">فيسبوك</span>
+            </a>
+            
+            <!-- WhatsApp -->
+            <a href="https://wa.me/201273953660" target="_blank" class="social-platform-card" title="تواصل معنا عبر واتس آب">
+                <i class="fa-brands fa-whatsapp social-platform-icon"></i>
+                <span class="social-platform-name">واتساب</span>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-grid-view">
+            <div class="footer-column">
+                <h3><i class="fa-solid fa-shield-cat" style="color:var(--accent);"></i> EL FAHD AUTOMOTIVE</h3>
+                <p id="trans-foot-desc">منظومة الفهد المتكاملة لزينة كماليات وإكسسوارات السيارات الفارهة. جودة أصلية، تركيب فوري، شحن موثوق لكافة بقاع الجمهورية بضمان كامل.</p>
+                <div class="social-matrix">
+                    <a class="nav-icon-btn" href="https://www.facebook.com/share/1a5dnLXJjt/?mibextid=wwXIfr" target="_blank" title="فيسبوك"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a class="nav-icon-btn" href="https://www.tiktok.com/@el._fahd?_r=1&_t=ZS-96V8qDBy6aL" target="_blank" title="تيك توك"><i class="fa-brands fa-tiktok"></i></a>
+                    <a class="nav-icon-btn" href="https://wa.me/201273953660" target="_blank" title="واتس آب"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3><i class="fa-solid fa-bolt"></i> <span id="trans-foot-links">روابط تصفح سريعة</span></h3>
+                <ul>
+                    <li><a href="#" onclick="router.navigate('home')">الرئيسية</a></li>
+                    <li><a href="#" onclick="router.navigate('home'); window.scrollTo(0, document.getElementById('brandsSection').offsetTop - 100);">كتالوج الماركات والبراندات</a></li>
+                    <li><a href="#" onclick="ui.toggleCart(true)">سلة المشتريات والقطع</a></li>
+                    <li><a href="#" onclick="router.navigate('admin')">بوابة الإدارة المشفرة</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container bottom-credits">
+            <p>&copy; 2026 متجر الفهد لإكسسوارات السيارات الفاخرة. جميع الحقوق البرمجية والموديلات محفوظة للنظام.</p>
+        </div>
+    </footer>
+
+    <script>
+        // CLIENT STORAGE CONTROLLER (DRIVER)
+        class DatabaseDriver {
+            constructor() {
+                this.initSeedData();
+            }
+            initSeedData() {
+                if(!localStorage.getItem('fahd_brands')) {
+                    const fallbackBrands = [
+                        { id: "mercedes", name: "مرسيدس بنز Mercedes-Benz", category: "شاشات أندرويد متطورة، كماليات ألياف ضوئية Carbon Fiber", desc: "أرقى التعديلات والإكسسوارات الداخلية والخارجية المخصصة لجميع فئات سيارات النجمة الألمانية.", logo: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=300" },
+                        { id: "bmw", name: "بي ام دبليو BMW", category: "أنظمة إضاءة Ambient Lighting, شبكات تبريد رياضية M-Performance", desc: "أضف الطابع الرياضي القوي لسيارة البافارية مع إكسسوارات داخلية وخارجية أصلية.", logo: "https://images.unsplash.com/photo-1555215695-3004980ad54e?q=80&w=300" }
+                    ];
+                    this.save('brands', fallbackBrands);
+                }
+                if(!localStorage.getItem('fahd_products')) {
+                    const fallbackProducts = [
+                        { id: "p1", name: "شاشة أندرويد مرسيدس C-Class الفاخرة 12.3 بوصة", brand: "mercedes", price: 8500, oldPrice: 11000, category: "إلكترونيات", desc: "دقة 4K فائقة وجميلة، تدعم Apple CarPlay و Android Auto اللاسلكي بشكل كامل وتتوافق مع ضفيرة وسيركت السيارة الأصلية دون أي تعديل.", img: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=400" },
+                        { id: "p2", name: "نظام Ambient Light ألياف ضوئية 64 لون لسيارات BMW", brand: "bmw", price: 3400, oldPrice: 4500, category: "إضاءة", desc: "يتم التحكم الكامل بها عبر تطبيق الهاتف أو شاشة السيارة الأصلية، تمنح المقصورة فخامة سينمائية ساحرة بالظلام.", img: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=400" }
+                    ];
+                    this.save('products', fallbackProducts);
+                }
+                if(!localStorage.getItem('fahd_shipping')) {
+                    const fallbackFares = [
+                        { id: "cairo", name: "القاهرة", fee: 60 }, { id: "giza", name: "الجيزة", fee: 60 }, { id: "alex", name: "الإسكندرية", fee: 80 }, { id: "qalyubia", name: "القليوبية", fee: 70 }, { id: "sharqia", name: "الشرقية", fee: 80 }, { id: "gharbia", name: "الغربية", fee: 80 }, { id: "monufia", name: "المنوفية", fee: 80 }, { id: "beheira", name: "البحيرة", fee: 85 }, { id: "dakahlia", name: "الدقهلية", fee: 85 }, { id: "damietta", name: "دمياط", fee: 90 }, { id: "kafr_el_sheikh", name: "كفر الشيخ", fee: 90 }, { id: "port_said", name: "بورسعيد", fee: 90 }, { id: "ismailia", name: "الإسماعيلية", fee: 85 }, { id: "suez", name: "السويس", fee: 85 }, { id: "fayoum", name: "الفيوم", fee: 80 }, { id: "beni_suef", name: "بني سويف", fee: 85 }, { id: "minya", name: "المنيا", fee: 95 }, { id: "assiut", name: "أسيوط", fee: 100 }, { id: "sohag", name: "سوهاج", fee: 110 }, { id: "qena", name: "قنا", fee: 120 }, { id: "luxor", name: "الأقصر", fee: 130 }, { id: "aswan", name: "أسوان", fee: 140 }
+                    ];
+                    this.save('shipping', fallbackFares);
+                }
+                if(!localStorage.getItem('fahd_orders')) {
+                    this.save('orders', []);
+                }
+                if(!localStorage.getItem('fahd_cart')) { this.save('cart', []); }
+                if(!localStorage.getItem('fahd_wishlist')) { this.save('wishlist', []); }
+            }
+            get brands() { return JSON.parse(localStorage.getItem('fahd_brands')) || []; }
+            get products() { return JSON.parse(localStorage.getItem('fahd_products')) || []; }
+            get shipping() { return JSON.parse(localStorage.getItem('fahd_shipping')) || []; }
+            get orders() { return JSON.parse(localStorage.getItem('fahd_orders')) || []; }
+            get cart() { return JSON.parse(localStorage.getItem('fahd_cart')) || []; }
+            get wishlist() { return JSON.parse(localStorage.getItem('fahd_wishlist')) || []; }
+            save(key, val) { localStorage.setItem('fahd_' + key, JSON.stringify(val)); }
+        }
+        const db = new DatabaseDriver();
+
+        // ROUTER APP ENGINE SWITCH VIEW ROUTE LAYER
+        class RouterEngine {
+            constructor() {
+                window.addEventListener('popstate', () => this.syncRouteFromUrl());
+            }
+            navigate(routeId) {
+                document.querySelectorAll('.route-view').forEach(el => el.style.display = 'none');
+                document.querySelectorAll('header nav ul li').forEach(li => li.classList.remove('active'));
+                
+                if(routeId === 'home') {
+                    document.getElementById('view-home').style.display = 'block';
+                    document.querySelector('header nav ul li[data-target="home"]').classList.add('active');
+                } else if(routeId === 'catalog') {
+                    document.getElementById('view-catalog').style.display = 'block';
+                } else if(routeId === 'checkout') {
+                    document.getElementById('view-checkout').style.display = 'block';
+                } else if(routeId === 'admin') {
+                    document.getElementById('view-admin').style.display = 'block';
+                    document.querySelector('header nav ul li[data-target="admin"]').classList.add('active');
+                    admin.refreshDashboardState();
+                }
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+        let router;
+
+        // USER INTERFACE SCREEN GRAPHICS CORE LAYER
+        class CarAccessoriesUI {
+            constructor() {
+                this.currentBrandContext = null;
+                this.selectedShippingGovName = null;
+                this.selectedShippingGovFee = 0;
+                this.currentLang = localStorage.getItem('fahd_lang') || 'ar';
+                this.themeMode = localStorage.getItem('fahd_theme') || 'dark';
+
+                this.initFlashTimer();
+                this.initHeroCanvas();
+                this.renderBrandsGridPanel();
+                this.initSearchableGovernoratesDropdown();
+                this.updateCartCount();
+                this.applySavedThemeMode();
+                this.applySavedLanguageLayout();
+            }
+
+            // Theme Mode Controls Toggle Engine
+            toggleThemeMode() {
+                if (this.themeMode === 'dark') {
+                    this.themeMode = 'light';
+                } else {
+                    this.themeMode = 'dark';
+                }
+                localStorage.setItem('fahd_theme', this.themeMode);
+                this.applySavedThemeMode();
+                this.showToast(this.currentLang === 'ar' ? "تم تبديل وتحديث مظهر المنصة الفاخرة بنجاح" : "Theme toggled smoothly successfully!");
+            }
+            applySavedThemeMode() {
+                const btnIcon = document.querySelector('#themeModeToggler i');
+                if (this.themeMode === 'light') {
+                    document.body.classList.add('light-mode');
+                    if(btnIcon) { btnIcon.className = 'fa-solid fa-sun'; }
+                } else {
+                    document.body.classList.remove('light-mode');
+                    if(btnIcon) { btnIcon.className = 'fa-solid fa-moon'; }
+                }
+            }
+
+            // Language Dynamic Translation Machine Dictionary Matrix
+            changeLanguage(langCode) {
+                this.currentLang = langCode;
+                localStorage.setItem('fahd_lang', langCode);
+                this.applySavedLanguageLayout();
+                this.showToast(langCode === 'ar' ? "تم تحويل لغة واجهة النظام إلى العربية" : "Interface system language swapped to English");
+                if (this.currentBrandContext) {
+                    this.bootBrandCatalogView(this.currentBrandContext);
+                }
+                this.renderBrandsGridPanel();
+                if (document.getElementById('view-admin').style.display === 'block') {
+                    admin.refreshDashboardState();
+                }
+            }
+            applySavedLanguageLayout() {
+                const dictionary = {
+                    ar: {
+                        "wa-tooltip": "تواصل معنا الآن",
+                        "logo-sub": "الفهد لإكسسوارات السيارات الفاخرة",
+                        "nav-home": "الرئيسية",
+                        "nav-brands": "الماركات",
+                        "nav-admin": "الإدارة والتحكم",
+                        "hero-title": "تفرد بفخامة سيارتك مع <span>إكسسوارات الفهد</span>",
+                        "hero-desc": "الوجهة الرقمية الأولى في الشرق الأوسط لتعديل أفخم ماركات السيارات العالمية بأعلى المعايير الألمانية واليابانية.",
+                        "hero-btn": "اكتشف كتالوجات الماركات",
+                        "search-btn": "ابحث الآن",
+                        "search-input": "ابحث عن إكسسوار معين، شاشات أندرويد، أنظمة ليد...",
+                        "brands-title1": "كتالوج الماركات",
+                        "brands-title2": "العالمية المدعومة",
+                        "brands-desc": "اختر ماركة سيارتك واستكشف أرقى الإكسسوارات المصممة لها خصيصاً بمقاسات دقيقة للغاية",
+                        "faq-title1": "الأسئلة الشائعة",
+                        "faq-desc": "كل ما تود معرفته عن خدمات الفهد للشحن والدعم الفني المباشر",
+                        "faq-q1": "هل تتوفر خدمات التركيب أم شحن فقط؟",
+                        "faq-a1": "نوفر شحناً سريعاً فائق الأمان لكافة محافظات جمهورية مصر العربية مع كتالوج إرشادي مفصل وفيديوهات تركيب ودعم فني مخصص لكل قطعة.",
+                        "faq-q2": "ما هي فترات الضمان على الشاشات والأنظمة الإلكترونية؟",
+                        "faq-a2": "جميع القطع الإلكترونية وشاشات الأندرويد والليد الفاخرة مشمولة بضمان استبدال حقيقي معتمد لمدة عامين كاملين من تاريخ فاتورة الشراء الأصلية.",
+                        "catalog-back": "العودة للماركات الرئيسية",
+                        "filter-cat-lbl": "تصفية وتحديد الفئة المطلوبة",
+                        "filter-price-lbl": "الحد الأقصى للميزانية",
+                        "chk-loader-txt": "جاري تشفير وتسجيل بيانات طلبك في النظام...",
+                        "chk-form-title": "استكمال بيانات شحن وتوصيل الطلبية",
+                        "chk-name-lbl": "اسم المستلم بالكامل *",
+                        "chk-phone-lbl": "رقم الهاتف الفعال للتواصل *",
+                        "chk-gov-lbl": "المحافظة (لإصدار قيمة الشحن) *",
+                        "chk-addr-lbl": "عنوان العميل التفصيلي *",
+                        "chk-submit-btn": "تأكيد حجز الطلب وإرساله للمراجعة",
+                        "summary-title": "ملخص المشتريات",
+                        "summary-gov": "المحافظة المحددة:",
+                        "summary-fee": "تكلفة الشحن لعنوانك:",
+                        "summary-total": "الإجمالي الكلي المالي:",
+                        "adm-title": "لوحة الإدارة والمخازن",
+                        "tab-metrics": "الإحصائيات العامة",
+                        "tab-shipping": "إدارة أسعار الشحن",
+                        "tab-addbrand": "إضافة ماركة سيارات",
+                        "tab-mgbrands": "إدارة وقائمة الماركات",
+                        "tab-addprod": "إضافة منتج جديد",
+                        "tab-mgprods": "إدارة المخزون الفعلي",
+                        "tab-orders": "طلبيات شحن العملاء",
+                        "stat-rev": "إجمالي الإيرادات",
+                        "stat-orders": "طلبات الشحن النشطة",
+                        "stat-brands": "الماركات المسجلة",
+                        "stat-prods": "عدد المنتجات الفعلي",
+                        "cart-title": "سلة المشتريات",
+                        "cart-total-lbl": "الإجمالي:",
+                        "cart-checkout-btn": "الانتقال لاستكمال الدفع والشحن",
+                        "foot-desc": "منظومة الفهد المتكاملة لزينة كماليات وإكسسوارات السيارات الفارهة. جودة أصلية، تركيب فوري، شحن موثوق لكافة بقاع الجمهورية بضمان كامل.",
+                        "foot-links": "روابط تصفح سريعة"
+                    },
+                    en: {
+                        "wa-tooltip": "Connect with us now",
+                        "logo-sub": "El Fahd Luxury Car Accessories",
+                        "nav-home": "Home",
+                        "nav-brands": "Brands",
+                        "nav-admin": "Control Hub",
+                        "hero-title": "Define Elegance of Your Car with <span>El Fahd Acc</span>",
+                        "hero-desc": "The premium digital portal in the Middle East for modifying luxury automotive brands with high German & Japanese standards.",
+                        "hero-btn": "Explore Brand Catalogs",
+                        "search-btn": "Search Now",
+                        "search-input": "Search for specific accessory, android screen, led lighting systems...",
+                        "brands-title1": "Global Supported",
+                        "brands-title2": "Automotive Brands",
+                        "brands-desc": "Select your vehicle brand and browse premium parts configured accurately for its specifications.",
+                        "faq-title1": "Frequently Asked",
+                        "faq-desc": "Everything you need to know regarding logistics shipping and hardware engineering support.",
+                        "faq-q1": "Are installation services available or shipment only?",
+                        "faq-a1": "We serve express secure shipping to all Governorates with highly descriptive guides, video manual files and dedicated support.",
+                        "faq-q2": "What are the warranty durations for smart systems?",
+                        "faq-a2": "All digital android screens and premium optics include a 2-year replacement warranty verified from purchase invoice.",
+                        "catalog-back": "Return to Main Brands",
+                        "filter-cat-lbl": "Filter and Select Target Category",
+                        "filter-price-lbl": "Maximum Target Budget",
+                        "chk-loader-txt": "Encrypting and publishing order records to base cluster...",
+                        "chk-form-title": "Complete Logistics Shipping Allocation Details",
+                        "chk-name-lbl": "Full Client Recipient Name *",
+                        "chk-phone-lbl": "Active Phone Number for Call Contact *",
+                        "chk-gov-lbl": "Target Governorate (For Fares Generation) *",
+                        "chk-addr-lbl": "Full Customer Detailed Address *",
+                        "chk-submit-btn": "Confirm Order Booking and Dispatch Request",
+                        "summary-title": "Purchased Items Summary",
+                        "summary-gov": "Selected Governorate:",
+                        "summary-fee": "Logistics Freight Cost:",
+                        "summary-total": "Grand Financial Sum Total:",
+                        "adm-title": "Warehouse & Fleet Controls",
+                        "tab-metrics": "Global Overview Matrix",
+                        "tab-shipping": "Freight Charges Management",
+                        "tab-addbrand": "Create Vehicle Brand",
+                        "tab-mgbrands": "Manage Stored Brands",
+                        "tab-addprod": "Insert New Product",
+                        "tab-mgprods": "Inventory stock Control",
+                        "tab-orders": "Customer Shipping Orders",
+                        "stat-rev": "Total Revenue Balance",
+                        "stat-orders": "Active Logistics Requests",
+                        "stat-brands": "Registered Brands count",
+                        "stat-prods": "Actual Stock Pieces",
+                        "cart-title": "Your Staged Basket",
+                        "cart-total-lbl": "Subtotal Sum:",
+                        "cart-checkout-btn": "Proceed to Checkout Logistics Form",
+                        "foot-desc": "El Fahd unified environment for premium high-end auto custom accessories. Genuine parts, swift transit, and complete structural warranty coverage.",
+                        "foot-links": "Quick Core Links"
+                    }
+                };
+
+                const dataset = dictionary[this.currentLang];
+                
+                // Toggle HTML directions wrappers safely
+                if(this.currentLang === 'en') {
+                    document.body.classList.add('ltr-mode');
+                    document.documentElement.setAttribute('lang', 'en');
+                    document.documentElement.setAttribute('dir', 'ltr');
+                    document.getElementById('globalProductSearchInput').placeholder = dictionary.en["search-input"];
+                    document.getElementById('checkoutGovSearchInput').placeholder = "Type governorate name to look up...";
+                    document.getElementById('checkoutName').placeholder = "Mister / ...";
+                    document.getElementById('checkoutAddress').placeholder = "Street name, building number, floor number, landmarks...";
+                    document.getElementById('langBtnEn').classList.add('active');
+                    document.getElementById('langBtnAr').classList.remove('active');
+                } else {
+                    document.body.classList.remove('ltr-mode');
+                    document.documentElement.setAttribute('lang', 'ar');
+                    document.documentElement.setAttribute('dir', 'rtl');
+                    document.getElementById('globalProductSearchInput').placeholder = dictionary.ar["search-input"];
+                    document.getElementById('checkoutGovSearchInput').placeholder = "اكتب اسم محافظتك للبحث...";
+                    document.getElementById('checkoutName').placeholder = "الأستاذ / ...";
+                    document.getElementById('checkoutAddress').placeholder = "اسم الشارع، رقم العقار، الدور، علامة مميزة...";
+                    document.getElementById('langBtnAr').classList.add('active');
+                    document.getElementById('langBtnEn').classList.remove('active');
+                }
+
+                // Sync UI text fields dynamically
+                Object.keys(dataset).forEach(idKey => {
+                    const el = document.getElementById('trans-' + idKey);
+                    if(el) { el.innerHTML = dataset[idKey]; }
+                });
+            }
+
+            renderBrandsGridPanel() {
+                const container = document.getElementById('homeBrandsContainer');
+                container.innerHTML = '';
+                db.brands.forEach(b => {
+                    const card = document.createElement('div');
+                    card.className = 'brand-premium-card';
+                    card.onclick = () => this.bootBrandCatalogView(b.id);
+                    card.innerHTML = `
+                        <div class="brand-img-wrap"><img src="${b.logo}" alt="Logo"></div>
+                        <div class="brand-premium-meta">${this.currentLang === 'ar' ? b.name : b.id.toUpperCase() + ' Luxury Custom'}</div>
+                    `;
+                    container.appendChild(card);
+                });
+            }
+
+            bootBrandCatalogView(brandId) {
+                this.currentBrandContext = brandId;
+                const brand = db.brands.find(b => b.id === brandId);
+                if(!brand) return;
+                const bannerContainer = document.getElementById('catalogBannerPlaceholder');
+                const fallbackBanner = "https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?q=80&w=1200";
+                
+                bannerContainer.innerHTML = `
+                    <div class="catalog-header-banner" style="background-image: url('${brand.logo || fallbackBanner}');">
+                        <div class="catalog-banner-inner">
+                            <img src="${brand.logo || fallbackBanner}" class="catalog-banner-logo">
+                            <div class="catalog-banner-text">
+                                <h1>${this.currentLang === 'ar' ? 'إكسسوارات ' + brand.name : brand.id.toUpperCase() + ' Accessories'}</h1>
+                                <p>${brand.category} - ${this.currentLang === 'ar' ? 'تفضل باختيار كمالياتك الفاخرة' : 'Choose your high end components config'}</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                document.getElementById('filterCategorySelect').value = 'all';
+                document.getElementById('filterPriceRange').value = 15000;
+                document.getElementById('priceMaxLabel').innerText = '15000';
+                this.applyCatalogFilters();
+                router.navigate('catalog');
+            }
+
+            applyCatalogFilters() {
+                const category = document.getElementById('filterCategorySelect').value;
+                const priceMax = parseInt(document.getElementById('filterPriceRange').value);
+                const container = document.getElementById('catalogProductsContainer');
+                
+                let items = db.products.filter(p => p.brand === this.currentBrandContext);
+                if(category !== 'all') items = items.filter(p => p.category === category);
+                items = items.filter(p => p.price <= priceMax);
+                
+                container.innerHTML = '';
+                if(items.length === 0) {
+                    container.innerHTML = `<p style="grid-column:1/-1; text-align:center; color:var(--text-muted); padding:4rem; font-weight:700;">${this.currentLang === 'ar' ? 'لا توجد إكسسوارات متوفرة تطابق خيارات التصفية الحالية.' : 'No accessories match selection criteria.'}</p>`;
+                    return;
+                }
+                items.forEach(prod => {
+                    const isWish = db.wishlist.includes(prod.id) ? 'active' : '';
+                    const oldPriceTag = prod.oldPrice ? `<span class="old-price">${prod.oldPrice} ج.م</span>` : '';
+                    const card = document.createElement('div');
+                    card.className = 'product-premium-card';
+                    card.innerHTML = `
+                        <div class="prod-image-frame">
+                            <div class="wishlist-trigger ${isWish}" onclick="ui.toggleWishlistItem('${prod.id}', this)"><i class="fa-solid fa-heart"></i></div>
+                            <span class="prod-meta-tag">${prod.category}</span>
+                            <img src="${prod.img}">
+                        </div>
+                        <div class="prod-details-pane">
+                            <h3 class="prod-title-text">${prod.name}</h3>
+                            <p class="prod-desc-text">${prod.desc}</p>
+                            <div class="rating-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <div class="price-group">
+                                <span class="current-price">${prod.price} ج.م</span>
+                                ${oldPriceTag}
+                            </div>
+                            <div class="action-button-group">
+                                <button class="btn-card-action btn-cart-add" onclick="ui.addProductToCart('${prod.id}')"><i class="fa-solid fa-cart-plus"></i> ${this.currentLang === 'ar' ? 'إضافة للسلة' : 'Add to Cart'}</button>
+                                <button class="btn-card-action btn-quick-view" onclick="ui.launchQuickView('${prod.id}')"><i class="fa-solid fa-eye"></i> ${this.currentLang === 'ar' ? 'عـرض' : 'View'}</button>
+                            </div>
+                        </div>
+                    `;
+                    container.appendChild(card);
+                });
+            }
+
+            triggerLiveSearch(val) {
+                const searchVal = val.toLowerCase().trim();
+                if(searchVal.length === 0) return;
+                const container = document.getElementById('catalogProductsContainer');
+                let matches = db.products.filter(p => p.name.toLowerCase().includes(searchVal) || p.desc.toLowerCase().includes(searchVal));
+                
+                this.currentBrandContext = "search_context";
+                const bannerContainer = document.getElementById('catalogBannerPlaceholder');
+                bannerContainer.innerHTML = `
+                    <div class="catalog-header-banner" style="background-image: url('https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?q=80&w=1200');">
+                        <div class="catalog-banner-inner">
+                            <div class="catalog-banner-text">
+                                <h1>${this.currentLang === 'ar' ? 'نتائج البحث عن : ' + val : 'Search Results for: ' + val}</h1>
+                                <p>${matches.length} ${this.currentLang === 'ar' ? 'قطعة إكسسوار متوفرة بالسيستم حالياً' : 'matching accessories verified'}</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.innerHTML = '';
+                if(matches.length === 0) {
+                    container.innerHTML = `<p style="grid-column:1/-1; text-align:center; color:var(--text-muted); padding:4rem; font-weight:700;">لا توجد نتائج تطابق بحثك</p>`;
+                } else {
+                    matches.forEach(prod => {
+                        const isWish = db.wishlist.includes(prod.id) ? 'active' : '';
+                        const card = document.createElement('div');
+                        card.className = 'product-premium-card';
+                        card.innerHTML = `
+                            <div class="prod-image-frame"><img src="${prod.img}"></div>
+                            <div class="prod-details-pane">
+                                <h3 class="prod-title-text">${prod.name}</h3>
+                                <p class="prod-desc-text">${prod.desc}</p>
+                                <div class="price-group"><span class="current-price">${prod.price} ج.م</span></div>
+                                <div class="action-button-group">
+                                    <button class="btn-card-action btn-cart-add" onclick="ui.addProductToCart('${prod.id}')"><i class="fa-solid fa-cart-plus"></i> إضافة للسلة</button>
+                                    <button class="btn-card-action btn-quick-view" onclick="ui.launchQuickView('${prod.id}')"><i class="fa-solid fa-eye"></i> عرض</button>
+                                </div>
+                            </div>
+                        `;
+                        container.appendChild(card);
+                    });
+                }
+                router.navigate('catalog');
+            }
+            executeSearchButton() {
+                const val = document.getElementById('globalProductSearchInput').value;
+                this.triggerLiveSearch(val);
+            }
+
+            toggleCart(open) {
+                const sidebar = document.getElementById('cartSidebar');
+                const overlay = document.getElementById('cartOverlay');
+                if(open) {
+                    this.renderCartItems();
+                    sidebar.classList.add('active');
+                    overlay.style.display = 'block';
+                } else {
+                    sidebar.classList.remove('active');
+                    overlay.style.display = 'none';
+                }
+            }
+            renderCartItems() {
+                const container = document.getElementById('cartItemsContainer');
+                container.innerHTML = '';
+                let total = 0;
+                db.cart.forEach(cartItem => {
+                    const prod = db.products.find(p => p.id === cartItem.id);
+                    if(!prod) return;
+                    total += (prod.price * cartItem.qty);
+                    const row = document.createElement('div');
+                    row.className = 'cart-hardware-row';
+                    row.innerHTML = `
+                        <img src="${prod.img}" class="cart-row-img">
+                        <div class="cart-row-meta">
+                            <h4>${prod.name}</h4><p>${prod.price} ج.م</p>
+                            <div class="cart-row-qty-ctrl">
+                                <button class="qty-adjust-btn" onclick="ui.mutateQty('${prod.id}', -1)">-</button>
+                                <span>${cartItem.qty}</span>
+                                <button class="qty-adjust-btn" onclick="ui.mutateQty('${prod.id}', 1)">+</button>
+                            </div>
+                        </div>
+                        <button class="cart-row-delete" onclick="ui.mutateQty('${prod.id}', -999)"><i class="fa-solid fa-trash-can"></i></button>
+                    `;
+                    container.appendChild(row);
+                });
+                document.getElementById('cartPanelTotal').innerText = `${total} ج.م`;
+            }
+            addProductToCart(id) {
+                let cart = db.cart;
+                const match = cart.find(c => c.id === id);
+                if(match) match.qty += 1; else cart.push({ id: id, qty: 1 });
+                db.save('cart', cart);
+                this.updateCartCount();
+                this.showToast(this.currentLang === 'ar' ? "تم بنجاح إدراج القطعة وتحديث سلة المشتريات فورا" : "Item bundled to cart layout!");
+            }
+            mutateQty(id, delta) {
+                let cart = db.cart;
+                const match = cart.find(c => c.id === id);
+                if(match) {
+                    match.qty += delta;
+                    if(match.qty <= 0 || delta === -999) cart = cart.filter(c => c.id !== id);
+                }
+                db.save('cart', cart);
+                this.updateCartCount();
+                this.renderCartItems();
+            }
+            updateCartCount() {
+                let cnt = 0;
+                db.cart.forEach(c => cnt += c.qty);
+                const badge = document.getElementById('globalCartCount');
+                if(badge) badge.innerText = cnt;
+            }
+
+            initSearchableGovernoratesDropdown() {
+                const list = document.getElementById('checkoutGovDropdownList');
+                if(!list) return;
+                list.innerHTML = '';
+                db.shipping.forEach(gov => {
+                    const li = document.createElement('li');
+                    li.innerText = gov.name;
+                    li.onclick = () => {
+                        this.selectedShippingGovName = gov.name;
+                        this.selectedShippingGovFee = gov.fee;
+                        document.getElementById('checkoutGovSearchInput').value = gov.name;
+                        list.style.display = 'none';
+                        this.updateCheckoutBillCalculationSummary();
+                    };
+                    list.appendChild(li);
+                });
+                document.addEventListener('click', (e) => {
+                    if(!e.target.closest('.searchable-select-wrapper')) list.style.display = 'none';
+                });
+            }
+            filterGovDropdown() {
+                const input = document.getElementById('checkoutGovSearchInput');
+                const filter = input.value.trim().toLowerCase();
+                const list = document.getElementById('checkoutGovDropdownList');
+                const rows = list.getElementsByTagName('li');
+                list.style.display = 'block';
+                for(let i=0; i<rows.length; i++) {
+                    let txt = rows[i].innerText || rows[i].textContent;
+                    if(txt.toLowerCase().indexOf(filter) > -1) rows[i].style.display = ""; else rows[i].style.display = "none";
+                }
+            }
+
+            goToCheckoutRoute() {
+                if(db.cart.length === 0) { this.showToast('سلة المشتريات فارغة تماما!'); return; }
+                this.toggleCart(false);
+                this.updateCheckoutBillCalculationSummary();
+                router.navigate('checkout');
+            }
+            updateCheckoutBillCalculationSummary() {
+                const container = document.getElementById('checkoutOrderItemsList');
+                container.innerHTML = '';
+                let productsSubtotal = 0;
+                
+                db.cart.forEach(c => {
+                    const p = db.products.find(prod => prod.id === c.id);
+                    if(p) {
+                        productsSubtotal += (p.price * c.qty);
+                        const itemRow = document.createElement('div');
+                        itemRow.style = "display:flex; justify-content:space-between; font-size:0.95rem; background:rgba(255,255,255,0.02); padding:10px; border-radius:8px;";
+                        itemRow.innerHTML = `<span>${p.name} <strong>(×${c.qty})</strong></span> <span>${p.price * c.qty} ج.م</span>`;
+                        container.appendChild(itemRow);
+                    }
+                });
+                if(this.selectedShippingGovName) {
+                    document.getElementById('checkoutSelectedGovLabel').innerText = this.selectedShippingGovName;
+                    document.getElementById('checkoutShippingCostLabel').innerText = `${this.selectedShippingGovFee} ج.م`;
+                    document.getElementById('checkoutSummaryTotal').innerText = `${productsSubtotal + this.selectedShippingGovFee} ج.م`;
+                } else {
+                    document.getElementById('checkoutSelectedGovLabel').innerText = this.currentLang === 'ar' ? "لم تحدد" : "Not Selected";
+                    document.getElementById('checkoutShippingCostLabel').innerText = `0 ج.م`;
+                    document.getElementById('checkoutSummaryTotal').innerText = `${productsSubtotal} ج.م`;
+                }
+            }
+
+            handleCheckoutSubmit(e) {
+                e.preventDefault();
+                if(!this.selectedShippingGovName || document.getElementById('checkoutGovSearchInput').value !== this.selectedShippingGovName) {
+                    this.showToast('يرجى تحديد المحافظة بشكل صحيح من القائمة المنسدلة للبحث!');
+                    return;
+                }
+                const name = document.getElementById('checkoutName').value.trim();
+                const phone = document.getElementById('checkoutPhone').value.trim();
+                const address = document.getElementById('checkoutAddress').value.trim();
+                const loader = document.getElementById('checkoutSubmissionLoader');
+                
+                loader.style.display = 'flex';
+                setTimeout(() => {
+                    loader.style.display = 'none';
+                    let orders = db.orders;
+                    let productsSubtotal = 0;
+                    db.cart.forEach(c => {
+                        const p = db.products.find(prod => prod.id === c.id);
+                        if(p) productsSubtotal += (p.price * c.qty);
+                    });
+                    const grandFinalTotal = productsSubtotal + this.selectedShippingGovFee;
+                    const orderId = 'FAHD-' + Math.floor(100000 + Math.random() * 900000);
+                    
+                    const orderObj = {
+                        id: orderId,
+                        name: name,
+                        phone: phone,
+                        gov: this.selectedShippingGovName,
+                        address: address, // Saved successfully inside core database storage structure
+                        items: db.cart,
+                        total: grandFinalTotal,
+                        status: 'قيد المراجعة الفنية',
+                        date: new Date().toLocaleDateString('ar-EG')
+                    };
+                    orders.push(orderObj);
+                    db.save('orders', orders);
+                    db.save('cart', []);
+                    this.updateCartCount();
+                    document.getElementById('checkoutForm').reset();
+                    this.selectedShippingGovName = null;
+                    
+                    const finalMsg = this.currentLang === 'ar' 
+                        ? `تم تسجيل طلبك بنجاح بكود: ${orderId} - سنتواصل معك فوراً!` 
+                        : `Order registered under code: ${orderId}`;
+                    alert(finalMsg);
+                    router.navigate('home');
+                }, 1500);
+            }
+
+            launchQuickView(id) {
+                const prod = db.products.find(p => p.id === id);
+                if(!prod) return;
+                const windowContent = document.getElementById('quickViewModalContent');
+                windowContent.innerHTML = `
+                    <div style="display:grid; grid-template-columns:1fr 1.2fr; gap:2.5rem; margin-top:1.5rem; flex-wrap:wrap;">
+                        <div style="background:#fff; border-radius:14px; padding:20px; display:flex; align-items:center; justify-content:center;"><img src="${prod.img}" style="max-width:100%; max-height:280px; object-fit:contain;"></div>
+                        <div>
+                            <h2 style="font-size:2rem; font-weight:900; color:#fff; margin-bottom:1rem;">${prod.name}</h2>
+                            <p style="color:var(--text-muted); font-size:1.05rem; margin-bottom:1.5rem; line-height:1.7;">${prod.desc}</p>
+                            <div style="font-size:2.2rem; font-weight:900; color:var(--accent); margin-bottom:2rem;">${prod.price} ج.م</div>
+                            <button class="btn-premium" style="width:100%; justify-content:center;" onclick="ui.addProductToCart('${prod.id}'); ui.closeQuickView(null);"><i class="fa-solid fa-cart-plus"></i> إضافة فورا لطلب الشحن</button>
+                        </div>
+                    </div>
+                `;
+                document.getElementById('quickViewModal').style.display = 'flex';
+            }
+            closeQuickView(e) {
+                if(!e || e.target.id === 'quickViewModal' || e.target.className === 'modal-close-abs') {
+                    document.getElementById('quickViewModal').style.display = 'none';
+                }
+            }
+
+            toggleWishlistItem(id, btnEl) {
+                let wish = db.wishlist;
+                if(wish.includes(id)) {
+                    wish = wish.filter(i => i !== id);
+                    btnEl.classList.remove('active');
+                    this.showToast('تمت الإزالة من المفضلة');
+                } else {
+                    wish.push(id);
+                    btnEl.classList.add('active');
+                    this.showToast('تمت الإضافة للمفضلة اللامعة للقطع');
+                }
+                db.save('wishlist', wish);
+            }
+
+            toggleFaq(headerEl) { headerEl.parentElement.classList.toggle('active'); }
+            showToast(msg) {
+                const container = document.getElementById('toastContainer');
+                const t = document.createElement('div');
+                t.className = 'toast-notification';
+                t.innerHTML = `<i class="fa-solid fa-circle-info" style="color:var(--accent);"></i> <span>${msg}</span>`;
+                container.appendChild(t);
+                setTimeout(() => { t.style.opacity = '0'; setTimeout(() => t.remove(), 400); }, 3500);
+            }
+
+            initFlashTimer() {
+                let duration = 4 * 3600 + 15 * 60;
+                setInterval(() => {
+                    duration--; if(duration <= 0) duration = 4 * 3600;
+                    const h = String(Math.floor(duration / 3600)).padStart(2, '0');
+                    const m = String(Math.floor((duration % 3600) / 60)).padStart(2, '0');
+                    const s = String(duration % 60).padStart(2, '0');
+                    const el = document.getElementById('flashTimer');
+                    if(el) el.innerText = `${h}:${m}:${s}`;
+                }, 1000);
+            }
+            initHeroCanvas() {
+                const canvas = document.getElementById('heroParticles'); if(!canvas) return;
+                const ctx = canvas.getContext('2d'); let pts = [];
+                const resize = () => { canvas.width = canvas.parentElement.offsetWidth; canvas.height = canvas.parentElement.offsetHeight; };
+                window.addEventListener('resize', resize); resize();
+                for(let i=0; i<45; i++) pts.push({ x: Math.random()*canvas.width, y: Math.random()*canvas.height, r: Math.random()*2+1, d: Math.random()*0.5+0.2 });
+                const draw = () => {
+                    ctx.clearRect(0,0,canvas.width,canvas.height); ctx.fillStyle = 'rgba(244,162,97,0.3)';
+                    pts.forEach(p => { ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI*2); ctx.fill(); p.y -= p.d; if(p.y < 0) p.y = canvas.height; });
+                    requestAnimationFrame(draw);
+                }; draw();
+            }
+        }
+        let ui;
+
+        // EXECUTIVE PORTAL ROOT BACKEND ADMIN PANEL OPERATIONS CONTROLLER
+        class AdminDashboardControl {
+            constructor() {
+                this.temporaryBrandLogoBase64 = null;
+                this.temporaryProductImageBase64 = null;
+                this.initDragAndDropUploaderBinders();
+            }
+
+            switchTab(tabId) {
+                document.querySelectorAll('.admin-subview').forEach(el => el.style.display = 'none');
+                document.querySelectorAll('.admin-sidebar-link').forEach(lk => lk.classList.remove('active'));
+                document.getElementById('adminTab-' + tabId).style.display = 'block';
+                document.getElementById('link-' + tabId).classList.add('active');
+                
+                if(tabId === 'shipping-settings') this.renderShippingFaresManagementTable();
+                if(tabId === 'add-product') this.syncBrandsSelectorDropdownOptions();
+            }
+
+            refreshDashboardState() {
+                let rev = 0;
+                db.orders.forEach(o => { if(o.status === 'تم الشحن' || o.status.includes('تأكيد')) rev += o.total; });
+                document.getElementById('statTotalRevenue').innerText = `${rev} ج.م`;
+                document.getElementById('statTotalOrders').innerText = db.orders.length;
+                document.getElementById('statTotalBrands').innerText = db.brands.length;
+                document.getElementById('statTotalProducts').innerText = db.products.length;
+                this.renderBrandsTable();
+                this.renderProductsTable();
+                this.renderOrdersTable();
+            }
+
+            renderShippingFaresManagementTable() {
+                const tbody = document.getElementById('adminShippingTableBody'); if(!tbody) return;
+                tbody.innerHTML = '';
+                db.shipping.forEach(gov => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td><strong>${gov.name}</strong></td>
+                        <td><input type="number" id="inputFare-${gov.id}" value="${gov.fee}" style="background:var(--primary); border:1px solid var(--border-glass); padding:8px 12px; border-radius:6px; color:#fff; width:120px;"></td>
+                        <td><button class="btn-premium" style="padding:6px 14px; font-size:0.85rem; border-radius:8px;" onclick="admin.saveSingleGovShippingFare('${gov.id}')"><i class="fa-solid fa-floppy-disk"></i> حفظ </button></td>
+                    `;
+                    tbody.appendChild(tr);
+                });
+            }
+            saveSingleGovShippingFare(govId) {
+                const inputVal = parseInt(document.getElementById(`inputFare-${govId}`).value);
+                let list = db.shipping; const match = list.find(g => g.id === govId);
+                if(match) { match.fee = inputVal; db.save('shipping', list); ui.showToast(`تم تحديث سعر شحن محافظة ${match.name}`); ui.initSearchableGovernoratesDropdown(); }
+            }
+
+            renderBrandsTable() {
+                const tbody = document.getElementById('adminBrandsTableBody'); tbody.innerHTML = '';
+                db.brands.forEach(b => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td><img src="${b.logo}" style="width:45px; height:45px; border-radius:8px; object-fit:cover;"></td>
+                        <td><strong>${b.name}</strong></td><td><span style="color:var(--accent); font-weight:700;">${b.category}</span></td>
+                        <td>
+                            <div style="display:flex; gap:10px;">
+                                <button class="row-action-btn" style="color:#e2e8f0;" onclick="admin.triggerBrandEdit('${b.id}')"><i class="fa-solid fa-pen-to-square"></i></button>
+                                <button class="row-action-btn" style="color:var(--accent-dark);" onclick="admin.deleteCarBrand('${b.id}')"><i class="fa-solid fa-trash-can"></i></button>
+                            </div>
+                        </td>
+                    `;
+                    tbody.appendChild(tr);
+                });
+            }
+
+            renderProductsTable() {
+                const tbody = document.getElementById('adminProductsTableBody'); tbody.innerHTML = '';
+                db.products.forEach(p => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td><img src="${p.img}" style="width:45px; height:45px; border-radius:8px; object-fit:cover; background:#fff;"></td>
+                        <td><strong>${p.name}</strong></td><td><span style="background:rgba(255,255,255,0.05); padding:4px 10px; border-radius:6px;">${p.brand}</span></td>
+                        <td><strong style="color:var(--accent);">${p.price} ج.م</strong></td><td>${p.category}</td>
+                        <td><button class="row-action-btn" style="color:var(--accent-dark);" onclick="admin.deleteProduct('${p.id}')"><i class="fa-solid fa-trash-can"></i></button></td>
+                    `;
+                    tbody.appendChild(tr);
+                });
+            }
+
+            // ADVANCED SHIPPING ORDERS DATATABLE CONTEXT RENDERING ENGINE (UPGRADED)
+            renderOrdersTable() {
+                const oBody = document.getElementById('adminOrdersTableBody'); 
+                if(!oBody) return;
+                oBody.innerHTML = '';
+                
+                db.orders.forEach(o => {
+                    let itemsDescriptions = [];
+                    if (Array.isArray(o.items)) {
+                        o.items.forEach(c => {
+                            const p = db.products.find(prod => prod.id === c.id);
+                            if (p) {
+                                itemsDescriptions.push(`<div style="font-size:0.85rem; margin-bottom:3px; color:var(--text-light);"><i class="fa-solid fa-circle-dot" style="font-size:8px; color:var(--accent);"></i> ${p.name} <strong style="color:var(--accent);">(×${c.qty})</strong></div>`);
+                            }
+                        });
+                    }
+
+                    const tr = document.createElement('tr');
+                    tr.id = `order-row-${o.id}`;
+                    tr.innerHTML = `
+                        <td><strong style="color:var(--accent); font-family:monospace; font-size:1.1rem;">${o.id}</strong></td>
+                        <td>
+                            <div style="font-weight:800; color:#fff;">${o.name}</div>
+                            <div style="font-size:0.9rem; color:var(--text-muted); margin-top:3px;"><i class="fa-solid fa-phone"></i> ${o.phone}</div>
+                            <div style="font-size:0.8rem; color:var(--text-muted);"><i class="fa-solid fa-calendar-days"></i> ${o.date || '2026/05/19'}</div>
+                        </td>
+                        <td>
+                            <div style="background:rgba(255,255,255,0.03); padding:8px 12px; border-radius:8px; border:1px solid var(--border-glass); max-width:240px; font-size:0.9rem; line-height:1.4;">
+                                <strong>${o.gov}</strong> - ${o.address || 'لم يتم تقديم تفاصيل العنوان'}
+                            </div>
+                        </td>
+                        <td><div style="max-height:90px; overflow-y:auto; padding-right:5px;">${itemsDescriptions.join('')}</div></td>
+                        <td><strong style="color:var(--accent); font-size:1.15rem;">${o.total} ج.م</strong></td>
+                        <td>
+                            <span id="order-status-badge-${o.id}" style="padding:6px 14px; border-radius:30px; font-size:0.85rem; font-weight:800; display:inline-block; 
+                                ${o.status === 'تم الشحن' ? 'background:rgba(37,211,102,0.15); color:#25D366; border:1px solid #25D366;' : 'background:rgba(244,162,97,0.1); color:var(--accent); border:1px solid var(--accent);'}">
+                                ${o.status}
+                            </span>
+                        </td>
+                        <td>
+                            <div style="display:flex; flex-direction:column; gap:8px; max-width:160px;">
+                                <button class="btn-premium" style="padding:8px 14px; font-size:0.85rem; border-radius:8px; background:linear-gradient(135deg, #25D366 0%, #128C7E 100%); color:#fff; font-weight:700; white-space:nowrap;" onclick="admin.markOrderAsShipped('${o.id}')">
+                                    <i class="fa-solid fa-truck-fast"></i> تم الشحن
+                                </button>
+                                <button class="btn-premium" style="padding:8px 14px; font-size:0.85rem; border-radius:8px; background:rgba(231,111,81,0.15); border:1px solid rgba(231,111,81,0.3); color:var(--accent-dark); font-weight:700; white-space:nowrap;" onclick="admin.deleteSingleOrder('${o.id}')">
+                                    <i class="fa-solid fa-trash-can"></i> مسح الأوردر
+                                </button>
+                            </div>
+                        </td>
+                    `;
+                    oBody.appendChild(tr);
+                });
+            }
+
+            // Instant status alteration without general layout reload sequence
+            markOrderAsShipped(orderId) {
+                let orders = db.orders;
+                const match = orders.find(o => o.id === orderId);
+                if (match) {
+                    match.status = 'تم الشحن';
+                    db.save('orders', orders);
+                    
+                    // Direct targeting interface update layer instantly
+                    const statusBadge = document.getElementById(`order-status-badge-${orderId}`);
+                    if (statusBadge) {
+                        statusBadge.innerText = 'تم الشحن';
+                        statusBadge.style = "padding:6px 14px; border-radius:30px; font-size:0.85rem; font-weight:800; display:inline-block; background:rgba(37,211,102,0.15); color:#25D366; border:1px solid #25D366;";
+                    }
+                    ui.showToast(`تمت عملية تعديل حالة الشحن للأوردر ${orderId} إلى تم الشحن فورياً!`);
+                    
+                    // Soft recalculation engine update without flickering viewport views
+                    let rev = 0;
+                    db.orders.forEach(o => { if(o.status === 'تم الشحن' || o.status.includes('تأكيد')) rev += o.total; });
+                    document.getElementById('statTotalRevenue').innerText = `${rev} ج.م`;
+                }
+            }
+
+            // Permanent order row erasure with custom visual verification popup
+            deleteSingleOrder(orderId) {
+                const verification = confirm(`تنبيه أمني هام:\nهل أنت متأكد تماماً من رغبتك في حذف الأوردر رقم (${orderId}) نهائياً من قاعدة البيانات وجداول الشحن؟ لا يمكن التراجع عن هذا الإجراء!`);
+                if (verification) {
+                    let orders = db.orders;
+                    orders = orders.filter(o => o.id !== orderId);
+                    db.save('orders', orders);
+                    
+                    // Directly animate row erasure seamlessly from viewport layout context
+                    const targetRow = document.getElementById(`order-row-${orderId}`);
+                    if (targetRow) {
+                        targetRow.style.transition = "all 0.4s ease";
+                        targetRow.style.opacity = "0";
+                        targetRow.style.transform = "translateX(-50px)";
+                        setTimeout(() => {
+                            targetRow.remove();
+                            // Soft recalculate active numbers state tracking metrics
+                            document.getElementById('statTotalOrders').innerText = db.orders.length;
+                            let rev = 0;
+                            db.orders.forEach(o => { if(o.status === 'تم الشحن' || o.status.includes('تأكيد')) rev += o.total; });
+                            document.getElementById('statTotalRevenue').innerText = `${rev} ج.م`;
+                        }, 400);
+                    }
+                    ui.showToast(`تم مسح وإلغاء الأوردر ${orderId} بشكل نهائي تام من قواعد البيانات.`);
+                }
+            }
+
+            // PROFESSIONAL EXCEL CSV EXPORT AUTOMATION MODULATED CONTROLLER
+            exportOrdersToExcel() {
+                // Construct structural columns matrix according to direct requirements payload
+                let csvContent = 'اسم العميل,رقم الهاتف,عنوان العميل,المنتجات,الكمية,السعر,حالة الشحن,تاريخ الطلب\n';
+                
+                db.orders.forEach(o => {
+                    let itemsNames = [];
+                    let itemsQty = [];
+                    
+                    if (Array.isArray(o.items)) {
+                        o.items.forEach(c => {
+                            const p = db.products.find(prod => prod.id === c.id);
+                            if (p) {
+                                itemsNames.push(p.name.replace(/"/g, '""')); // Escape quotes inside values safely
+                                itemsQty.push(c.qty);
+                            }
+                        });
+                    }
+                    
+                    const clientName = `"${o.name ? o.name.replace(/"/g, '""') : ''}"`;
+                    const clientPhone = `"${o.phone || ''}"`;
+                    // Full combined detailed spatial parameters address storage mapping string representation
+                    const fullAddressValue = `"${o.gov || ''} - ${o.address ? o.address.replace(/"/g, '""') : ''}"`;
+                    const productStringRepresentation = `"${itemsNames.join(' | ')}"`;
+                    const totalQtyRepresentation = `"${itemsQty.join(' | ')}"`;
+                    const financialCostValue = `${o.total || 0}`;
+                    const shippingStatusLabel = `"${o.status || ''}"`;
+                    const orderDateTimestamp = `"${o.date || '2026/05/19'}"`;
+                    
+                    csvContent += `${clientName},${clientPhone},${fullAddressValue},${productStringRepresentation},${totalQtyRepresentation},${financialCostValue},${shippingStatusLabel},${orderDateTimestamp}\n`;
+                });
+                
+                // Inject UTF-8 structural encoding BOM to preserve full detailed Arabic letters styling layout
+                const blob = new Blob([new Uint8Array([0xEF, 0xBB, 0xBF]), csvContent], { type: 'text/csv;charset=utf-8;' });
+                const virtualLink = document.createElement('a');
+                const resourceUrl = URL.createObjectURL(blob);
+                
+                virtualLink.setAttribute('href', resourceUrl);
+                virtualLink.setAttribute('download', `Fahd_Automotive_FleetOrders_2026.csv`);
+                document.body.appendChild(virtualLink);
+                virtualLink.click();
+                document.body.removeChild(virtualLink);
+                
+                ui.showToast('تم استخراج ملف إكسيل الشحن وجاري التحميل التلقائي...');
+            }
+
+            syncBrandsSelectorDropdownOptions() {
+                const select = document.getElementById('newProdBrandSelect'); select.innerHTML = '';
+                db.brands.forEach(b => { const opt = document.createElement('option'); opt.value = b.id; opt.innerText = b.name; select.appendChild(opt); });
+            }
+
+            initDragAndDropUploaderBinders() {
+                ['brandDragDropZone', 'productDragDropZone'].forEach(zoneId => {
+                    const zone = document.getElementById(zoneId); if(!zone) return;
+                    const input = zone.querySelector('input[type="file"]');
+                    zone.onclick = () => input.click();
+                    zone.addEventListener('dragover', (e) => { e.preventDefault(); zone.classList.add('dragover'); });
+                    zone.addEventListener('dragleave', () => zone.classList.remove('dragover'));
+                    zone.addEventListener('drop', (e) => {
+                        e.preventDefault(); zone.classList.remove('dragover');
+                        if(e.dataTransfer.files.length) { input.files = e.dataTransfer.files; this.processLocalImageFileToBase64(input.files[0], zoneId); }
+                    });
+                    input.onchange = () => { if(input.files.length) this.processLocalImageFileToBase64(input.files[0], zoneId); };
+                });
+            }
+            processLocalImageFileToBase64(file, zoneId) {
+                const reader = new FileReader(); reader.readAsDataURL(file);
+                reader.onload = () => {
+                    if(zoneId === 'brandDragDropZone') {
+                        this.temporaryBrandLogoBase64 = reader.result;
+                        const img = document.getElementById('brandUploadedImagePreview'); img.src = reader.result;
+                        document.getElementById('brandImagePreviewContainer').style.display = 'block';
+                    } else {
+                        this.temporaryProductImageBase64 = reader.result;
+                        const img = document.getElementById('productUploadedImagePreview'); img.src = reader.result;
+                        document.getElementById('productImagePreviewContainer').style.display = 'block';
+                    }
+                };
+            }
+
+            handleBrandFormSubmit(e) {
+                e.preventDefault();
+                const bId = document.getElementById('editBrandId').value.trim() || 'bnd-' + Math.floor(10000 + Math.random() * 90000);
+                const name = document.getElementById('newBrandName').value.trim();
+                const cat = document.getElementById('newBrandCategory').value.trim();
+                const desc = document.getElementById('newBrandDesc').value.trim();
+                const logo = this.temporaryBrandLogoBase64 || "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=300";
+                
+                let brands = db.brands; const existingIdx = brands.findIndex(b => b.id === bId);
+                const brandObj = { id: bId, name: name, category: cat, desc: desc, logo: logo };
+                if(existingIdx > -1) brands[existingIdx] = brandObj; else brands.push(brandObj);
+                
+                db.save('brands', brands); this.resetBrandForm();
+                ui.showToast('تم حفظ وتحديث الماركة بنجاح بالكتالوج الفعلي');
+                this.refreshDashboardState(); ui.renderBrandsGridPanel();
+            }
+            triggerBrandEdit(id) {
+                const b = db.brands.find(brand => brand.id === id); if(!b) return;
+                document.getElementById('editBrandId').value = b.id;
+                document.getElementById('newBrandName').value = b.name;
+                document.getElementById('newBrandCategory').value = b.category;
+                document.getElementById('newBrandDesc').value = b.desc;
+                this.temporaryBrandLogoBase64 = b.logo;
+                document.getElementById('brandUploadedImagePreview').src = b.logo;
+                document.getElementById('brandImagePreviewContainer').style.display = 'block';
+                document.getElementById('brandFormTitle').innerText = "تعديل خيارات وبيانات الماركة النشطة";
+                this.switchTab('add-brand');
+            }
+            resetBrandForm() {
+                document.getElementById('brandCreationForm').reset();
+                document.getElementById('brandFormTitle').innerText = "إضافة علامة تجارية (ماركة سيارات) جديدة في الكتالوج";
+                document.getElementById('editBrandId').value = ''; this.temporaryBrandLogoBase64 = null;
+                document.getElementById('brandImagePreviewContainer').style.display = 'none';
+            }
+            deleteCarBrand(id) {
+                if(confirm('تحذير: مسح الماركة سيؤدي إلى إخفائها من الواجهة ولكن المنتجات ستبقى محفوظة. هل تود الاستمرار الفوري؟')) {
+                    let brands = db.brands.filter(b => b.id !== id); db.save('brands', brands);
+                    ui.showToast('تم مسح العلامة بنجاح من قائمة الواجهة المعروضة للمستخدمين');
+                    this.refreshDashboardState(); ui.renderBrandsGridPanel();
+                }
+            }
+
+            handleProductFormSubmit(e) {
+                e.preventDefault();
+                const pId = 'prod-' + Math.floor(100000 + Math.random() * 900000);
+                const name = document.getElementById('newProdName').value.trim();
+                const brand = document.getElementById('newProdBrandSelect').value;
+                const price = parseInt(document.getElementById('newProdPrice').value);
+                const oldPrice = parseInt(document.getElementById('newProdOldPrice').value) || null;
+                const cat = document.getElementById('newProdCategory').value;
+                const desc = document.getElementById('newProdDesc').value.trim();
+                const img = this.temporaryProductImageBase64 || "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=400";
+                
+                const pObj = { id: pId, name: name, brand: brand, price: price, oldPrice: oldPrice, category: cat, desc: desc, img: img };
+                let prods = db.products; prods.push(pObj); db.save('products', prods);
+                document.getElementById('productCreationForm').reset(); this.temporaryProductImageBase64 = null;
+                document.getElementById('productImagePreviewContainer').style.display = 'none';
+                ui.showToast('تم بنجاح إدراج الأكسسوار وحفظه بالكامل في الكتالوج العام للموقع');
+                this.refreshDashboardState();
+            }
+            deleteProduct(id) {
+                if(confirm('هل أنت متأكد من رغبتك في حذف هذا المنتج وإزالته نهائياً من العرض والجرد؟')) {
+                    let prods = db.products.filter(p => p.id !== id); db.save('products', prods);
+                    ui.showToast('تم بنجاح حذف وإقصاء القطعة بالكامل من المخزون والكتالوج العام للموقع');
+                    this.refreshDashboardState();
+                }
+            }
+        }
+        let admin;
+
+        // PLATFORM INITIALIZER EXECUTOR ON FULL SYSTEM LOAD
+        document.addEventListener('DOMContentLoaded', () => {
+            router = new RouterEngine();
+            ui = new CarAccessoriesUI();
+            admin = new AdminDashboardControl();
+
+            // Progress tracking layer synchronizer
+            window.addEventListener('scroll', () => {
+                const scrollableHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const progressRatio = (window.scrollY / scrollableHeight);
+                document.getElementById("progressBar").style.transform = `scaleX(${progressRatio})`;
+            });
+        });
+    </script>
+</body>
+</html>
+
+```
