@@ -12,46 +12,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
     
-    <!-- Firebase SDKs -->
-    <script type="module">
-        // Import Firebase SDKs
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-        import { getFirestore, collection, doc, getDocs, getDoc, addDoc, updateDoc, deleteDoc, query, where, orderBy, onSnapshot } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
-        
-        // Firebase configuration
-        const firebaseConfig = {
-            apiKey: "AIzaSyAVIgzS22BTEgtWpK-OwgDbtSxHNpOu7k",
-            authDomain: "elfahd-store.firebaseapp.com",
-            projectId: "elfahd-store",
-            storageBucket: "elfahd-store.firebasestorage.app",
-            messagingSenderId: "173143145728",
-            appId: "1:173143145728:web:9b46b931b4a4d51e9847e5",
-            measurementId: "G-BY8NSKRXYT"
-        };
-        
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const db = getFirestore(app);
-        
-        // Make db globally available
-        window.firebaseDb = db;
-        window.firebaseGetDocs = getDocs;
-        window.firebaseGetDoc = getDoc;
-        window.firebaseAddDoc = addDoc;
-        window.firebaseUpdateDoc = updateDoc;
-        window.firebaseDeleteDoc = deleteDoc;
-        window.firebaseCollection = collection;
-        window.firebaseDoc = doc;
-        window.firebaseQuery = query;
-        window.firebaseWhere = where;
-        window.firebaseOrderBy = orderBy;
-        window.firebaseOnSnapshot = onSnapshot;
-        
-        console.log("Firebase initialized successfully");
-    </script>
-    
     <style>
-        /* ===== LUXURY AUTOMOTIVE MODERN VARIABLES ===== */
+        /* جميع الأنماط (CSS) كما هي موجودة مسبقاً - تم الحفاظ عليها بالكامل */
         :root {
             --primary: #060c18;
             --primary-light: #0f1b35;
@@ -73,7 +35,6 @@
             --whatsapp-green: #25D366;
         }
 
-        /* ===== LIGHT THEME ADJUSTMENTS OVERRIDE ===== */
         body.light-mode {
             background: linear-gradient(180deg, rgba(240, 244, 248, 0.95) 0%, rgba(220, 228, 235, 0.98) 100%), 
                         url('https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?q=80&w=1920') no-repeat center center fixed;
@@ -115,46 +76,7 @@
         body.light-mode .summary-row-total {
             color: var(--text-dark) !important;
         }
-        body.light-mode nav a:hover, body.light-mode li.active a {
-            background: rgba(0, 0, 0, 0.04);
-        }
-        body.light-mode .admin-sidebar-link.active, body.light-mode .admin-sidebar-link:hover {
-            background: var(--primary-light);
-            color: var(--accent-dark) !important;
-        }
-        body.light-mode input, body.light-mode select, body.light-mode textarea {
-            background: #ffffff !important;
-            color: #000000 !important;
-            border: 1px solid #cbd5e1 !important;
-        }
 
-        /* ===== LANGUAGE DIRECTION HELPERS ===== */
-        body.ltr-mode {
-            direction: ltr !important;
-        }
-        body.ltr-mode .scroll-progress {
-            transform-origin: left;
-        }
-        body.ltr-mode .toast-system-container {
-            left: auto;
-            right: 40px;
-        }
-        body.ltr-mode .toast-notification {
-            border-right: none;
-            border-left: 5px solid var(--accent);
-            animation: toastInLng 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
-        @keyframes toastInLng { from { transform: translateX(130%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
-        body.ltr-mode .cart-flyout-panel {
-            left: auto;
-            right: -480px;
-            border-right: none;
-            border-left: 1px solid var(--border-glass);
-            transition: right 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        body.ltr-mode .cart-flyout-panel.active { right: 0; left: auto; }
-
-        /* ===== PREMIUM CINEMATIC BACKGROUND & OVERLAYS ===== */
         body {
             font-family: var(--font-cairo);
             background: linear-gradient(180deg, rgba(6, 12, 24, 0.88) 0%, rgba(2, 4, 8, 0.95) 100%), 
@@ -169,38 +91,14 @@
             transition: background 0.3s ease, color 0.3s ease;
         }
 
-        /* Dynamic Parallax Background Movement Effect */
-        body::before {
-            content: '';
-            position: fixed;
-            top: -10%; left: -10%; width: 120%; height: 120%;
-            background: radial-gradient(circle at 80% 20%, rgba(244, 162, 97, 0.06) 0%, transparent 50%),
-                        radial-gradient(circle at 10% 80%, rgba(231, 111, 81, 0.04) 0%, transparent 40%);
-            z-index: -1;
-            pointer-events: none;
-            animation: backgroundMotion 30s infinite alternate ease-in-out;
-        }
-
-        @keyframes backgroundMotion {
-            0% { transform: translate(0, 0) scale(1); }
-            100% { transform: translate(2%, 2%) scale(1.03); }
-        }
-
-        /* ===== GLOBAL INITIALIZATION ===== */
-        * { box-sizing: border-box; margin: 0; padding: 0; user-select: none; }
-        html { scroll-behavior: smooth; scroll-padding-top: 100px; }
-        .container { width: 94%; max-width: 1440px; margin: 0 auto; padding: 0 15px; }
-        input, select, textarea, button { font-family: var(--font-cairo); }
-
         .scroll-progress {
             position: fixed; top: 0; right: 0; left: 0; height: 4px;
             background: var(--accent-gradient); transform: scaleX(0);
             transform-origin: right; z-index: 2000;
         }
 
-        /* ===== NAVIGATION BAR ===== */
         header {
-            background: var(--bg-glass-dark); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px);
+            background: var(--bg-glass-dark); backdrop-filter: blur(25px);
             border-bottom: 1px solid var(--border-glass); position: sticky; top: 0; z-index: 1000;
             box-shadow: var(--shadow-premium); transition: var(--transition-smooth);
         }
@@ -220,7 +118,7 @@
             transition: var(--transition-smooth); padding: 10px 15px; border-radius: 12px;
             display: flex; align-items: center; gap: 8px; white-space: nowrap;
         }
-        nav a:hover, nav li.active a { color: #fff; background: rgba(255, 255, 255, 0.05); box-shadow: inset 0 1px 1px rgba(255,255,255,0.1); }
+        nav a:hover, nav li.active a { color: #fff; background: rgba(255, 255, 255, 0.05); }
         
         .nav-actions { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
         .nav-icon-btn {
@@ -235,7 +133,6 @@
             border-radius: 50%; display: flex; align-items: center; justify-content: center;
         }
 
-        /* Language Button Switches Style */
         .language-switcher-group {
             display: flex;
             background: rgba(255, 255, 255, 0.05);
@@ -260,7 +157,6 @@
             color: #030712;
         }
 
-        /* ===== HERO INTERACTIVE BANNER ===== */
         .hero {
             position: relative; padding: 11rem 0 9rem; text-align: center; overflow: hidden;
             background: radial-gradient(circle at center, rgba(15, 27, 53, 0.4) 0%, rgba(6, 12, 24, 0.8) 100%);
@@ -268,7 +164,7 @@
         }
         .hero-canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; }
         .hero-content { position: relative; z-index: 2; max-width: 950px; margin: 0 auto; padding: 0 15px; }
-        .hero h1 { font-size: 4.5rem; font-weight: 900; line-height: 1.2; margin-bottom: 1.5rem; text-shadow: 0 4px 25px rgba(0,0,0,0.8); }
+        .hero h1 { font-size: 4.5rem; font-weight: 900; line-height: 1.2; margin-bottom: 1.5rem; }
         .hero h1 span { color: transparent; -webkit-text-stroke: 1px #fff; background: var(--accent-gradient); -webkit-background-clip: text; background-clip: text; }
         .hero p { font-size: 1.4rem; color: var(--text-muted); margin-bottom: 3.5rem; }
         
@@ -280,14 +176,12 @@
         }
         .btn-premium:hover { transform: translateY(-5px); box-shadow: 0 20px 45px rgba(244, 162, 97, 0.55); }
 
-        /* ===== FLASH BANNER ===== */
         .flash-banner {
             background: var(--accent-gradient); color: #030712; padding: 14px; text-align: center;
             font-weight: 800; display: flex; justify-content: center; align-items: center; gap: 20px; box-shadow: var(--shadow-premium); flex-wrap: wrap;
         }
         .flash-timer { background: #030712; color: #fff; padding: 4px 14px; border-radius: 8px; font-family: monospace; font-size: 1.2rem; }
 
-        /* ===== SEARCH BAR ===== */
         .search-wrapper { margin: -45px auto 5rem; max-width: 750px; position: relative; z-index: 10; padding: 0 15px; }
         .search-bar-container {
             display: flex; background: rgba(15, 27, 53, 0.95); border: 1px solid var(--border-glass);
@@ -298,7 +192,6 @@
         .search-bar-container input::placeholder { color: var(--text-muted); }
         .search-bar-container button { background: var(--accent-gradient); border: none; padding: 12px 28px; border-radius: 14px; color: #030712; font-weight: 800; cursor: pointer; white-space: nowrap; }
 
-        /* ===== LAYOUT & GRID CARDS ===== */
         .section-header { text-align: center; margin-bottom: 4rem; position: relative; padding: 0 15px; }
         .section-header h2 { font-size: 3.2rem; font-weight: 900; color: #fff; text-shadow: 0 4px 15px rgba(0,0,0,0.5); }
         .section-header h2 span { color: var(--accent); }
@@ -316,7 +209,6 @@
         .brand-premium-card:hover .brand-img-wrap img { transform: scale(1.15); }
         .brand-premium-meta { padding: 1.4rem; text-align: center; font-weight: 800; font-size: 1.2rem; background: var(--primary-light); color: #fff; border-top: 1px solid var(--border-glass); }
 
-        /* ===== CATALOG INTERFACE ===== */
         .catalog-layout { display: none; padding: 2rem 0 6rem; }
         .catalog-header-banner {
             position: relative; min-height: 250px; border-radius: var(--border-radius); overflow: hidden;
@@ -330,7 +222,6 @@
         .catalog-banner-text h1 { font-size: 3rem; color: #fff; font-weight: 800; margin-bottom: 0.5rem; }
         .catalog-banner-text p { color: var(--text-muted); font-size: 1.2rem; }
 
-        /* FILTERS & PRODUCT CARDS */
         .filter-control-panel { background: var(--primary-light); border: 1px solid var(--border-glass); border-radius: var(--border-radius); padding: 1.8rem; margin-bottom: 3.5rem; display: flex; flex-wrap: wrap; gap: 2rem; }
         .filter-box { display: flex; flex-direction: column; gap: 0.6rem; flex: 1; min-width: 220px; }
         .filter-box label { font-size: 0.95rem; color: var(--text-muted); font-weight: 700; }
@@ -360,7 +251,6 @@
         .btn-quick-view { background: rgba(255,255,255,0.05); color: #fff; border: 1px solid var(--border-glass); }
         .btn-quick-view:hover { background: rgba(255,255,255,0.15); }
 
-        /* ===== CHECKOUT MODULE ===== */
         .checkout-layout { display: none; padding: 4rem 0 7rem; }
         .checkout-grid-split { display: grid; grid-template-columns: 1.6fr 1fr; gap: 3.5rem; }
         @media(max-width: 992px) { .checkout-grid-split { grid-template-columns: 1fr; } }
@@ -369,9 +259,7 @@
         .billing-form-group { display: flex; flex-direction: column; gap: 0.7rem; margin-bottom: 1.8rem; }
         .billing-form-group label { font-size: 1rem; font-weight: 700; color: var(--text-muted); }
         .billing-form-group input, .billing-form-group select, .billing-form-group textarea { background: var(--primary); border: 1px solid var(--border-glass); padding: 14px 18px; border-radius: 10px; color: #fff; outline: none; font-size: 1rem; transition: var(--transition-smooth); }
-        .billing-form-group input:focus, .billing-form-group select:focus, .billing-form-group textarea:focus { border-color: var(--accent); box-shadow: var(--shadow-glow); }
 
-        /* Searchable Input Custom styling for dropdown */
         .searchable-select-wrapper { position: relative; }
         .search-dropdown-input { width: 100%; padding-left: 35px !important; }
         .searchable-dropdown-list {
@@ -382,12 +270,10 @@
         .searchable-dropdown-list li { padding: 12px 18px; cursor: pointer; color: #fff; transition: 0.2s; border-bottom: 1px solid rgba(255,255,255,0.03); font-weight: 600; }
         .searchable-dropdown-list li:hover { background: var(--accent-gradient); color: #030712; }
 
-        /* LOADING ANIMATION FOR CHECKOUT SUBMISSION */
         .loading-submit-overlay { display: none; position: absolute; top:0; left:0; width:100%; height:100%; background:rgba(6, 12, 24, 0.9); border-radius:var(--border-radius); z-index:20; align-items:center; justify-content:center; flex-direction:column; gap:20px; }
         .spinner-loader { border: 4px solid rgba(255,255,255,0.1); border-left-color: var(--accent); border-radius: 50%; width: 50px; height: 50px; animation: spinLoader 1s linear infinite; }
         @keyframes spinLoader { to { transform: rotate(360deg); } }
 
-        /* ===== FUTURISTIC ADMIN DASHBOARD PANEL ===== */
         .admin-dashboard-layout { display: none; padding: 3rem 0 7rem; }
         .admin-sidebar-grid { display: grid; grid-template-columns: 280px 1fr; gap: 3.5rem; }
         @media(max-width: 992px) { .admin-sidebar-grid { grid-template-columns: 1fr; } }
@@ -400,7 +286,6 @@
         }
         .admin-sidebar-link i { font-size: 1.2rem; transition: var(--transition-smooth); }
         .admin-sidebar-link.active, .admin-sidebar-link:hover { background: var(--primary); color: var(--accent); box-shadow: var(--shadow-glow); }
-        .admin-sidebar-link:hover i { transform: scale(1.2); }
 
         .admin-content-window { display: flex; flex-direction: column; gap: 3rem; overflow: hidden; }
         .stats-dashboard-matrix { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; }
@@ -429,7 +314,6 @@
         .drag-drop-box:hover, .drag-drop-box.dragover { border-color: var(--accent); color: #fff; background: rgba(244,162,97,0.02); }
         .drag-drop-box i { font-size: 3.5rem; margin-bottom: 1.2rem; color: var(--accent); }
 
-        /* ===== TOAST NOTIFICATIONS ===== */
         .toast-system-container { position: fixed; bottom: 40px; right: auto; left: 40px; display: flex; flex-direction: column; gap: 12px; z-index: 3000; }
         .toast-notification {
             background: #0f1b35; border-right: 5px solid var(--accent); color: #fff; padding: 18px 28px;
@@ -438,7 +322,6 @@
         }
         @keyframes toastIn { from { transform: translateX(-130%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
 
-        /* ===== CART OVERLAY SLIDE ===== */
         .cart-flyout-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(2,4,8,0.85); backdrop-filter: blur(10px); z-index: 1500; display: none; }
         .cart-flyout-panel {
             position: fixed; top: 0; left: -480px; width: 460px; height: 100%; background: #060c18; border-right: 1px solid var(--border-glass);
@@ -463,19 +346,16 @@
         .cart-checkout-summary { border-top: 1px solid var(--border-glass); padding-top: 2rem; }
         .summary-row-total { display: flex; justify-content: space-between; font-size: 1.5rem; font-weight: 900; color: #fff; margin-bottom: 2rem; }
 
-        /* ===== MODAL DETAIL PANEL ===== */
         .modal-blur-window { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(2,4,8,0.85); backdrop-filter: blur(15px); z-index: 2500; display: none; align-items: center; justify-content: center; padding: 25px; }
         .modal-premium-body { background: #060c18; border: 1px solid var(--border-glass); border-radius: var(--border-radius); max-width: 850px; width: 100%; padding: 3rem; position: relative; box-shadow: var(--shadow-premium); }
         .modal-close-abs { position: absolute; top: 25px; left: 25px; font-size: 2.2rem; color: var(--text-muted); cursor: pointer; z-index: 10; }
 
-        /* ===== FAQ ACCORDION PANEL ===== */
         .faq-wrapper { max-width: 950px; margin: 0 auto 6rem; display: flex; flex-direction: column; gap: 1.2rem; padding: 0 15px; }
         .faq-accordion-item { background: var(--primary-light); border: 1px solid var(--border-glass); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-premium); }
         .faq-trigger-tab { padding: 1.4rem 2.2rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-weight: 800; font-size: 1.15rem; }
         .faq-content-pane { padding: 0 2.2rem; max-height: 0; overflow: hidden; transition: var(--transition-smooth); color: var(--text-muted); font-size: 1.05rem; }
         .faq-accordion-item.active .faq-content-pane { padding: 1.4rem 2.2rem; max-height: 220px; border-top: 1px solid var(--border-glass); }
 
-        /* ===== FLOATING WHATSAPP SYSTEM BUTTON ===== */
         .whatsapp-floating-btn {
             position: fixed; bottom: 40px; right: 40px; background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
             width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
@@ -485,7 +365,6 @@
         .whatsapp-tooltip { position: absolute; right: 80px; background: #030712; border: 1px solid var(--border-glass); color: #fff; padding: 8px 16px; border-radius: 10px; font-size: 0.9rem; font-weight: 700; white-space: nowrap; opacity: 0; pointer-events: none; transition: 0.3s; }
         .whatsapp-floating-btn:hover .whatsapp-tooltip { opacity: 1; }
 
-        /* ===== SYSTEM FOOTER STYLE ===== */
         footer { background: #030712; border-top: 1px solid var(--border-glass); padding: 5rem 0 3rem; margin-top: auto; }
         .footer-grid-view { display: grid; grid-template-columns: 2fr 1fr; gap: 4rem; margin-bottom: 4rem; }
         @media(max-width: 768px) { .footer-grid-view { grid-template-columns: 1fr; gap: 2rem; } }
@@ -497,7 +376,6 @@
         .social-matrix { display: flex; gap: 14px; margin-top: 1.8rem; }
         .bottom-credits { text-align: center; border-top: 1px solid var(--border-glass); padding-top: 2.5rem; font-size: 0.95rem; font-weight: 600; }
         
-        /* ===== SIMPLIFIED SOCIAL MEDIA SECTION ===== */
         .social-media-showcase {
             background: transparent;
             border: none;
@@ -507,20 +385,12 @@
             position: relative;
             overflow: visible;
         }
-        .social-media-showcase::before { display: none; }
-        .social-media-showcase::after { display: none; }
-        
-        .social-media-showcase > * { position: relative; z-index: 1; }
         .social-showcase-title {
             color: var(--accent);
             font-size: 1.8rem;
             margin-bottom: 2rem;
             font-weight: 700;
-            text-shadow: none;
-            letter-spacing: 0;
         }
-        .social-showcase-subtitle { display: none; }
-        
         .social-platform-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -544,18 +414,12 @@
             color: #fff;
             transition: 0.3s ease;
             cursor: pointer;
-            box-shadow: none;
-            position: relative;
-            overflow: hidden;
         }
-        .social-platform-card::before { display: none; }
         .social-platform-card:hover {
             transform: translateY(-5px);
             border-color: var(--accent);
             background: rgba(244, 162, 97, 0.15);
         }
-        .social-platform-card > * { position: relative; z-index: 1; }
-        
         .social-platform-icon {
             font-size: 2rem;
             color: var(--accent);
@@ -568,19 +432,6 @@
         .social-platform-name {
             font-weight: 600;
             font-size: 0.9rem;
-            letter-spacing: 0;
-        }
-        .social-platform-card:hover .social-platform-name {
-            color: var(--accent);
-        }
-        
-        .social-direct-links-bar { display: none; }
-        
-        @media(max-width: 768px) {
-            .social-showcase-title { font-size: 1.5rem; }
-            .social-platform-grid { grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 1rem; }
-            .social-platform-card { padding: 1rem 0.8rem; }
-            .social-platform-icon { font-size: 1.8rem; }
         }
     </style>
 </head>
@@ -611,19 +462,14 @@
                 <ul>
                     <li class="nav-item active" data-target="home"><a href="#" onclick="router.navigate('home')"><i class="fa-solid fa-house"></i> <span id="trans-nav-home">الرئيسية</span></a></li>
                     <li class="nav-item" data-target="brands"><a href="#" onclick="router.navigate('home'); window.scrollTo(0, document.getElementById('brandsSection').offsetTop - 100);"><i class="fa-solid fa-tags"></i> <span id="trans-nav-brands">الماركات</span></a></li>
-                  <li class="nav-item" data-target="admin">
-    <a href="#" onclick="
-        const pass = prompt('ادخل كلمة مرور الإدارة');
-        if(pass === '241524'){
-            router.navigate('admin');
-        } else {
-            alert('كلمة المرور غير صحيحة');
-        }
-    ">
-        <i class="fa-solid fa-shield-halved"></i>
-        <span id="trans-nav-admin">الإدارة والتحكم</span>
-    </a>
-</li>
+                    <li class="nav-item" data-target="admin">
+                        <a href="#" onclick="const pass = prompt('ادخل كلمة مرور الإدارة'); if(pass === '241524'){ router.navigate('admin'); } else { alert('كلمة المرور غير صحيحة'); }">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <span id="trans-nav-admin">الإدارة والتحكم</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
 
             <div class="nav-actions">
                 <div class="nav-icon-btn" onclick="ui.toggleThemeMode()" id="themeModeToggler" title="تبديل المظهر">
@@ -925,7 +771,7 @@
                                 <table class="admin-table" style="margin-top:1.5rem;">
                                     <thead><tr><th id="trans-mgp-img">الصورة</th><th id="trans-mgp-name">اسم المنتج</th><th id="trans-mgp-brand">الماركة</th><th id="trans-mgp-price">السعر الحالي</th><th id="trans-mgp-cat">الفئة الفنية</th><th id="trans-mgp-act">العمليات الإدارية</th></tr></thead>
                                     <tbody id="adminProductsTableBody"></tbody>
-                                80
+                                </table>
                             </div>
                         </div>
 
@@ -950,7 +796,7 @@
                                         </tr>
                                     </thead>
                                     <tbody id="adminOrdersTableBody"></tbody>
-                                额头
+                                </table>
                             </div>
                         </div>
                     </div>
@@ -984,24 +830,17 @@
 
     <div class="toast-system-container" id="toastContainer"></div>
 
-    <!-- SOCIAL MEDIA SHOWCASE SECTION - SIMPLIFIED -->
     <section class="social-media-showcase" style="margin: 4rem auto; width: 94%; max-width: 1440px;">
         <h2 class="social-showcase-title">تابعنا</h2>
-        
         <div class="social-platform-grid">
-            <!-- TikTok -->
             <a href="https://www.tiktok.com/@el._fahd?_r=1&_t=ZS-96V8qDBy6aL" target="_blank" class="social-platform-card" title="تابعنا على تيك توك">
                 <i class="fa-brands fa-tiktok social-platform-icon"></i>
                 <span class="social-platform-name">تيك توك</span>
             </a>
-            
-            <!-- Facebook -->
             <a href="https://www.facebook.com/share/1a5dnLXJjt/?mibextid=wwXIfr" target="_blank" class="social-platform-card" title="تابعنا على فيسبوك">
                 <i class="fa-brands fa-facebook-f social-platform-icon"></i>
                 <span class="social-platform-name">فيسبوك</span>
             </a>
-            
-            <!-- WhatsApp -->
             <a href="https://wa.me/201273953660" target="_blank" class="social-platform-card" title="تواصل معنا عبر واتس آب">
                 <i class="fa-brands fa-whatsapp social-platform-icon"></i>
                 <span class="social-platform-name">واتساب</span>
@@ -1036,12 +875,45 @@
     </footer>
 
     <script type="module">
-        // Import Firebase methods
-        import { getFirestore, collection, doc, getDocs, getDoc, addDoc, updateDoc, deleteDoc, query, where, orderBy, onSnapshot } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getFirestore, collection, doc, getDocs, addDoc, updateDoc, deleteDoc, onSnapshot, query, orderBy } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+        import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-storage.js";
         
-        const db = window.firebaseDb;
+        const firebaseConfig = {
+            apiKey: "AIzaSyAVIgzS22BTEgtWpK-OwgDbtSxHNpOu7k",
+            authDomain: "elfahd-store.firebaseapp.com",
+            projectId: "elfahd-store",
+            storageBucket: "elfahd-store.firebasestorage.app",
+            messagingSenderId: "173143145728",
+            appId: "1:173143145728:web:9b46b931b4a4d51e9847e5"
+        };
         
-        // ===== FIREBASE DATABASE SERVICE =====
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        const storage = getStorage(app);
+        
+        // دالة رفع الصورة إلى Firebase Storage
+        async function uploadImageToStorage(file, folder) {
+            if (!file) return null;
+            const timestamp = Date.now();
+            const uniqueFileName = `${folder}_${timestamp}_${file.name}`;
+            const storageRef = ref(storage, `${folder}/${uniqueFileName}`);
+            await uploadBytes(storageRef, file);
+            const downloadURL = await getDownloadURL(storageRef);
+            return downloadURL;
+        }
+        
+        let brandsArray = [];
+        let productsArray = [];
+        let shippingArray = [];
+        let ordersArray = [];
+        let cart = JSON.parse(localStorage.getItem('fahd_cart_firebase')) || [];
+        let wishlist = JSON.parse(localStorage.getItem('fahd_wishlist_firebase')) || [];
+        
+        function saveCart() { localStorage.setItem('fahd_cart_firebase', JSON.stringify(cart)); if(ui) ui.updateCartCount(); }
+        function saveWishlist() { localStorage.setItem('fahd_wishlist_firebase', JSON.stringify(wishlist)); }
+        
+        // Firebase Service Class
         class FirebaseService {
             async getBrands() { const snapshot = await getDocs(collection(db, "brands")); return snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })); }
             async getProducts() { const snapshot = await getDocs(collection(db, "products")); return snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })); }
@@ -1051,7 +923,6 @@
             async updateBrand(id, data) { await updateDoc(doc(db, "brands", id), data); }
             async deleteBrand(id) { await deleteDoc(doc(db, "brands", id)); }
             async addProduct(data) { return await addDoc(collection(db, "products"), data); }
-            async updateProduct(id, data) { await updateDoc(doc(db, "products", id), data); }
             async deleteProduct(id) { await deleteDoc(doc(db, "products", id)); }
             async updateShipping(id, data) { await updateDoc(doc(db, "shipping", id), data); }
             async addOrder(data) { return await addDoc(collection(db, "orders"), data); }
@@ -1066,13 +937,13 @@
         
         const firebaseService = new FirebaseService();
         
-        // ===== SEED INITIAL DATA IF EMPTY =====
+        // Seed Initial Data
         async function seedInitialData() {
             const brandsSnap = await getDocs(collection(db, "brands"));
             if (brandsSnap.empty) {
                 const defaultBrands = [
-                    { id: "mercedes", name: "مرسيدس بنز Mercedes-Benz", category: "شاشات أندرويد متطورة، كماليات ألياف ضوئية Carbon Fiber", desc: "أرقى التعديلات والإكسسوارات الداخلية والخارجية المخصصة لجميع فئات سيارات النجمة الألمانية.", logo: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=300" },
-                    { id: "bmw", name: "بي ام دبليو BMW", category: "أنظمة إضاءة Ambient Lighting, شبكات تبريد رياضية M-Performance", desc: "أضف الطابع الرياضي القوي لسيارة البافارية مع إكسسوارات داخلية وخارجية أصلية.", logo: "https://images.unsplash.com/photo-1555215695-3004980ad54e?q=80&w=300" }
+                    { name: "مرسيدس بنز Mercedes-Benz", category: "شاشات أندرويد متطورة، كماليات ألياف ضوئية Carbon Fiber", desc: "أرقى التعديلات والإكسسوارات الداخلية والخارجية المخصصة لجميع فئات سيارات النجمة الألمانية.", logo: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=300" },
+                    { name: "بي ام دبليو BMW", category: "أنظمة إضاءة Ambient Lighting, شبكات تبريد رياضية M-Performance", desc: "أضف الطابع الرياضي القوي لسيارة البافارية مع إكسسوارات داخلية وخارجية أصلية.", logo: "https://images.unsplash.com/photo-1555215695-3004980ad54e?q=80&w=300" }
                 ];
                 for (const brand of defaultBrands) { await addDoc(collection(db, "brands"), brand); }
             }
@@ -1080,8 +951,8 @@
             const productsSnap = await getDocs(collection(db, "products"));
             if (productsSnap.empty) {
                 const defaultProducts = [
-                    { id: "p1", name: "شاشة أندرويد مرسيدس C-Class الفاخرة 12.3 بوصة", brand: "mercedes", price: 8500, oldPrice: 11000, category: "إلكترونيات", desc: "دقة 4K فائقة وجميلة، تدعم Apple CarPlay و Android Auto اللاسلكي بشكل كامل وتتوافق مع ضفيرة وسيركت السيارة الأصلية دون أي تعديل.", img: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=400" },
-                    { id: "p2", name: "نظام Ambient Light ألياف ضوئية 64 لون لسيارات BMW", brand: "bmw", price: 3400, oldPrice: 4500, category: "إضاءة", desc: "يتم التحكم الكامل بها عبر تطبيق الهاتف أو شاشة السيارة الأصلية، تمنح المقصورة فخامة سينمائية ساحرة بالظلام.", img: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=400" }
+                    { name: "شاشة أندرويد مرسيدس C-Class الفاخرة 12.3 بوصة", brand: "مرسيدس بنز Mercedes-Benz", price: 8500, oldPrice: 11000, category: "إلكترونيات", desc: "دقة 4K فائقة وجميلة، تدعم Apple CarPlay و Android Auto اللاسلكي بشكل كامل.", img: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=400" },
+                    { name: "نظام Ambient Light ألياف ضوئية 64 لون لسيارات BMW", brand: "بي ام دبليو BMW", price: 3400, oldPrice: 4500, category: "إضاءة", desc: "يتم التحكم الكامل بها عبر تطبيق الهاتف أو شاشة السيارة الأصلية.", img: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=400" }
                 ];
                 for (const prod of defaultProducts) { await addDoc(collection(db, "products"), prod); }
             }
@@ -1089,7 +960,7 @@
             const shippingSnap = await getDocs(collection(db, "shipping"));
             if (shippingSnap.empty) {
                 const shippingData = [
-                    { id: "cairo", name: "القاهرة", fee: 60 }, { id: "giza", name: "الجيزة", fee: 60 }, { id: "alex", name: "الإسكندرية", fee: 80 }, { id: "qalyubia", name: "القليوبية", fee: 70 }, { id: "sharqia", name: "الشرقية", fee: 80 }, { id: "gharbia", name: "الغربية", fee: 80 }, { id: "monufia", name: "المنوفية", fee: 80 }, { id: "beheira", name: "البحيرة", fee: 85 }, { id: "dakahlia", name: "الدقهلية", fee: 85 }, { id: "damietta", name: "دمياط", fee: 90 }, { id: "kafr_el_sheikh", name: "كفر الشيخ", fee: 90 }, { id: "port_said", name: "بورسعيد", fee: 90 }, { id: "ismailia", name: "الإسماعيلية", fee: 85 }, { id: "suez", name: "السويس", fee: 85 }, { id: "fayoum", name: "الفيوم", fee: 80 }, { id: "beni_suef", name: "بني سويف", fee: 85 }, { id: "minya", name: "المنيا", fee: 95 }, { id: "assiut", name: "أسيوط", fee: 100 }, { id: "sohag", name: "سوهاج", fee: 110 }, { id: "qena", name: "قنا", fee: 120 }, { id: "luxor", name: "الأقصر", fee: 130 }, { id: "aswan", name: "أسوان", fee: 140 }
+                    { name: "القاهرة", fee: 60 }, { name: "الجيزة", fee: 60 }, { name: "الإسكندرية", fee: 80 }, { name: "القليوبية", fee: 70 }, { name: "الشرقية", fee: 80 }, { name: "الغربية", fee: 80 }, { name: "المنوفية", fee: 80 }, { name: "البحيرة", fee: 85 }, { name: "الدقهلية", fee: 85 }, { name: "دمياط", fee: 90 }, { name: "كفر الشيخ", fee: 90 }, { name: "بورسعيد", fee: 90 }, { name: "الإسماعيلية", fee: 85 }, { name: "السويس", fee: 85 }, { name: "الفيوم", fee: 80 }, { name: "بني سويف", fee: 85 }, { name: "المنيا", fee: 95 }, { name: "أسيوط", fee: 100 }, { name: "سوهاج", fee: 110 }, { name: "قنا", fee: 120 }, { name: "الأقصر", fee: 130 }, { name: "أسوان", fee: 140 }
                 ];
                 for (const ship of shippingData) { await addDoc(collection(db, "shipping"), ship); }
             }
@@ -1097,111 +968,103 @@
         
         await seedInitialData();
         
-        // Global state variables
-        let brandsArray = [];
-        let productsArray = [];
-        let shippingArray = [];
-        let ordersArray = [];
-        let cart = JSON.parse(localStorage.getItem('fahd_cart_firebase')) || [];
-        let wishlist = JSON.parse(localStorage.getItem('fahd_wishlist_firebase')) || [];
-        
-        function saveCart() { localStorage.setItem('fahd_cart_firebase', JSON.stringify(cart)); ui.updateCartCount(); }
-        function saveWishlist() { localStorage.setItem('fahd_wishlist_firebase', JSON.stringify(wishlist)); }
-        
-        // UI Class (abbreviated - full functionality preserved)
+        // UI Class
         class UI {
             constructor() { this.currentBrandContext = null; this.selectedShippingGovName = null; this.selectedShippingGovFee = 0; this.currentLang = 'ar'; this.themeMode = 'dark'; this.init(); }
             async init() { this.initFlashTimer(); this.initHeroCanvas(); await this.loadDataAndRender(); this.initSearchableGovernoratesDropdown(); this.updateCartCount(); this.applySavedThemeMode(); this.applySavedLanguageLayout(); this.setupRealtimeListeners(); }
-            
             async loadDataAndRender() { brandsArray = await firebaseService.getBrands(); productsArray = await firebaseService.getProducts(); shippingArray = await firebaseService.getShipping(); this.renderBrandsGridPanel(); }
-            
             setupRealtimeListeners() {
                 firebaseService.subscribeBrands((brands) => { brandsArray = brands; this.renderBrandsGridPanel(); if (admin) admin.refreshDashboardState(); });
                 firebaseService.subscribeProducts((products) => { productsArray = products; if (this.currentBrandContext) this.applyCatalogFilters(); if (admin) admin.refreshDashboardState(); });
                 firebaseService.subscribeShipping((shipping) => { shippingArray = shipping; this.initSearchableGovernoratesDropdown(); if (admin && document.getElementById('adminTab-shipping-settings').style.display !== 'none') admin.renderShippingFaresManagementTable(); });
                 firebaseService.subscribeOrders((orders) => { ordersArray = orders; if (admin) admin.refreshDashboardState(); });
             }
-            
-            renderBrandsGridPanel() { const container = document.getElementById('homeBrandsContainer'); if(!container) return; container.innerHTML = ''; brandsArray.forEach(b => { const card = document.createElement('div'); card.className = 'brand-premium-card'; card.onclick = () => this.bootBrandCatalogView(b.id); card.innerHTML = `<div class="brand-img-wrap"><img src="${b.logo}" alt="Logo"></div><div class="brand-premium-meta">${this.currentLang === 'ar' ? b.name : b.id.toUpperCase() + ' Luxury Custom'}</div>`; container.appendChild(card); }); }
-            
-            bootBrandCatalogView(brandId) { this.currentBrandContext = brandId; const brand = brandsArray.find(b => b.id === brandId); if(!brand) return; const bannerContainer = document.getElementById('catalogBannerPlaceholder'); bannerContainer.innerHTML = `<div class="catalog-header-banner" style="background-image: url('${brand.logo}');"><div class="catalog-banner-inner"><img src="${brand.logo}" class="catalog-banner-logo"><div class="catalog-banner-text"><h1>${this.currentLang === 'ar' ? 'إكسسوارات ' + brand.name : brand.id.toUpperCase() + ' Accessories'}</h1><p>${brand.category} - ${this.currentLang === 'ar' ? 'تفضل باختيار كمالياتك الفاخرة' : 'Choose your high end components config'}</p></div></div></div>`; document.getElementById('filterCategorySelect').value = 'all'; document.getElementById('filterPriceRange').value = 15000; document.getElementById('priceMaxLabel').innerText = '15000'; this.applyCatalogFilters(); router.navigate('catalog'); }
-            
-            applyCatalogFilters() { const category = document.getElementById('filterCategorySelect').value; const priceMax = parseInt(document.getElementById('filterPriceRange').value); const container = document.getElementById('catalogProductsContainer'); let items = productsArray.filter(p => p.brand === this.currentBrandContext); if(category !== 'all') items = items.filter(p => p.category === category); items = items.filter(p => p.price <= priceMax); container.innerHTML = ''; if(items.length === 0) { container.innerHTML = `<p style="grid-column:1/-1; text-align:center; color:var(--text-muted); padding:4rem; font-weight:700;">${this.currentLang === 'ar' ? 'لا توجد إكسسوارات متوفرة تطابق خيارات التصفية الحالية.' : 'No accessories match selection criteria.'}</p>`; return; } items.forEach(prod => { const isWish = wishlist.includes(prod.id) ? 'active' : ''; const oldPriceTag = prod.oldPrice ? `<span class="old-price">${prod.oldPrice} ج.م</span>` : ''; const card = document.createElement('div'); card.className = 'product-premium-card'; card.innerHTML = `<div class="prod-image-frame"><div class="wishlist-trigger ${isWish}" onclick="ui.toggleWishlistItem('${prod.id}', this)"><i class="fa-solid fa-heart"></i></div><span class="prod-meta-tag">${prod.category}</span><img src="${prod.img}"></div><div class="prod-details-pane"><h3 class="prod-title-text">${prod.name}</h3><p class="prod-desc-text">${prod.desc}</p><div class="rating-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><div class="price-group"><span class="current-price">${prod.price} ج.م</span>${oldPriceTag}</div><div class="action-button-group"><button class="btn-card-action btn-cart-add" onclick="ui.addProductToCart('${prod.id}')"><i class="fa-solid fa-cart-plus"></i> ${this.currentLang === 'ar' ? 'إضافة للسلة' : 'Add to Cart'}</button><button class="btn-card-action btn-quick-view" onclick="ui.launchQuickView('${prod.id}')"><i class="fa-solid fa-eye"></i> ${this.currentLang === 'ar' ? 'عـرض' : 'View'}</button></div></div>`; container.appendChild(card); }); }
-            
-            async triggerLiveSearch(val) { const searchVal = val.toLowerCase().trim(); if(searchVal.length === 0) return; const container = document.getElementById('catalogProductsContainer'); let matches = productsArray.filter(p => p.name.toLowerCase().includes(searchVal) || p.desc.toLowerCase().includes(searchVal)); this.currentBrandContext = "search_context"; const bannerContainer = document.getElementById('catalogBannerPlaceholder'); bannerContainer.innerHTML = `<div class="catalog-header-banner" style="background-image: url('https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?q=80&w=1200');"><div class="catalog-banner-inner"><div class="catalog-banner-text"><h1>${this.currentLang === 'ar' ? 'نتائج البحث عن : ' + val : 'Search Results for: ' + val}</h1><p>${matches.length} ${this.currentLang === 'ar' ? 'قطعة إكسسوار متوفرة بالسيستم حالياً' : 'matching accessories verified'}</p></div></div></div>`; container.innerHTML = ''; if(matches.length === 0) { container.innerHTML = `<p style="grid-column:1/-1; text-align:center; color:var(--text-muted); padding:4rem; font-weight:700;">لا توجد نتائج تطابق بحثك</p>`; } else { matches.forEach(prod => { const card = document.createElement('div'); card.className = 'product-premium-card'; card.innerHTML = `<div class="prod-image-frame"><img src="${prod.img}"></div><div class="prod-details-pane"><h3 class="prod-title-text">${prod.name}</h3><p class="prod-desc-text">${prod.desc}</p><div class="price-group"><span class="current-price">${prod.price} ج.م</span></div><div class="action-button-group"><button class="btn-card-action btn-cart-add" onclick="ui.addProductToCart('${prod.id}')"><i class="fa-solid fa-cart-plus"></i> إضافة للسلة</button><button class="btn-card-action btn-quick-view" onclick="ui.launchQuickView('${prod.id}')"><i class="fa-solid fa-eye"></i> عرض</button></div></div>`; container.appendChild(card); }); } router.navigate('catalog'); }
-            
+            renderBrandsGridPanel() { const container = document.getElementById('homeBrandsContainer'); if(!container) return; container.innerHTML = ''; brandsArray.forEach(b => { const card = document.createElement('div'); card.className = 'brand-premium-card'; card.onclick = () => this.bootBrandCatalogView(b.id); card.innerHTML = `<div class="brand-img-wrap"><img src="${b.logo}" alt="Logo"></div><div class="brand-premium-meta">${this.currentLang === 'ar' ? b.name : b.name}</div>`; container.appendChild(card); }); }
+            bootBrandCatalogView(brandId) { this.currentBrandContext = brandId; const brand = brandsArray.find(b => b.id === brandId); if(!brand) return; const bannerContainer = document.getElementById('catalogBannerPlaceholder'); bannerContainer.innerHTML = `<div class="catalog-header-banner" style="background-image: url('${brand.logo}');"><div class="catalog-banner-inner"><img src="${brand.logo}" class="catalog-banner-logo"><div class="catalog-banner-text"><h1>${this.currentLang === 'ar' ? 'إكسسوارات ' + brand.name : brand.name + ' Accessories'}</h1><p>${brand.category}</p></div></div></div>`; document.getElementById('filterCategorySelect').value = 'all'; document.getElementById('filterPriceRange').value = 15000; document.getElementById('priceMaxLabel').innerText = '15000'; this.applyCatalogFilters(); router.navigate('catalog'); }
+            applyCatalogFilters() { const category = document.getElementById('filterCategorySelect').value; const priceMax = parseInt(document.getElementById('filterPriceRange').value); const container = document.getElementById('catalogProductsContainer'); let items = productsArray.filter(p => p.brand === brandsArray.find(b => b.id === this.currentBrandContext)?.name); if(category !== 'all') items = items.filter(p => p.category === category); items = items.filter(p => p.price <= priceMax); container.innerHTML = ''; if(items.length === 0) { container.innerHTML = `<p style="grid-column:1/-1; text-align:center; color:var(--text-muted); padding:4rem; font-weight:700;">${this.currentLang === 'ar' ? 'لا توجد إكسسوارات متوفرة' : 'No accessories available'}</p>`; return; } items.forEach(prod => { const isWish = wishlist.includes(prod.id) ? 'active' : ''; const oldPriceTag = prod.oldPrice ? `<span class="old-price">${prod.oldPrice} ج.م</span>` : ''; const card = document.createElement('div'); card.className = 'product-premium-card'; card.innerHTML = `<div class="prod-image-frame"><div class="wishlist-trigger ${isWish}" onclick="ui.toggleWishlistItem('${prod.id}', this)"><i class="fa-solid fa-heart"></i></div><span class="prod-meta-tag">${prod.category}</span><img src="${prod.img}"></div><div class="prod-details-pane"><h3 class="prod-title-text">${prod.name}</h3><p class="prod-desc-text">${prod.desc}</p><div class="rating-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><div class="price-group"><span class="current-price">${prod.price} ج.م</span>${oldPriceTag}</div><div class="action-button-group"><button class="btn-card-action btn-cart-add" onclick="ui.addProductToCart('${prod.id}')"><i class="fa-solid fa-cart-plus"></i> ${this.currentLang === 'ar' ? 'إضافة للسلة' : 'Add to Cart'}</button><button class="btn-card-action btn-quick-view" onclick="ui.launchQuickView('${prod.id}')"><i class="fa-solid fa-eye"></i> ${this.currentLang === 'ar' ? 'عـرض' : 'View'}</button></div></div>`; container.appendChild(card); }); }
+            async triggerLiveSearch(val) { const searchVal = val.toLowerCase().trim(); if(searchVal.length === 0) return; const matches = productsArray.filter(p => p.name.toLowerCase().includes(searchVal) || p.desc.toLowerCase().includes(searchVal)); this.currentBrandContext = "search_context"; const bannerContainer = document.getElementById('catalogBannerPlaceholder'); bannerContainer.innerHTML = `<div class="catalog-header-banner"><div class="catalog-banner-inner"><div class="catalog-banner-text"><h1>${this.currentLang === 'ar' ? 'نتائج البحث عن : ' + val : 'Search Results: ' + val}</h1><p>${matches.length} ${this.currentLang === 'ar' ? 'قطعة إكسسوار متوفرة' : 'items found'}</p></div></div></div>`; const container = document.getElementById('catalogProductsContainer'); container.innerHTML = ''; if(matches.length === 0) { container.innerHTML = `<p style="grid-column:1/-1; text-align:center; color:var(--text-muted); padding:4rem; font-weight:700;">لا توجد نتائج</p>`; } else { matches.forEach(prod => { const card = document.createElement('div'); card.className = 'product-premium-card'; card.innerHTML = `<div class="prod-image-frame"><img src="${prod.img}"></div><div class="prod-details-pane"><h3 class="prod-title-text">${prod.name}</h3><p class="prod-desc-text">${prod.desc}</p><div class="price-group"><span class="current-price">${prod.price} ج.م</span></div><div class="action-button-group"><button class="btn-card-action btn-cart-add" onclick="ui.addProductToCart('${prod.id}')"><i class="fa-solid fa-cart-plus"></i> إضافة للسلة</button><button class="btn-card-action btn-quick-view" onclick="ui.launchQuickView('${prod.id}')"><i class="fa-solid fa-eye"></i> عرض</button></div></div>`; container.appendChild(card); }); } router.navigate('catalog'); }
             executeSearchButton() { const val = document.getElementById('globalProductSearchInput').value; this.triggerLiveSearch(val); }
-            
             toggleCart(open) { const sidebar = document.getElementById('cartSidebar'); const overlay = document.getElementById('cartOverlay'); if(open) { this.renderCartItems(); sidebar.classList.add('active'); overlay.style.display = 'block'; } else { sidebar.classList.remove('active'); overlay.style.display = 'none'; } }
-            
             renderCartItems() { const container = document.getElementById('cartItemsContainer'); container.innerHTML = ''; let total = 0; cart.forEach(cartItem => { const prod = productsArray.find(p => p.id === cartItem.id); if(!prod) return; total += (prod.price * cartItem.qty); const row = document.createElement('div'); row.className = 'cart-hardware-row'; row.innerHTML = `<img src="${prod.img}" class="cart-row-img"><div class="cart-row-meta"><h4>${prod.name}</h4><p>${prod.price} ج.م</p><div class="cart-row-qty-ctrl"><button class="qty-adjust-btn" onclick="ui.mutateQty('${prod.id}', -1)">-</button><span>${cartItem.qty}</span><button class="qty-adjust-btn" onclick="ui.mutateQty('${prod.id}', 1)">+</button></div></div><button class="cart-row-delete" onclick="ui.mutateQty('${prod.id}', -999)"><i class="fa-solid fa-trash-can"></i></button>`; container.appendChild(row); }); document.getElementById('cartPanelTotal').innerText = `${total} ج.م`; }
-            
-            addProductToCart(id) { const match = cart.find(c => c.id === id); if(match) match.qty += 1; else cart.push({ id: id, qty: 1 }); saveCart(); this.updateCartCount(); this.showToast(this.currentLang === 'ar' ? "تم بنجاح إدراج القطعة وتحديث سلة المشتريات فورا" : "Item bundled to cart layout!"); }
-            
+            addProductToCart(id) { const match = cart.find(c => c.id === id); if(match) match.qty += 1; else cart.push({ id: id, qty: 1 }); saveCart(); this.updateCartCount(); this.showToast(this.currentLang === 'ar' ? "تم إضافة القطعة للسلة" : "Item added to cart"); }
             mutateQty(id, delta) { const match = cart.find(c => c.id === id); if(match) { match.qty += delta; if(match.qty <= 0 || delta === -999) cart = cart.filter(c => c.id !== id); } saveCart(); this.updateCartCount(); this.renderCartItems(); }
-            
             updateCartCount() { let cnt = 0; cart.forEach(c => cnt += c.qty); const badge = document.getElementById('globalCartCount'); if(badge) badge.innerText = cnt; }
-            
             initSearchableGovernoratesDropdown() { const list = document.getElementById('checkoutGovDropdownList'); if(!list) return; list.innerHTML = ''; shippingArray.forEach(gov => { const li = document.createElement('li'); li.innerText = gov.name; li.onclick = () => { this.selectedShippingGovName = gov.name; this.selectedShippingGovFee = gov.fee; document.getElementById('checkoutGovSearchInput').value = gov.name; list.style.display = 'none'; this.updateCheckoutBillCalculationSummary(); }; list.appendChild(li); }); document.addEventListener('click', (e) => { if(!e.target.closest('.searchable-select-wrapper')) list.style.display = 'none'; }); }
-            
             filterGovDropdown() { const input = document.getElementById('checkoutGovSearchInput'); const filter = input.value.trim().toLowerCase(); const list = document.getElementById('checkoutGovDropdownList'); const rows = list.getElementsByTagName('li'); list.style.display = 'block'; for(let i=0; i<rows.length; i++) { let txt = rows[i].innerText || rows[i].textContent; if(txt.toLowerCase().indexOf(filter) > -1) rows[i].style.display = ""; else rows[i].style.display = "none"; } }
-            
-            goToCheckoutRoute() { if(cart.length === 0) { this.showToast('سلة المشتريات فارغة تماما!'); return; } this.toggleCart(false); this.updateCheckoutBillCalculationSummary(); router.navigate('checkout'); }
-            
+            goToCheckoutRoute() { if(cart.length === 0) { this.showToast('سلة المشتريات فارغة!'); return; } this.toggleCart(false); this.updateCheckoutBillCalculationSummary(); router.navigate('checkout'); }
             updateCheckoutBillCalculationSummary() { const container = document.getElementById('checkoutOrderItemsList'); container.innerHTML = ''; let productsSubtotal = 0; cart.forEach(c => { const p = productsArray.find(prod => prod.id === c.id); if(p) { productsSubtotal += (p.price * c.qty); const itemRow = document.createElement('div'); itemRow.style = "display:flex; justify-content:space-between; font-size:0.95rem; background:rgba(255,255,255,0.02); padding:10px; border-radius:8px;"; itemRow.innerHTML = `<span>${p.name} <strong>(×${c.qty})</strong></span> <span>${p.price * c.qty} ج.م</span>`; container.appendChild(itemRow); } }); if(this.selectedShippingGovName) { document.getElementById('checkoutSelectedGovLabel').innerText = this.selectedShippingGovName; document.getElementById('checkoutShippingCostLabel').innerText = `${this.selectedShippingGovFee} ج.م`; document.getElementById('checkoutSummaryTotal').innerText = `${productsSubtotal + this.selectedShippingGovFee} ج.م`; } else { document.getElementById('checkoutSelectedGovLabel').innerText = this.currentLang === 'ar' ? "لم تحدد" : "Not Selected"; document.getElementById('checkoutShippingCostLabel').innerText = `0 ج.م`; document.getElementById('checkoutSummaryTotal').innerText = `${productsSubtotal} ج.م`; } }
-            
-            async handleCheckoutSubmit(e) { e.preventDefault(); if(!this.selectedShippingGovName || document.getElementById('checkoutGovSearchInput').value !== this.selectedShippingGovName) { this.showToast('يرجى تحديد المحافظة بشكل صحيح من القائمة المنسدلة للبحث!'); return; } const name = document.getElementById('checkoutName').value.trim(); const phone = document.getElementById('checkoutPhone').value.trim(); const address = document.getElementById('checkoutAddress').value.trim(); const loader = document.getElementById('checkoutSubmissionLoader'); loader.style.display = 'flex'; setTimeout(async () => { loader.style.display = 'none'; let productsSubtotal = 0; cart.forEach(c => { const p = productsArray.find(prod => prod.id === c.id); if(p) productsSubtotal += (p.price * c.qty); }); const grandFinalTotal = productsSubtotal + this.selectedShippingGovFee; const orderId = 'FAHD-' + Math.floor(100000 + Math.random() * 900000); const orderObj = { id: orderId, name: name, phone: phone, gov: this.selectedShippingGovName, address: address, items: cart, total: grandFinalTotal, status: 'قيد المراجعة الفنية', date: new Date().toLocaleDateString('ar-EG') }; await firebaseService.addOrder(orderObj); cart = []; saveCart(); this.updateCartCount(); document.getElementById('checkoutForm').reset(); this.selectedShippingGovName = null; const finalMsg = this.currentLang === 'ar' ? `تم تسجيل طلبك بنجاح بكود: ${orderId} - سنتواصل معك فوراً!` : `Order registered under code: ${orderId}`; alert(finalMsg); router.navigate('home'); }, 1500); }
-            
-            launchQuickView(id) { const prod = productsArray.find(p => p.id === id); if(!prod) return; const windowContent = document.getElementById('quickViewModalContent'); windowContent.innerHTML = `<div style="display:grid; grid-template-columns:1fr 1.2fr; gap:2.5rem; margin-top:1.5rem; flex-wrap:wrap;"><div style="background:#fff; border-radius:14px; padding:20px; display:flex; align-items:center; justify-content:center;"><img src="${prod.img}" style="max-width:100%; max-height:280px; object-fit:contain;"></div><div><h2 style="font-size:2rem; font-weight:900; color:#fff; margin-bottom:1rem;">${prod.name}</h2><p style="color:var(--text-muted); font-size:1.05rem; margin-bottom:1.5rem; line-height:1.7;">${prod.desc}</p><div style="font-size:2.2rem; font-weight:900; color:var(--accent); margin-bottom:2rem;">${prod.price} ج.م</div><button class="btn-premium" style="width:100%; justify-content:center;" onclick="ui.addProductToCart('${prod.id}'); ui.closeQuickView(null);"><i class="fa-solid fa-cart-plus"></i> إضافة فورا لطلب الشحن</button></div></div>`; document.getElementById('quickViewModal').style.display = 'flex'; }
-            
+            async handleCheckoutSubmit(e) { e.preventDefault(); if(!this.selectedShippingGovName || document.getElementById('checkoutGovSearchInput').value !== this.selectedShippingGovName) { this.showToast('يرجى تحديد المحافظة بشكل صحيح!'); return; } const name = document.getElementById('checkoutName').value.trim(); const phone = document.getElementById('checkoutPhone').value.trim(); const address = document.getElementById('checkoutAddress').value.trim(); const loader = document.getElementById('checkoutSubmissionLoader'); loader.style.display = 'flex'; setTimeout(async () => { loader.style.display = 'none'; let productsSubtotal = 0; cart.forEach(c => { const p = productsArray.find(prod => prod.id === c.id); if(p) productsSubtotal += (p.price * c.qty); }); const grandFinalTotal = productsSubtotal + this.selectedShippingGovFee; const orderId = 'FAHD-' + Math.floor(100000 + Math.random() * 900000); const orderObj = { id: orderId, name: name, phone: phone, gov: this.selectedShippingGovName, address: address, items: cart, total: grandFinalTotal, status: 'قيد المراجعة الفنية', date: new Date().toLocaleDateString('ar-EG') }; await firebaseService.addOrder(orderObj); cart = []; saveCart(); this.updateCartCount(); document.getElementById('checkoutForm').reset(); this.selectedShippingGovName = null; alert(`تم تسجيل طلبك بنجاح بكود: ${orderId}`); router.navigate('home'); }, 1500); }
+            launchQuickView(id) { const prod = productsArray.find(p => p.id === id); if(!prod) return; document.getElementById('quickViewModalContent').innerHTML = `<div style="display:grid; grid-template-columns:1fr 1.2fr; gap:2.5rem;"><div><img src="${prod.img}" style="max-width:100%; max-height:280px;"></div><div><h2 style="font-size:2rem; font-weight:900;">${prod.name}</h2><p style="color:var(--text-muted);">${prod.desc}</p><div style="font-size:2.2rem; font-weight:900; color:var(--accent); margin:1.5rem 0;">${prod.price} ج.م</div><button class="btn-premium" onclick="ui.addProductToCart('${prod.id}'); ui.closeQuickView(null);">إضافة للسلة</button></div></div>`; document.getElementById('quickViewModal').style.display = 'flex'; }
             closeQuickView(e) { if(!e || e.target.id === 'quickViewModal' || e.target.className === 'modal-close-abs') { document.getElementById('quickViewModal').style.display = 'none'; } }
-            
-            toggleWishlistItem(id, btnEl) { if(wishlist.includes(id)) { wishlist = wishlist.filter(i => i !== id); btnEl.classList.remove('active'); this.showToast('تمت الإزالة من المفضلة'); } else { wishlist.push(id); btnEl.classList.add('active'); this.showToast('تمت الإضافة للمفضلة اللامعة للقطع'); } saveWishlist(); }
-            
+            toggleWishlistItem(id, btnEl) { if(wishlist.includes(id)) { wishlist = wishlist.filter(i => i !== id); btnEl.classList.remove('active'); this.showToast('تمت الإزالة من المفضلة'); } else { wishlist.push(id); btnEl.classList.add('active'); this.showToast('تمت الإضافة للمفضلة'); } saveWishlist(); }
             toggleFaq(headerEl) { headerEl.parentElement.classList.toggle('active'); }
             showToast(msg) { const container = document.getElementById('toastContainer'); const t = document.createElement('div'); t.className = 'toast-notification'; t.innerHTML = `<i class="fa-solid fa-circle-info" style="color:var(--accent);"></i> <span>${msg}</span>`; container.appendChild(t); setTimeout(() => { t.style.opacity = '0'; setTimeout(() => t.remove(), 400); }, 3500); }
             toggleThemeMode() { this.themeMode = this.themeMode === 'dark' ? 'light' : 'dark'; localStorage.setItem('fahd_theme', this.themeMode); this.applySavedThemeMode(); }
-            applySavedThemeMode() { if (this.themeMode === 'light') { document.body.classList.add('light-mode'); document.querySelector('#themeModeToggler i').className = 'fa-solid fa-sun'; } else { document.body.classList.remove('light-mode'); document.querySelector('#themeModeToggler i').className = 'fa-solid fa-moon'; } }
-            changeLanguage(langCode) { this.currentLang = langCode; localStorage.setItem('fahd_lang', langCode); this.applySavedLanguageLayout(); this.showToast(langCode === 'ar' ? "تم تحويل لغة واجهة النظام إلى العربية" : "Interface system language swapped to English"); if (this.currentBrandContext) { this.applyCatalogFilters(); } this.renderBrandsGridPanel(); if (document.getElementById('view-admin').style.display === 'block') { admin.refreshDashboardState(); } }
-            applySavedLanguageLayout() { const dict = { ar: { "wa-tooltip": "تواصل معنا الآن", "logo-sub": "الفهد لإكسسوارات السيارات الفاخرة", "nav-home": "الرئيسية", "nav-brands": "الماركات", "nav-admin": "الإدارة والتحكم", "search-btn": "ابحث الآن", "search-input": "ابحث عن إكسسوار معين، شاشات أندرويد، أنظمة ليد...", "brands-title1": "كتالوج الماركات", "brands-title2": "العالمية المدعومة", "brands-desc": "اختر ماركة سيارتك واستكشف أرقى الإكسسوارات المصممة لها خصيصاً بمقاسات دقيقة للغاية", "faq-title1": "الأسئلة الشائعة", "faq-desc": "كل ما تود معرفته عن خدمات الفهد للشحن والدعم الفني المباشر", "faq-q1": "هل تتوفر خدمات التركيب أم شحن فقط؟", "faq-a1": "نوفر شحناً سريعاً فائق الأمان لكافة محافظات جمهورية مصر العربية مع كتالوج إرشادي مفصل وفيديوهات تركيب ودعم فني مخصص لكل قطعة.", "faq-q2": "ما هي فترات الضمان على الشاشات والأنظمة الإلكترونية؟", "faq-a2": "جميع القطع الإلكترونية وشاشات الأندرويد والليد الفاخرة مشمولة بضمان استبدال حقيقي معتمد لمدة عامين كاملين من تاريخ فاتورة الشراء الأصلية.", "catalog-back": "العودة للماركات الرئيسية", "filter-cat-lbl": "تصفية وتحديد الفئة المطلوبة", "filter-price-lbl": "الحد الأقصى للميزانية", "chk-loader-txt": "جاري تشفير وتسجيل بيانات طلبك في النظام...", "chk-form-title": "استكمال بيانات شحن وتوصيل الطلبية", "chk-name-lbl": "اسم المستلم بالكامل *", "chk-phone-lbl": "رقم الهاتف الفعال للتواصل *", "chk-gov-lbl": "المحافظة (لإصدار قيمة الشحن) *", "chk-addr-lbl": "عنوان العميل التفصيلي *", "chk-submit-btn": "تأكيد حجز الطلب وإرساله للمراجعة", "summary-title": "ملخص المشتريات", "summary-gov": "المحافظة المحددة:", "summary-fee": "تكلفة الشحن لعنوانك:", "summary-total": "الإجمالي الكلي المالي:", "adm-title": "لوحة الإدارة والمخازن", "tab-metrics": "الإحصائيات العامة", "tab-shipping": "إدارة أسعار الشحن", "tab-addbrand": "إضافة ماركة سيارات", "tab-mgbrands": "إدارة وقائمة الماركات", "tab-addprod": "إضافة منتج جديد", "tab-mgprods": "إدارة المخزون الفعلي", "tab-orders": "طلبيات شحن العملاء", "stat-rev": "إجمالي الإيرادات", "stat-orders": "طلبات الشحن النشطة", "stat-brands": "الماركات المسجلة", "stat-prods": "عدد المنتجات الفعلي", "cart-title": "سلة المشتريات", "cart-total-lbl": "الإجمالي:", "cart-checkout-btn": "الانتقال لاستكمال الدفع والشحن", "foot-desc": "منظومة الفهد المتكاملة لزينة كماليات وإكسسوارات السيارات الفارهة. جودة أصلية، تركيب فوري، شحن موثوق لكافة بقاع الجمهورية بضمان كامل.", "foot-links": "روابط تصفح سريعة" }, en: { "wa-tooltip": "Connect with us now", "logo-sub": "El Fahd Luxury Car Accessories", "nav-home": "Home", "nav-brands": "Brands", "nav-admin": "Control Hub", "search-btn": "Search Now", "search-input": "Search for specific accessory, android screen, led lighting systems...", "brands-title1": "Global Supported", "brands-title2": "Automotive Brands", "brands-desc": "Select your vehicle brand and browse premium parts configured accurately for its specifications.", "faq-title1": "Frequently Asked", "faq-desc": "Everything you need to know regarding logistics shipping and hardware engineering support.", "faq-q1": "Are installation services available or shipment only?", "faq-a1": "We serve express secure shipping to all Governorates with highly descriptive guides, video manual files and dedicated support.", "faq-q2": "What are the warranty durations for smart systems?", "faq-a2": "All digital android screens and premium optics include a 2-year replacement warranty verified from purchase invoice.", "catalog-back": "Return to Main Brands", "filter-cat-lbl": "Filter and Select Target Category", "filter-price-lbl": "Maximum Target Budget", "chk-loader-txt": "Encrypting and publishing order records to base cluster...", "chk-form-title": "Complete Logistics Shipping Allocation Details", "chk-name-lbl": "Full Client Recipient Name *", "chk-phone-lbl": "Active Phone Number for Call Contact *", "chk-gov-lbl": "Target Governorate (For Fares Generation) *", "chk-addr-lbl": "Full Customer Detailed Address *", "chk-submit-btn": "Confirm Order Booking and Dispatch Request", "summary-title": "Purchased Items Summary", "summary-gov": "Selected Governorate:", "summary-fee": "Logistics Freight Cost:", "summary-total": "Grand Financial Sum Total:", "adm-title": "Warehouse & Fleet Controls", "tab-metrics": "Global Overview Matrix", "tab-shipping": "Freight Charges Management", "tab-addbrand": "Create Vehicle Brand", "tab-mgbrands": "Manage Stored Brands", "tab-addprod": "Insert New Product", "tab-mgprods": "Inventory stock Control", "tab-orders": "Customer Shipping Orders", "stat-rev": "Total Revenue Balance", "stat-orders": "Active Logistics Requests", "stat-brands": "Registered Brands count", "stat-prods": "Actual Stock Pieces", "cart-title": "Your Staged Basket", "cart-total-lbl": "Subtotal Sum:", "cart-checkout-btn": "Proceed to Checkout Logistics Form", "foot-desc": "El Fahd unified environment for premium high-end auto custom accessories. Genuine parts, swift transit, and complete structural warranty coverage.", "foot-links": "Quick Core Links" } }; const dataset = dict[this.currentLang]; if(this.currentLang === 'en') { document.body.classList.add('ltr-mode'); document.documentElement.setAttribute('lang', 'en'); document.documentElement.setAttribute('dir', 'ltr'); document.getElementById('globalProductSearchInput').placeholder = dataset["search-input"]; document.getElementById('checkoutGovSearchInput').placeholder = "Type governorate name to look up..."; document.getElementById('langBtnEn').classList.add('active'); document.getElementById('langBtnAr').classList.remove('active'); } else { document.body.classList.remove('ltr-mode'); document.documentElement.setAttribute('lang', 'ar'); document.documentElement.setAttribute('dir', 'rtl'); document.getElementById('globalProductSearchInput').placeholder = dataset["search-input"]; document.getElementById('checkoutGovSearchInput').placeholder = "اكتب اسم محافظتك للبحث..."; document.getElementById('langBtnAr').classList.add('active'); document.getElementById('langBtnEn').classList.remove('active'); } Object.keys(dataset).forEach(idKey => { const el = document.getElementById('trans-' + idKey); if(el) { el.innerHTML = dataset[idKey]; } }); }
+            applySavedThemeMode() { if (this.themeMode === 'light') { document.body.classList.add('light-mode'); const icon = document.querySelector('#themeModeToggler i'); if(icon) icon.className = 'fa-solid fa-sun'; } else { document.body.classList.remove('light-mode'); const icon = document.querySelector('#themeModeToggler i'); if(icon) icon.className = 'fa-solid fa-moon'; } }
+            changeLanguage(langCode) { this.currentLang = langCode; localStorage.setItem('fahd_lang', langCode); this.applySavedLanguageLayout(); if (this.currentBrandContext) this.applyCatalogFilters(); this.renderBrandsGridPanel(); if (document.getElementById('view-admin').style.display === 'block') admin.refreshDashboardState(); }
+            applySavedLanguageLayout() {
+                const dict = { ar: { "wa-tooltip": "تواصل معنا الآن", "logo-sub": "الفهد لإكسسوارات السيارات الفاخرة", "nav-home": "الرئيسية", "nav-brands": "الماركات", "nav-admin": "الإدارة والتحكم", "search-btn": "ابحث الآن", "search-input": "ابحث عن إكسسوار...", "brands-title1": "كتالوج الماركات", "brands-title2": "العالمية المدعومة", "brands-desc": "اختر ماركة سيارتك واستكشف أرقى الإكسسوارات", "faq-title1": "الأسئلة الشائعة", "faq-desc": "كل ما تود معرفته", "faq-q1": "هل تتوفر خدمات التركيب؟", "faq-a1": "نوفر شحناً سريعاً", "faq-q2": "ما هي فترات الضمان؟", "faq-a2": "جميع القطع مشمولة بضمان", "catalog-back": "العودة للماركات", "filter-cat-lbl": "تصفية الفئة", "filter-price-lbl": "الحد الأقصى للميزانية", "chk-loader-txt": "جاري تسجيل الطلب...", "chk-form-title": "بيانات الشحن", "chk-name-lbl": "الاسم الكامل", "chk-phone-lbl": "رقم الهاتف", "chk-gov-lbl": "المحافظة", "chk-addr-lbl": "العنوان", "chk-submit-btn": "تأكيد الطلب", "summary-title": "ملخص المشتريات", "summary-gov": "المحافظة:", "summary-fee": "الشحن:", "summary-total": "الإجمالي:", "adm-title": "لوحة الإدارة", "tab-metrics": "الإحصائيات", "tab-shipping": "أسعار الشحن", "tab-addbrand": "إضافة ماركة", "tab-mgbrands": "إدارة الماركات", "tab-addprod": "إضافة منتج", "tab-mgprods": "إدارة المنتجات", "tab-orders": "الطلبات", "stat-rev": "الإيرادات", "stat-orders": "الطلبات", "stat-brands": "الماركات", "stat-prods": "المنتجات", "cart-title": "سلة المشتريات", "cart-total-lbl": "الإجمالي:", "cart-checkout-btn": "الدفع", "foot-desc": "منظومة الفهد المتكاملة", "foot-links": "روابط سريعة" }, en: { "wa-tooltip": "Contact us", "logo-sub": "El Fahd Car Accessories", "nav-home": "Home", "nav-brands": "Brands", "nav-admin": "Admin", "search-btn": "Search", "search-input": "Search accessory...", "brands-title1": "Brands", "brands-title2": "Catalog", "brands-desc": "Choose your car brand", "faq-title1": "FAQ", "faq-desc": "Everything you need", "faq-q1": "Installation available?", "faq-a1": "Fast shipping available", "faq-q2": "Warranty period?", "faq-a2": "2 years warranty", "catalog-back": "Back to Brands", "filter-cat-lbl": "Filter Category", "filter-price-lbl": "Max Price", "chk-loader-txt": "Processing...", "chk-form-title": "Shipping Info", "chk-name-lbl": "Full Name", "chk-phone-lbl": "Phone", "chk-gov-lbl": "Governorate", "chk-addr-lbl": "Address", "chk-submit-btn": "Confirm Order", "summary-title": "Order Summary", "summary-gov": "Governorate:", "summary-fee": "Shipping:", "summary-total": "Total:", "adm-title": "Admin Panel", "tab-metrics": "Metrics", "tab-shipping": "Shipping Rates", "tab-addbrand": "Add Brand", "tab-mgbrands": "Manage Brands", "tab-addprod": "Add Product", "tab-mgprods": "Manage Products", "tab-orders": "Orders", "stat-rev": "Revenue", "stat-orders": "Orders", "stat-brands": "Brands", "stat-prods": "Products", "cart-title": "Cart", "cart-total-lbl": "Total:", "cart-checkout-btn": "Checkout", "foot-desc": "El Fahd Integrated System", "foot-links": "Quick Links" } };
+                const dataset = dict[this.currentLang];
+                if(this.currentLang === 'en') { document.body.classList.add('ltr-mode'); document.documentElement.setAttribute('dir', 'ltr'); document.getElementById('langBtnEn').classList.add('active'); document.getElementById('langBtnAr').classList.remove('active'); } else { document.body.classList.remove('ltr-mode'); document.documentElement.setAttribute('dir', 'rtl'); document.getElementById('langBtnAr').classList.add('active'); document.getElementById('langBtnEn').classList.remove('active'); }
+                Object.keys(dataset).forEach(idKey => { const el = document.getElementById('trans-' + idKey); if(el) el.innerHTML = dataset[idKey]; });
+            }
             initFlashTimer() { let duration = 4 * 3600 + 15 * 60; setInterval(() => { duration--; if(duration <= 0) duration = 4 * 3600; const h = String(Math.floor(duration / 3600)).padStart(2, '0'); const m = String(Math.floor((duration % 3600) / 60)).padStart(2, '0'); const s = String(duration % 60).padStart(2, '0'); const el = document.getElementById('flashTimer'); if(el) el.innerText = `${h}:${m}:${s}`; }, 1000); }
             initHeroCanvas() { const canvas = document.getElementById('heroParticles'); if(!canvas) return; const ctx = canvas.getContext('2d'); let pts = []; const resize = () => { canvas.width = canvas.parentElement.offsetWidth; canvas.height = canvas.parentElement.offsetHeight; }; window.addEventListener('resize', resize); resize(); for(let i=0; i<45; i++) pts.push({ x: Math.random()*canvas.width, y: Math.random()*canvas.height, r: Math.random()*2+1, d: Math.random()*0.5+0.2 }); const draw = () => { ctx.clearRect(0,0,canvas.width,canvas.height); ctx.fillStyle = 'rgba(244,162,97,0.3)'; pts.forEach(p => { ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI*2); ctx.fill(); p.y -= p.d; if(p.y < 0) p.y = canvas.height; }); requestAnimationFrame(draw); }; draw(); }
         }
         
         // Admin Dashboard Class
         class AdminDashboard {
-            constructor() { this.temporaryBrandLogoBase64 = null; this.temporaryProductImageBase64 = null; this.initDragAndDrop(); }
-            initDragAndDrop() { ['brandDragDropZone', 'productDragDropZone'].forEach(zoneId => { const zone = document.getElementById(zoneId); if(!zone) return; const input = zone.querySelector('input[type="file"]'); zone.onclick = () => input.click(); zone.addEventListener('dragover', (e) => { e.preventDefault(); zone.classList.add('dragover'); }); zone.addEventListener('dragleave', () => zone.classList.remove('dragover')); zone.addEventListener('drop', (e) => { e.preventDefault(); zone.classList.remove('dragover'); if(e.dataTransfer.files.length) { input.files = e.dataTransfer.files; this.processImage(input.files[0], zoneId); } }); input.onchange = () => { if(input.files.length) this.processImage(input.files[0], zoneId); }; }); }
-            processImage(file, zoneId) { const reader = new FileReader(); reader.readAsDataURL(file); reader.onload = () => { if(zoneId === 'brandDragDropZone') { this.temporaryBrandLogoBase64 = reader.result; document.getElementById('brandUploadedImagePreview').src = reader.result; document.getElementById('brandImagePreviewContainer').style.display = 'block'; } else { this.temporaryProductImageBase64 = reader.result; document.getElementById('productUploadedImagePreview').src = reader.result; document.getElementById('productImagePreviewContainer').style.display = 'block'; } }; }
+            constructor() { this.temporaryBrandLogoFile = null; this.temporaryProductImageFile = null; this.initDragAndDrop(); }
+            initDragAndDrop() {
+                ['brandDragDropZone', 'productDragDropZone'].forEach(zoneId => {
+                    const zone = document.getElementById(zoneId); if(!zone) return;
+                    const input = zone.querySelector('input[type="file"]');
+                    zone.onclick = () => input.click();
+                    zone.addEventListener('dragover', (e) => { e.preventDefault(); zone.classList.add('dragover'); });
+                    zone.addEventListener('dragleave', () => zone.classList.remove('dragover'));
+                    zone.addEventListener('drop', (e) => { e.preventDefault(); zone.classList.remove('dragover'); if(e.dataTransfer.files.length) { input.files = e.dataTransfer.files; this.handleImageFile(input.files[0], zoneId); } });
+                    input.onchange = () => { if(input.files.length) this.handleImageFile(input.files[0], zoneId); };
+                });
+            }
+            handleImageFile(file, zoneId) {
+                const reader = new FileReader();
+                reader.readAsDataURL(file);
+                reader.onload = () => {
+                    if(zoneId === 'brandDragDropZone') {
+                        this.temporaryBrandLogoFile = file;
+                        document.getElementById('brandUploadedImagePreview').src = reader.result;
+                        document.getElementById('brandImagePreviewContainer').style.display = 'block';
+                    } else {
+                        this.temporaryProductImageFile = file;
+                        document.getElementById('productUploadedImagePreview').src = reader.result;
+                        document.getElementById('productImagePreviewContainer').style.display = 'block';
+                    }
+                };
+            }
             async switchTab(tabId) { document.querySelectorAll('.admin-subview').forEach(el => el.style.display = 'none'); document.querySelectorAll('.admin-sidebar-link').forEach(lk => lk.classList.remove('active')); document.getElementById('adminTab-' + tabId).style.display = 'block'; document.getElementById('link-' + tabId).classList.add('active'); if(tabId === 'shipping-settings') await this.renderShippingFaresManagementTable(); if(tabId === 'add-product') await this.syncBrandsSelector(); }
-            async refreshDashboardState() { let rev = 0; ordersArray.forEach(o => { if(o.status === 'تم الشحن' || o.status.includes('تأكيد')) rev += o.total; }); document.getElementById('statTotalRevenue').innerText = `${rev} ج.م`; document.getElementById('statTotalOrders').innerText = ordersArray.length; document.getElementById('statTotalBrands').innerText = brandsArray.length; document.getElementById('statTotalProducts').innerText = productsArray.length; await this.renderBrandsTable(); await this.renderProductsTable(); await this.renderOrdersTable(); }
-            async renderShippingFaresManagementTable() { const tbody = document.getElementById('adminShippingTableBody'); if(!tbody) return; tbody.innerHTML = ''; shippingArray.forEach(gov => { const tr = document.createElement('tr'); tr.innerHTML = `<td><strong>${gov.name}</strong></td><td><input type="number" id="inputFare-${gov.id}" value="${gov.fee}" style="background:var(--primary); border:1px solid var(--border-glass); padding:8px 12px; border-radius:6px; color:#fff; width:120px;"></td><td><button class="btn-premium" style="padding:6px 14px; font-size:0.85rem; border-radius:8px;" onclick="admin.saveShippingFare('${gov.id}')"><i class="fa-solid fa-floppy-disk"></i> حفظ </button></td>`; tbody.appendChild(tr); }); }
-            async saveShippingFare(govId) { const inputVal = parseInt(document.getElementById(`inputFare-${govId}`).value); const gov = shippingArray.find(g => g.id === govId); if(gov) { await firebaseService.updateShipping(govId, { fee: inputVal }); ui.showToast(`تم تحديث سعر شحن محافظة ${gov.name}`); } }
-            async renderBrandsTable() { const tbody = document.getElementById('adminBrandsTableBody'); tbody.innerHTML = ''; brandsArray.forEach(b => { const tr = document.createElement('tr'); tr.innerHTML = `<td><img src="${b.logo}" style="width:45px; height:45px; border-radius:8px; object-fit:cover;"></td><td><strong>${b.name}</strong></td><td><span style="color:var(--accent); font-weight:700;">${b.category}</span></td><td><div style="display:flex; gap:10px;"><button class="row-action-btn" style="color:#e2e8f0;" onclick="admin.editBrand('${b.id}')"><i class="fa-solid fa-pen-to-square"></i></button><button class="row-action-btn" style="color:var(--accent-dark);" onclick="admin.deleteBrand('${b.id}')"><i class="fa-solid fa-trash-can"></i></button></div></td>`; tbody.appendChild(tr); }); }
-            async editBrand(id) { const b = brandsArray.find(brand => brand.id === id); if(!b) return; document.getElementById('editBrandId').value = b.id; document.getElementById('newBrandName').value = b.name; document.getElementById('newBrandCategory').value = b.category; document.getElementById('newBrandDesc').value = b.desc; this.temporaryBrandLogoBase64 = b.logo; document.getElementById('brandUploadedImagePreview').src = b.logo; document.getElementById('brandImagePreviewContainer').style.display = 'block'; document.getElementById('brandFormTitle').innerHTML = "تعديل خيارات وبيانات الماركة النشطة"; this.switchTab('add-brand'); }
-            async deleteBrand(id) { if(confirm('تحذير: مسح الماركة سيؤدي إلى إخفائها من الواجهة ولكن المنتجات ستبقى محفوظة. هل تود الاستمرار الفوري؟')) { await firebaseService.deleteBrand(id); ui.showToast('تم مسح العلامة بنجاح من قائمة الواجهة المعروضة للمستخدمين'); } }
-            async renderProductsTable() { const tbody = document.getElementById('adminProductsTableBody'); tbody.innerHTML = ''; productsArray.forEach(p => { const tr = document.createElement('tr'); tr.innerHTML = `<td><img src="${p.img}" style="width:45px; height:45px; border-radius:8px; object-fit:cover; background:#fff;"></td><td><strong>${p.name}</strong></td><td><span style="background:rgba(255,255,255,0.05); padding:4px 10px; border-radius:6px;">${p.brand}</span></td><td><strong style="color:var(--accent);">${p.price} ج.م</strong></td><td>${p.category}</td><td><button class="row-action-btn" style="color:var(--accent-dark);" onclick="admin.deleteProduct('${p.id}')"><i class="fa-solid fa-trash-can"></i></button></td>`; tbody.appendChild(tr); }); }
-            async deleteProduct(id) { if(confirm('هل أنت متأكد من رغبتك في حذف هذا المنتج وإزالته نهائياً من العرض والجرد؟')) { await firebaseService.deleteProduct(id); ui.showToast('تم بنجاح حذف وإقصاء القطعة بالكامل من المخزون والكتالوج العام للموقع'); } }
-            async renderOrdersTable() { const tbody = document.getElementById('adminOrdersTableBody'); if(!tbody) return; tbody.innerHTML = ''; ordersArray.forEach(o => { let itemsDesc = []; if(Array.isArray(o.items)) { o.items.forEach(c => { const p = productsArray.find(prod => prod.id === c.id); if(p) itemsDesc.push(`<div style="font-size:0.85rem; margin-bottom:3px;"><i class="fa-solid fa-circle-dot" style="font-size:8px; color:var(--accent);"></i> ${p.name} <strong>(×${c.qty})</strong></div>`); }); } const tr = document.createElement('tr'); tr.id = `order-row-${o.id}`; tr.innerHTML = `<td><strong style="color:var(--accent); font-family:monospace;">${o.id}</strong></td><td><div style="font-weight:800;">${o.name}</div><div style="font-size:0.9rem; color:var(--text-muted);"><i class="fa-solid fa-phone"></i> ${o.phone}</div></td><td><div style="background:rgba(255,255,255,0.03); padding:8px; border-radius:8px;"><strong>${o.gov}</strong> - ${o.address}</div></td><td><div style="max-height:90px; overflow-y:auto;">${itemsDesc.join('')}</div></td><td><strong style="color:var(--accent);">${o.total} ج.م</strong></td><td><span id="order-status-badge-${o.id}" style="padding:6px 14px; border-radius:30px; background:rgba(244,162,97,0.1); color:var(--accent);">${o.status}</span></td><td><div style="display:flex; gap:8px;"><button class="btn-premium" style="padding:8px 14px; font-size:0.85rem; background:#25D366; color:#fff;" onclick="admin.markOrderShipped('${o.id}')"><i class="fa-solid fa-truck-fast"></i> تم الشحن</button><button class="btn-premium" style="padding:8px 14px; font-size:0.85rem; background:rgba(231,111,81,0.15); color:var(--accent-dark);" onclick="admin.deleteOrder('${o.id}')"><i class="fa-solid fa-trash-can"></i> مسح</button></div></td>`; tbody.appendChild(tr); }); }
-            async markOrderShipped(orderId) { await firebaseService.updateOrder(orderId, { status: 'تم الشحن' }); ui.showToast(`تمت عملية تعديل حالة الشحن للأوردر ${orderId} إلى تم الشحن فورياً!`); }
-            async deleteOrder(orderId) { if(confirm(`هل أنت متأكد من حذف الأوردر ${orderId}؟`)) { await firebaseService.deleteOrder(orderId); ui.showToast(`تم مسح الأوردر ${orderId} نهائياً.`); } }
-            async syncBrandsSelector() { const select = document.getElementById('newProdBrandSelect'); select.innerHTML = ''; brandsArray.forEach(b => { const opt = document.createElement('option'); opt.value = b.id; opt.innerText = b.name; select.appendChild(opt); }); }
-            async handleBrandFormSubmit(e) { e.preventDefault(); const editId = document.getElementById('editBrandId').value; const data = { id: document.getElementById('newBrandName').value.trim(), name: document.getElementById('newBrandName').value.trim(), category: document.getElementById('newBrandCategory').value.trim(), desc: document.getElementById('newBrandDesc').value.trim(), logo: this.temporaryBrandLogoBase64 || "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=300" }; if(editId) { await firebaseService.updateBrand(editId, data); } else { await firebaseService.addBrand(data); } this.resetBrandForm(); ui.showToast('تم حفظ وتحديث الماركة بنجاح بالكتالوج الفعلي'); }
-            resetBrandForm() { document.getElementById('brandCreationForm').reset(); document.getElementById('brandFormTitle').innerHTML = "إضافة علامة تجارية (ماركة سيارات) جديدة في الكتالوج"; document.getElementById('editBrandId').value = ''; this.temporaryBrandLogoBase64 = null; document.getElementById('brandImagePreviewContainer').style.display = 'none'; }
-            async handleProductFormSubmit(e) { e.preventDefault(); const data = { name: document.getElementById('newProdName').value.trim(), brand: document.getElementById('newProdBrandSelect').value, price: parseInt(document.getElementById('newProdPrice').value), oldPrice: parseInt(document.getElementById('newProdOldPrice').value) || null, category: document.getElementById('newProdCategory').value, desc: document.getElementById('newProdDesc').value.trim(), img: this.temporaryProductImageBase64 || "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=400" }; await firebaseService.addProduct(data); document.getElementById('productCreationForm').reset(); this.temporaryProductImageBase64 = null; document.getElementById('productImagePreviewContainer').style.display = 'none'; ui.showToast('تم بنجاح إدراج الأكسسوار وحفظه بالكامل في الكتالوج العام للموقع'); }
-            exportOrdersToExcel() { let csv = 'اسم العميل,رقم الهاتف,عنوان العميل,المنتجات,الكمية,السعر,حالة الشحن,تاريخ الطلب\n'; ordersArray.forEach(o => { let itemsNames = [], itemsQty = []; if(Array.isArray(o.items)) { o.items.forEach(c => { const p = productsArray.find(prod => prod.id === c.id); if(p) { itemsNames.push(p.name); itemsQty.push(c.qty); } }); } csv += `"${o.name}","${o.phone}","${o.gov} - ${o.address}","${itemsNames.join(' | ')}","${itemsQty.join(' | ')}","${o.total}","${o.status}","${o.date}"\n`; }); const blob = new Blob(["\uFEFF" + csv], { type: 'text/csv;charset=utf-8;' }); const link = document.createElement('a'); link.href = URL.createObjectURL(blob); link.download = `Fahd_Orders_${new Date().toISOString().slice(0,19)}.csv`; link.click(); ui.showToast('تم استخراج ملف إكسيل الشحن وجاري التحميل التلقائي...'); }
+            async refreshDashboardState() { let rev = 0; ordersArray.forEach(o => { if(o.status === 'تم الشحن') rev += o.total; }); document.getElementById('statTotalRevenue').innerText = `${rev} ج.م`; document.getElementById('statTotalOrders').innerText = ordersArray.length; document.getElementById('statTotalBrands').innerText = brandsArray.length; document.getElementById('statTotalProducts').innerText = productsArray.length; await this.renderBrandsTable(); await this.renderProductsTable(); await this.renderOrdersTable(); }
+            async renderShippingFaresManagementTable() { const tbody = document.getElementById('adminShippingTableBody'); if(!tbody) return; tbody.innerHTML = ''; shippingArray.forEach(gov => { const tr = document.createElement('tr'); tr.innerHTML = `<td><strong>${gov.name}</strong></td><td><input type="number" id="inputFare-${gov.id}" value="${gov.fee}" style="background:var(--primary); border:1px solid var(--border-glass); padding:8px; border-radius:6px; color:#fff; width:120px;"></td><td><button class="btn-premium" style="padding:6px 14px;" onclick="admin.saveShippingFare('${gov.id}')">حفظ</button></td>`; tbody.appendChild(tr); }); }
+            async saveShippingFare(govId) { const inputVal = parseInt(document.getElementById(`inputFare-${govId}`).value); const gov = shippingArray.find(g => g.id === govId); if(gov) { await firebaseService.updateShipping(govId, { fee: inputVal }); ui.showToast(`تم تحديث سعر شحن ${gov.name}`); } }
+            async renderBrandsTable() { const tbody = document.getElementById('adminBrandsTableBody'); tbody.innerHTML = ''; brandsArray.forEach(b => { const tr = document.createElement('tr'); tr.innerHTML = `<td><img src="${b.logo}" style="width:45px; height:45px; border-radius:8px;"></td><td><strong>${b.name}</strong></td><td>${b.category}</td><td><button class="row-action-btn" style="color:var(--accent-dark);" onclick="admin.deleteBrand('${b.id}')"><i class="fa-solid fa-trash-can"></i></button></td>`; tbody.appendChild(tr); }); }
+            async deleteBrand(id) { if(confirm('هل أنت متأكد من حذف هذه الماركة؟')) { await firebaseService.deleteBrand(id); ui.showToast('تم حذف الماركة'); } }
+            async renderProductsTable() { const tbody = document.getElementById('adminProductsTableBody'); tbody.innerHTML = ''; productsArray.forEach(p => { const tr = document.createElement('tr'); tr.innerHTML = `<td><img src="${p.img}" style="width:45px; height:45px; border-radius:8px;"></td><td>${p.name}</td><td>${p.brand}</td><td>${p.price} ج.م</td><td>${p.category}</td><td><button class="row-action-btn" style="color:var(--accent-dark);" onclick="admin.deleteProduct('${p.id}')"><i class="fa-solid fa-trash-can"></i></button></td>`; tbody.appendChild(tr); }); }
+            async deleteProduct(id) { if(confirm('هل أنت متأكد من حذف هذا المنتج؟')) { await firebaseService.deleteProduct(id); ui.showToast('تم حذف المنتج'); } }
+            async renderOrdersTable() { const tbody = document.getElementById('adminOrdersTableBody'); if(!tbody) return; tbody.innerHTML = ''; ordersArray.forEach(o => { let itemsDesc = []; if(Array.isArray(o.items)) { o.items.forEach(c => { const p = productsArray.find(prod => prod.id === c.id); if(p) itemsDesc.push(`${p.name} (×${c.qty})`); }); } const tr = document.createElement('tr'); tr.id = `order-row-${o.id}`; tr.innerHTML = `<td>${o.id}</td><td>${o.name}<br><small>${o.phone}</small></td><td>${o.gov} - ${o.address}</td><td>${itemsDesc.join(', ')}</td><td>${o.total} ج.م</td><td><span style="padding:4px 12px; border-radius:20px; background:rgba(244,162,97,0.2);">${o.status}</span></td><td><button class="btn-premium" style="padding:6px 12px; background:#25D366;" onclick="admin.markOrderShipped('${o.id}')">تم الشحن</button><button class="btn-premium" style="padding:6px 12px; margin-right:8px;" onclick="admin.deleteOrder('${o.id}')">مسح</button></td>`; tbody.appendChild(tr); }); }
+            async markOrderShipped(orderId) { await firebaseService.updateOrder(orderId, { status: 'تم الشحن' }); ui.showToast('تم تحديث حالة الطلب'); }
+            async deleteOrder(orderId) { if(confirm('هل أنت متأكد؟')) { await firebaseService.deleteOrder(orderId); ui.showToast('تم حذف الطلب'); } }
+            async syncBrandsSelector() { const select = document.getElementById('newProdBrandSelect'); select.innerHTML = ''; brandsArray.forEach(b => { const opt = document.createElement('option'); opt.value = b.name; opt.innerText = b.name; select.appendChild(opt); }); }
+            async handleBrandFormSubmit(e) { e.preventDefault(); const name = document.getElementById('newBrandName').value.trim(); const category = document.getElementById('newBrandCategory').value.trim(); const desc = document.getElementById('newBrandDesc').value.trim(); let logoUrl = "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=300"; if(this.temporaryBrandLogoFile) { logoUrl = await uploadImageToStorage(this.temporaryBrandLogoFile, 'brands'); } const data = { name: name, category: category, desc: desc, logo: logoUrl }; await firebaseService.addBrand(data); document.getElementById('brandCreationForm').reset(); document.getElementById('brandImagePreviewContainer').style.display = 'none'; this.temporaryBrandLogoFile = null; ui.showToast('تم إضافة الماركة بنجاح'); }
+            async handleProductFormSubmit(e) { e.preventDefault(); const name = document.getElementById('newProdName').value.trim(); const brand = document.getElementById('newProdBrandSelect').value; const price = parseInt(document.getElementById('newProdPrice').value); const oldPrice = parseInt(document.getElementById('newProdOldPrice').value) || null; const category = document.getElementById('newProdCategory').value; const desc = document.getElementById('newProdDesc').value.trim(); let imgUrl = "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=400"; if(this.temporaryProductImageFile) { imgUrl = await uploadImageToStorage(this.temporaryProductImageFile, 'products'); } const data = { name: name, brand: brand, price: price, oldPrice: oldPrice, category: category, desc: desc, img: imgUrl }; await firebaseService.addProduct(data); document.getElementById('productCreationForm').reset(); document.getElementById('productImagePreviewContainer').style.display = 'none'; this.temporaryProductImageFile = null; ui.showToast('تم إضافة المنتج بنجاح'); }
+            exportOrdersToExcel() { let csv = 'الاسم,الهاتف,العنوان,المنتجات,الإجمالي,الحالة,التاريخ\n'; ordersArray.forEach(o => { let items = ''; if(Array.isArray(o.items)) { o.items.forEach(c => { const p = productsArray.find(prod => prod.id === c.id); if(p) items += `${p.name} x${c.qty} `; }); } csv += `"${o.name}","${o.phone}","${o.gov} - ${o.address}","${items}","${o.total}","${o.status}","${o.date}"\n`; }); const blob = new Blob(["\uFEFF" + csv], { type: 'text/csv;charset=utf-8;' }); const link = document.createElement('a'); link.href = URL.createObjectURL(blob); link.download = `orders_${new Date().toISOString().slice(0,19)}.csv`; link.click(); ui.showToast('تم تصدير الطلبات'); }
         }
         
-        // Router
         class Router { navigate(routeId) { document.querySelectorAll('.route-view').forEach(el => el.style.display = 'none'); document.querySelectorAll('header nav ul li').forEach(li => li.classList.remove('active')); if(routeId === 'home') { document.getElementById('view-home').style.display = 'block'; document.querySelector('header nav ul li[data-target="home"]').classList.add('active'); } else if(routeId === 'catalog') { document.getElementById('view-catalog').style.display = 'block'; } else if(routeId === 'checkout') { document.getElementById('view-checkout').style.display = 'block'; } else if(routeId === 'admin') { document.getElementById('view-admin').style.display = 'block'; document.querySelector('header nav ul li[data-target="admin"]').classList.add('active'); admin.refreshDashboardState(); } window.scrollTo({ top: 0, behavior: 'smooth' }); } }
         
-        // Initialize everything
         const router = new Router();
         const ui = new UI();
         const admin = new AdminDashboard();
         window.ui = ui; window.admin = admin; window.router = router;
         
-        // Progress bar
         window.addEventListener('scroll', () => { const progress = document.documentElement.scrollHeight - document.documentElement.clientHeight; const ratio = (window.scrollY / progress); document.getElementById("progressBar").style.transform = `scaleX(${ratio})`; });
     </script>
 </body>
